@@ -112,12 +112,17 @@ class DBH_statistics extends DBH_abstract
         );
     }
 
-    public function searchWithoutID($ObjToBeSearched){
+    public function searchWithoutID($ObjToBeSearched)
+    {
         throw new Exception('Not implemented');
     }
+
     public function searchByDayW(int $day_w)
     {
-        $sql = 'SELECT ' . self::FULL_SELECT . ' FROM `' . self::TABLE_NAME . '` WHERE `day_w` = ' . $day_w . ' LIMIT ' . self::MAX_PER_SELECT . ';';
+        $sql = 'SELECT ' . self::FULL_SELECT . ' FROM `' . self::TABLE_NAME . '` ' . chr(0xa) .
+            'WHERE `day_w` = ' . $day_w . ' ' . chr(0xa) .
+            'ORDER BY hours ASC, minutes ASC' . chr(0xa) .
+            'LIMIT ' . self::MAX_PER_SELECT . ';';
         $result = mysqli_query($this->linkDB, $sql) or $this->dbError();
 
         $statistics = [];

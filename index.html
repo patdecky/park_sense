@@ -5,6 +5,8 @@
 
     <link rel="stylesheet" href="static/libs/ll/leaflet.css"/>
     <script src="static/libs/ll/leaflet.js"></script>
+    <script src="static/libs/chartjs/chart_v3.9.1.js"></script>
+    <script src="static/libs/chartjs/chartBackground.js"></script>
 
     <script src="static/js/Class/Cl_statistics.js"></script>
     <script src="static/js/Class/Cl_camera.js"></script>
@@ -16,6 +18,7 @@
     <script src="static/js/dataLoader/dataRequester.js"></script>
     <script src="static/js/dataLoader/fetchAPI.js"></script>
     <script src="static/js/dataHolderStatistics.js"></script>
+    <script src="static/js/statsChart.js"></script>
 
     <script src="static/js/maps.js"></script>
 
@@ -103,6 +106,25 @@
             z-index: 1000;
         }
 
+        #chartCanvas {
+            border-radius: 20px; /* Round the corners */
+        }
+
+        #chartContainer {
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 20px); /* Subtract 20px to account for 10px padding on each side */
+            height: 100%; /* Ensure it takes full height */
+            position: absolute;
+            bottom: 0; /* Adjusted to 0 to align with full height */
+            align-items: center;
+            justify-content: center; /* Center vertically */
+            z-index: 1000;
+            padding: 0 10px; /* Add 10px padding on the left and right */
+            border-radius: 10px; /* Round the corners */
+            /*background-color: var(--color4);*/
+        }
+
         .wideButton {
             width: 90%;
             padding: 10px;
@@ -136,7 +158,9 @@
             <button type="button" id="searchButton">&#128269;</button> <!-- Magnifying glass icon -->
         </div>
         <div id="map"></div>
-        <div id="chart"></div>
+        <div id="chartContainer" style="display: none;">
+            <canvas id="chartCanvas"></canvas>
+        </div>
         <div id="buttonContainer">
             <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat</button>
             <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase</button>
