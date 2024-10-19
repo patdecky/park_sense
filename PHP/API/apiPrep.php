@@ -30,8 +30,8 @@ function intFilter(string $reqStr): int|bool{
 }
 
 function floatFilter(string $reqStr): float|bool{
-    if (!empty($_REQUEST[$reqStr]) && is_float($_REQUEST[$reqStr])) {
-        return $_REQUEST[$reqStr];
+    if (!empty($_REQUEST[$reqStr]) && is_numeric($_REQUEST[$reqStr])) {
+        return (float)($_REQUEST[$reqStr]);
     } else
         return false;
 }

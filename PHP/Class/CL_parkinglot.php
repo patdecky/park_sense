@@ -9,21 +9,24 @@ require_once __DIR__ . "/CL_DBDataParser.php";
 
 class CL_parkinglot extends CL_DBDataParser
 {
-    private int $geopos_x;
-    private int $geopos_y;
-    private int $car_capacity;
+    protected float $geopos_x;
+    protected float $geopos_y;
+    protected int $car_capacity;
+    protected string $name;
 
     /**
-     * @param int $geopos_x
-     * @param int $geopos_y
+     * @param float $geopos_x
+     * @param float $geopos_y
      * @param int $car_capacity
+     * @param string $name
      */
-    public function __construct(int $id, int $car_capacity, int $geopos_x, int $geopos_y)
+    public function __construct(int $id, int $car_capacity, float $geopos_x, float $geopos_y, string $name)
     {
         $this->ID = $id;
         $this->geopos_x = $geopos_x;
         $this->geopos_y = $geopos_y;
         $this->car_capacity = $car_capacity;
+        $this->name = $name;
     }
 
     public static function pointToXY(int $id, int $car_capacity, array $point): CL_parkinglot
@@ -31,25 +34,31 @@ class CL_parkinglot extends CL_DBDataParser
         return new CL_parkinglot($id, $car_capacity, $point[0], $point[1]);
     }
 
-    public function getGeoposX(): int
+    public function getGeoposX(): float
     {
         return $this->geopos_x;
     }
 
-    public function setGeoposX(int $geopos_x): void
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function setGeoposX(float $geopos_x): void
     {
         $this->geopos_x = $geopos_x;
     }
 
-    public function getGeoposY(): int
+    public function getGeoposY(): float
     {
         return $this->geopos_y;
     }
 
-    public function setGeoposY(int $geopos_y): void
+    public function setGeoposY(float $geopos_y): void
     {
         $this->geopos_y = $geopos_y;
     }
+    
 
     public function getCarCapacity(): int
     {

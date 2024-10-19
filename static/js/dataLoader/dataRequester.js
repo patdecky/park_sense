@@ -247,4 +247,19 @@ class dataRequester extends dataHolderBase {
         dhs.setStatistics(mvs);
     }
 
+    async loadParkingLots(lat, long, radius, limit) {
+        let ret = await fetchAPI.AllInOneReq("parkingSpaces.php", "getNearestParkingLots", {'lat': lat, "long": long, "radius":radius, "limit":limit}, 0);
+        if (ret.length <= 0) {
+            //observer triggered in vendorList setter
+            return
+        }
+
+        let mvs = [];
+        ret.forEach(el => {
+            mvs.push(new Cl_parkinglot(el.id, el.geopos_x, el.geopos_y, el.car_capacity, el.name));
+        });
+        //observer triggered in vendorList setter
+        return mvs
+    }
+
 }

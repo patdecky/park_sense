@@ -14,8 +14,8 @@ switch ($_GET['req']) {
     case "getNearestParkingLots":
         $lat = floatFilter('lat');
         $long = floatFilter('long');
-        $radius = intFilter('radius') || 500;
-        $limit = intFilter('limit') || $DPL::MAX_PER_SELECT;
+        $radius = intFilter('radius');
+        $limit = intFilter('limit');
 
         if ($lat === false || $long === false) {
             quitExe(400, QE_INPUT_INVALID);
@@ -24,7 +24,7 @@ switch ($_GET['req']) {
         responseOK($parkingLots);
     case "getRecentHistoryForParkingLot":
         $parkingLotID = intFilter('parkingLotID');
-        $hoursBack = intFilter('hoursBack') || 24;
+        $hoursBack = intFilter('hoursBack');
         if ($parkingLotID === false) {
             quitExe(400, QE_INPUT_INVALID);
         }

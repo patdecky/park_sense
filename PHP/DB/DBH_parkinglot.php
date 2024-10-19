@@ -11,8 +11,8 @@ class DBH_parkinglot extends DBH_abstract
 
     const TABLE_NAME = 'parkinglot';
     const MAX_PER_SELECT = 64;
-    const FULL_SELECT = '`id`, `car_capacity`, ST_X(geopos) as longitude, ST_Y(geopos) as latitude';
-    const FULL_INSERT = '( `car_capacity`, `geopos`)';
+    const FULL_SELECT = '`id`, `car_capacity`, ST_X(geopos) as longitude, ST_Y(geopos) as latitude, `name`';
+    const FULL_INSERT = '( `car_capacity`, `geopos`, `name`)';
     protected array $tablesToLock = [self::TABLE_NAME];
 
     protected function setLanguage(): void
@@ -93,12 +93,15 @@ class DBH_parkinglot extends DBH_abstract
     public function searchNearestFreeParking(array $carPosition, int $distanceMeters = 500, int $limit = 5): array
     {
         $limit = min($limit, self::MAX_PER_SELECT);
-        $sql = 'SELECT ' . self::FULL_SELECT . ', ST_Distance(geopos, POINT(' . $carPosition[0] . ', ' . $carPosition[1] . ')) AS distance ' . chr(0xa)
+        $sql = 'SELECT ' . self::FULL_SELECT . ', ST_Distance_Sphere(geopos, POINT(' . $carPosition[0] . ', ' . $carPosition[1] . ')) AS distancee ' . chr(0xa)
             . 'FROM `' . self::TABLE_NAME . '` ' . chr(0xa)
             . 'WHERE `car_capacity` > 0 ' . chr(0xa)
-            . 'AND ST_Distance(geopos, POINT(' . $carPosition[0] . ', ' . $carPosition[1] . ')) <= ' . $distanceMeters . ' ' . chr(0xa)
-            . 'ORDER BY distance ASC ' . chr(0xa)
+            . 'AND ST_Distance_Sphere(geopos, POINT(' . $carPosition[0] . ', ' . $carPosition[1] . ')) <= ' . $distanceMeters . ' ' . chr(0xa)
+            . 'ORDER BY distancee ASC ' . chr(0xa)
             . "LIMIT $limit;";
+
+            // var_dump($sql);
+            // exit(0);
         $result = mysqli_query($this->linkDB, $sql);
         $parkingLots = [];
         while ($row = mysqli_fetch_object($result)) {
@@ -159,16 +162,17 @@ class DBH_parkinglot extends DBH_abstract
     function rowToObj(\stdClass $row): CL_parkinglot
     {
         return new CL_parkinglot(
-            $row->ID,
+            $row->id,
             $row->car_capacity,
             $row->longitude,
-            $row->latitude
+            $row->latitude,
+            $row->name
         );
     }
 
     private function insertSql(CL_parkinglot $geopos):string
     {
-        return "( {$geopos->getCarCapacity()} , POINT({$this->escpNull($geopos->getGeoposX())}, {$this->escpNull($geopos->getGeoposY())}) )";
+        return "( {$geopos->getCarCapacity()} , POINT({$this->escpNull($geopos->getGeoposX())}, {$this->escpNull($geopos->getGeoposY())}, {$this->mres($geopos->getName())}) )";
     }
 
 }
