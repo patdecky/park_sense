@@ -1,0 +1,146 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="static/libs/ll/leaflet.css"/>
+    <script src="static/libs/ll/leaflet.js"></script>
+
+    <script src="static/js/Class/Cl_statistics.js"></script>
+    <script src="static/js/Class/Cl_camera.js"></script>
+    <script src="static/js/Class/Cl_parkinglot.js"></script>
+    <script src="static/js/Class/Cl_pl_history.js"></script>
+
+    <script src="static/js/globals.js"></script>
+    <script src="static/js/dataLoader/dataHolderBase.js"></script>
+    <script src="static/js/dataLoader/dataRequester.js"></script>
+    <script src="static/js/dataLoader/fetchAPI.js"></script>
+    <script src="static/js/dataHolderStatistics.js"></script>
+
+    <script src="static/js/maps.js"></script>
+
+    <title>Home</title>
+    <style>
+        :root {
+            --color1: #72BF78;
+            --color2: #A0D683;
+            --color3: #D3EE98;
+            --color4: #FEFF9F;
+
+            --color5: #8C3061;
+            --color6: #C63C51;
+
+            --color7: #7E60BF;
+            --color8: #E4B1F0;
+
+        }
+
+        #mainContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        #mapDivContainer {
+            width: 800px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #searchContainer {
+            background-color: var(--color2);
+            width: calc(100% - 60px);
+            display: flex;
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            z-index: 1000;
+            border: 1px solid var(--color1);
+            border-radius: 12px; /* Increased border-radius */
+        }
+
+        #searchBar {
+            width: calc(100% - 50px);
+            background: var(--color2);
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 12px 0 0 12px; /* Increased border-radius */
+        }
+
+        #searchBar::placeholder {
+            color: #333; /* Darker color for placeholder text */
+        }
+
+        #searchButton {
+            padding: 10px;
+            background: var(--color2);
+            border: none;
+            border-left: 1px solid var(--color1);
+            border-radius: 0 12px 12px 0; /* Increased border-radius */
+            cursor: pointer;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+
+        #buttonContainer {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            bottom: 10px;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .wideButton {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .colorZebraCl:nth-child(even) {
+            background-color: var(--color1);
+        }
+
+        .colorZebraCl:nth-child(odd) {
+            background-color: var(--color2);
+        }
+
+        @media (max-width: 800px) {
+            #mapDivContainer {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="mainContainer">
+    <div id="mapDivContainer">
+        <div id="searchContainer">
+            <input type="text" id="searchBar" placeholder="Search...">
+            <button type="button" id="searchButton">&#128269;</button> <!-- Magnifying glass icon -->
+        </div>
+        <div id="map"></div>
+        <div id="buttonContainer">
+            <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat</button>
+            <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
