@@ -10,16 +10,16 @@ require_once __DIR__ . "/CL_DBDataParser.php";
 
 class CL_pl_history extends CL_DBDataParser implements \JsonSerializable
 {
-    private int $parkinglot_id;
+    protected int $parkinglot_id;
     /**
      * @var int
      * @required
      * @brief free parking spaces for car
      * @brief cannot be above Cl_parkinglot.car_capacity
      */
-    private int $vacancy;
+    protected int $vacancy;
 
-    private \DateTime $current_timestamp;
+    protected \DateTime $current_timestamp;
 
     /**
      * @param int $parkinglot_id

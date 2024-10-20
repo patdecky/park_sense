@@ -10,7 +10,7 @@ class Cl_pl_history{
         this.id = id;
         this.parkinglot_id = parkinglot_id;
         this.vacancy = vacancy;
-        this.current_timestamp = new DateMK2(new Date(current_timestamp));
+        this.current_timestamp = new DateMK2(new Date(current_timestamp.date));
     }
 
 }

@@ -256,10 +256,26 @@ class dataRequester extends dataHolderBase {
 
         let mvs = [];
         ret.forEach(el => {
-            mvs.push(new Cl_parkinglot(el.id, el.geopos_x, el.geopos_y, el.car_capacity, el.name));
+            mvs.push(new Cl_parkinglot(el.ID, el.geopos_x, el.geopos_y, el.car_capacity, el.name));
         });
         //observer triggered in vendorList setter
         return mvs
     }
 
+    async loadParkingLotsVacancy(parkinglot_id) {
+        let ret = await fetchAPI.AllInOneReq("parkingSpaces.php", "getRecentHistoryForParkingLot", {'parkingLotID': parkinglot_id, "hoursBack": 1}, 0);
+        if (ret.length <= 0) {
+            //observer triggered in vendorList setter
+            return
+        }
+        let mvs = [];
+        ret.forEach(el => {
+            mvs.push(new Cl_pl_history(el.ID,el.parkinglot_id, el.vacancy, el.current_timestamp));
+        });
+        //observer triggered in vendorList setter
+
+        return mvs[0]
+    }
+
 }
+

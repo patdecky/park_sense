@@ -104,7 +104,7 @@ class DBH_pl_history extends DBH_abstract
             'WHERE `parkinglot_id` = ' . $parkinglot_id . ' AND ' . chr(0xa) .
             '`current_timestamp` > DATE_SUB(NOW(), INTERVAL ' . $hoursBack . ' HOUR) ' . chr(0xa) .
             'ORDER BY `current_timestamp` DESC ' . chr(0xa) .
-            "LIMIT = $limit;";
+            "LIMIT $limit;";
         $result = mysqli_query($this->linkDB, $sql) or $this->dbError();
 
         $history = [];
