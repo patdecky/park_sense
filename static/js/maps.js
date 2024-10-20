@@ -276,7 +276,7 @@ function betterMarkerUse(latitude, longitude,description, vacancy, capacity, mai
         shape: 'square',
         number: vacancy,
         prefix: 'fa'
-    }), [latitude, longitude], vacancy + "/" + capacity + "<br>" + description)
+    }), [latitude, longitude], "Volno: "+ vacancy + "/" + capacity + "<br>" + description)
 
     if (main){
         my_marker.openPopup()
