@@ -3,6 +3,9 @@ let map;
 let marker;
 let park_place_markers = [];
 
+const shapes = ['circle', 'square', 'star', 'penta'];
+const colors = ['red', 'orange-dark', 'orange', 'yellow', 'blue-dark', 'cyan', 'purple', 'violet', 'pink', 'green-dark', 'green', 'white', 'black'];
+
 
 window.addEventListener('load', () => {
     // Initialize the map
@@ -91,8 +94,15 @@ window.addEventListener('load', () => {
         // Add layer control to the map
         L.control.layers(baseMaps).addTo(map);
 
-        setMapCenter(51.505, -0.09, 13)
-        setMarkerToMap(51.505, -0.09, null)
+        setMapCenter(49.5940567,17.251143, 13)
+        // setMarkerToMap(51.505, -0.09, null)
+        betterMarker(L.ExtraMarkers.icon({
+            icon: 'fa-number',
+            markerColor: colors[0],
+            shape: 'square',
+            number: '11',
+            prefix: 'fa'
+        }), [49.5876267,17.2553681], 'skibbidy toilet')
     }
 
     function setMarkerToMap(latitude, longitude, description) {
@@ -239,24 +249,11 @@ window.addEventListener('load', () => {
 
 //////////////////////
     // Setup map
-    const shapes = ['circle', 'square', 'star', 'penta'];
-    const colors = ['red', 'orange-dark', 'orange', 'yellow', 'blue-dark', 'cyan', 'purple', 'violet', 'pink', 'green-dark', 'green', 'white', 'black'];
 
 function betterMarker(options, pos, name) {
     const marker = L.marker(pos, {icon: options}).addTo(map);
     marker.bindPopup(name);
 }
-
-    //test
-
-    betterMarker(L.ExtraMarkers.icon({
-        icon: 'fa-number',
-        markerColor: colors[0],
-        shape: 'square',
-        number: '11',
-        prefix: 'fa'
-    }), [51.50, -0.05], 'skibbidy toilet')
-
 
 //////////////////////
 

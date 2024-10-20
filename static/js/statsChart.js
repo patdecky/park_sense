@@ -6,7 +6,7 @@ class statsChart {
     timeDiv = 1 * 60; // 5mins
     _dcChart = null;
     config = null;
-    perHour = false;
+    perHour = true;
     container = null;
 
     colorChart = 'blue'
