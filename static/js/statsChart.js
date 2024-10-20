@@ -7,6 +7,7 @@ class statsChart {
     _dcChart = null;
     config = null;
     perHour = false;
+    container = null;
 
     colorChart = '#7E60BF'
     colorBackground = '#D3EE98'
@@ -20,7 +21,13 @@ class statsChart {
         //constructor here:
         //...
 
-        let container = document.getElementById('chartCanvas');
+        this.container = document.getElementById('chartCanvas');
+
+        // Add event listener to the container
+        this.container.addEventListener('click', () => {
+            this.perHour = !this.perHour; // Toggle perHour
+            this.chartMaker(); // Call chartMaker
+        });
     }
 
     /**
@@ -101,7 +108,7 @@ class statsChart {
 
         if (this._dcChart === null) {
             this._dcChart = new Chart(
-                document.getElementById('chartCanvas'),
+                this.container,
                 this.config
             );
         } else {
