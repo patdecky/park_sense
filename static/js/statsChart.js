@@ -9,8 +9,8 @@ class statsChart {
     perHour = false;
     container = null;
 
-    colorChart = '#7E60BF'
-    colorBackground = '#D3EE98'
+    colorChart = 'blue'
+    colorBackground = 'white'
     colorText = 'black'
 
     constructor() {
