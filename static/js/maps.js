@@ -242,8 +242,16 @@ window.addEventListener('load', () => {
     const shapes = ['circle', 'square', 'star', 'penta'];
     const colors = ['red', 'orange-dark', 'orange', 'yellow', 'blue-dark', 'cyan', 'purple', 'violet', 'pink', 'green-dark', 'green', 'white', 'black'];
 
-    function betterMarker(options, pos) {
+    function betterMarker(options, pos, name) {
         L.marker(pos, {icon: options}).addTo(map);
+        map.eachLayer(function (layer) {
+            if (layer._icon && layer._icon.className.includes('leaflet-marker-icon')) {
+                var popUpTextArray = [];
+                popUpTextArray.push(name);
+                var popUpText = popUpTextArray.join('<br />');
+                layer.bindPopup(popUpText);
+            }
+        });
     }
 
     //test
@@ -254,7 +262,7 @@ window.addEventListener('load', () => {
         shape: 'square',
         number: '11',
         prefix: 'fa'
-    }), [51.50, -0.05])
+    }), [51.50, -0.05], 'skibbidy toilet')
 
 
 //////////////////////
