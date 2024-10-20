@@ -33,6 +33,14 @@ window.addEventListener('load', () => {
         }
         onHashChange();
     });
+
+
+    document.getElementById('searchBar').addEventListener('keydown', function(event) {
+        if (event.key === "Enter") {
+            const inputValue = event.target.value; // Get the value of the inputf
+            geocodePlace(inputValue)
+        }
+    });
     
     document.getElementById('searchButton').addEventListener('click', () => {
         const inputValue = document.getElementById('searchBar').value
@@ -65,6 +73,11 @@ window.addEventListener('load', () => {
         if (description != null)
         {
             marker.bindPopup(description).openPopup();
+            if (onPopupOpenCallbackMain && typeof onPopupOpenCallbackMain === 'function') {
+                marker.on('popupopen', function (event) {
+                    onPopupOpenCallbackMain(event.target); // Pass the marker (event.target is the marker)
+                });
+            }
         }
     }
 
@@ -96,7 +109,6 @@ window.addEventListener('load', () => {
 
     function onPopupOpenCallbackMain(){
         park_place_markers.forEach(element => {
-            map.removeLayer(element);
             element.closePopup()
         });
     }
@@ -139,9 +151,13 @@ window.addEventListener('load', () => {
                     const location = data[0];
                     const lat = parseFloat(location.lat);
                     const lon = parseFloat(location.lon);
+                    const displayName = location.display_name;
+                    const shortName = displayName.split(',')[0];
 
-                    setMapCenter(lat, lon, 18)
-                    await searchAndPlaceMarkers(lat, lon, "Dest")
+                    const inputValue = document.getElementById('searchBar').value = shortName
+
+                    setMapCenter(lat, lon, 17)
+                    await searchAndPlaceMarkers(lat, lon, displayName)
                 } else {
                     alert('Place not found!');
                     place_selected = false
@@ -152,7 +168,7 @@ window.addEventListener('load', () => {
 
     async function findNearestParkingLots(lat, lon){
 
-        return result = await (new dataRequester()).loadParkingLots(lat, lon, 500, 5)
+        return result = await (new dataRequester()).loadParkingLots(lat, lon, 1500, 5)
     }
 
     function openCoordinatesInGoogleMaps() {
