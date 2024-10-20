@@ -244,22 +244,6 @@ window.addEventListener('load', () => {
 
     function betterMarker(options, pos) {
         L.marker(pos, {icon: options}).addTo(map);
-        map.eachLayer(function (layer) {
-            if (layer._icon && layer._icon.className.includes('leaflet-marker-icon')) {
-                var popUpTextArray = [];
-                popUpTextArray.push('shape: \'' + layer.options.icon.options.shape + '\'');
-                popUpTextArray.push('markerColor: \'' + layer.options.icon.options.markerColor + '\'');
-                popUpTextArray.push('prefix: \'' + layer.options.icon.options.prefix + '\'');
-                popUpTextArray.push('icon: \'' + layer.options.icon.options.icon + '\'');
-                popUpTextArray.push('iconColor: \'' + layer.options.icon.options.iconColor + '\'');
-                popUpTextArray.push('iconRotate: ' + layer.options.icon.options.iconRotate);
-                popUpTextArray.push('extraClasses: \'' + layer.options.icon.options.extraClasses + '\'');
-                popUpTextArray.push('number: \'' + layer.options.icon.options.number + '\'');
-                popUpTextArray.push('svg: ' + layer.options.icon.options.svg);
-                var popUpText = popUpTextArray.join('<br />');
-                layer.bindPopup(popUpText);
-            }
-        });
     }
 
     //test
