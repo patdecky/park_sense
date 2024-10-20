@@ -242,17 +242,10 @@ window.addEventListener('load', () => {
     const shapes = ['circle', 'square', 'star', 'penta'];
     const colors = ['red', 'orange-dark', 'orange', 'yellow', 'blue-dark', 'cyan', 'purple', 'violet', 'pink', 'green-dark', 'green', 'white', 'black'];
 
-    function betterMarker(options, pos, name) {
-        L.marker(pos, {icon: options}).addTo(map);
-        map.eachLayer(function (layer) {
-            if (layer._icon && layer._icon.className.includes('leaflet-marker-icon')) {
-                var popUpTextArray = [];
-                popUpTextArray.push(name);
-                var popUpText = popUpTextArray.join('<br />');
-                layer.bindPopup(popUpText);
-            }
-        });
-    }
+function betterMarker(options, pos, name) {
+    const marker = L.marker(pos, {icon: options}).addTo(map);
+    marker.bindPopup(name);
+}
 
     //test
 
