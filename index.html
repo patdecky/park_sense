@@ -36,8 +36,17 @@
             --color7: #7E60BF;
             --color8: #E4B1F0;
 
+            --search_background: #FFFFFF;
+            --serach_frame: #aaaaaa;
+            --map_frame: #bbbbbb;
+            --button_text_color: #333;
+
         }
 
+
+        body{
+            background-color: #fff;
+        }
         #mainContainer {
             display: flex;
             flex-direction: column;
@@ -48,47 +57,52 @@
         }
 
         #mapDivContainer {
-            width: 800px;
+            width: 600px;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
+            border: 1px solid var(--map_frame);
         }
 
         #searchContainer {
-            background-color: var(--color2);
-            width: calc(100% - 60px);
+            background-color: var(--search_background);
+            width: calc(100% - 140px);
             display: flex;
             position: absolute;
             top: 10px;
-            left: 50px;
+            left: 60px;
             z-index: 1000;
-            border: 1px solid var(--color1);
+            border: 2px solid var(--serach_frame);
             border-radius: 12px; /* Increased border-radius */
         }
 
         #searchBar {
             width: calc(100% - 50px);
-            background: var(--color2);
+            background: var(--search_background);
             padding: 10px;
             box-sizing: border-box;
             border: none;
             border-radius: 12px 0 0 12px; /* Increased border-radius */
+            font-size: 18px;
+            text-align: center; 
         }
 
         #searchBar::placeholder {
-            color: #333; /* Darker color for placeholder text */
+            color: #555; /* Darker color for placeholder text */
+            font-weight: bold;
         }
 
         #searchButton {
             padding: 10px;
-            background: var(--color2);
+            background: var(--search_background);
             border: none;
-            border-left: 1px solid var(--color1);
+            border-left: 1px solid var(--serach_frame);
             border-radius: 0 12px 12px 0; /* Increased border-radius */
             cursor: pointer;
+            font-size: 20px; /* icon size */
         }
 
         #map {
@@ -127,20 +141,30 @@
 
         .wideButton {
             width: 90%;
-            padding: 10px;
-            margin-bottom: 10px;
+            padding: 7px;
+            margin-bottom: 8px;
             background: white;
             border: 1px solid #ccc;
             border-radius: 4px;
-            cursor: pointer;
+            cursor: pointer;    
+        }
+
+        .colorZebraCl{
+            font-size: 18px; /* icon size */
+            font-weight: 550;
+            color:#000;
         }
 
         .colorZebraCl:nth-child(even) {
-            background-color: var(--color1);
+            /* time chart */
+            background-color: #6db9f7;
+            border: 1px solid #0F67B1;
         }
 
         .colorZebraCl:nth-child(odd) {
-            background-color: var(--color2);
+            /* navigate */
+             background-color: #96d2f4;
+            border: 1px solid #0F67B1;
         }
 
         @media (max-width: 800px) {
@@ -162,7 +186,7 @@
             <canvas id="chartCanvas"></canvas>
         </div>
         <div id="buttonContainer">
-            <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat</button>
+            <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat &#127757</button>
             <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase</button>
         </div>
     </div>

@@ -55,10 +55,42 @@ window.addEventListener('load', () => {
     function initializeMap(){
         map = L.map('map')
 
-        // Add a tile layer to the map
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        // Base layer: OpenStreetMap
+        var openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+        });
+
+        // Satellite layer: Esri
+        var satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+        });
+
+        // Terrain layer: Esri
+        var terrainLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data: &copy; OpenStreetMap contributors, SRTM | Map style: &copy; OpenTopoMap (CC-BY-SA)'
+        });
+
+        // Add OpenStreetMap as the default layer
+        openStreetMap.addTo(map);
+
+        // Layer control for switching between base layers
+        var baseMaps = {
+            "OpenStreetMap": openStreetMap,
+            "Satellite": satelliteLayer,
+            "Terrain": terrainLayer
+        };
+
+
+
+        // Layer control for switching between base layers
+        var baseMaps = {
+            "OpenStreetMap": openStreetMap,
+            "Satellite": satelliteLayer,
+            "Terrain": terrainLayer
+        };
+
+        // Add layer control to the map
+        L.control.layers(baseMaps).addTo(map);
 
         setMapCenter(51.505, -0.09, 13)
         setMarkerToMap(51.505, -0.09, null)
