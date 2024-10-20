@@ -1,4 +1,3 @@
-
 //global scope
 let map;
 let marker;
@@ -35,13 +34,13 @@ window.addEventListener('load', () => {
     });
 
 
-    document.getElementById('searchBar').addEventListener('keydown', function(event) {
+    document.getElementById('searchBar').addEventListener('keydown', function (event) {
         if (event.key === "Enter") {
             const inputValue = event.target.value; // Get the value of the inputf
             geocodePlace(inputValue)
         }
     });
-    
+
     document.getElementById('searchButton').addEventListener('click', () => {
         const inputValue = document.getElementById('searchBar').value
         geocodePlace(inputValue)
@@ -52,7 +51,7 @@ window.addEventListener('load', () => {
 
     }
 
-    function initializeMap(){
+    function initializeMap() {
         map = L.map('map')
 
         // Add a tile layer to the map
@@ -64,14 +63,13 @@ window.addEventListener('load', () => {
         setMarkerToMap(51.505, -0.09, null)
     }
 
-    function setMarkerToMap(latitude, longitude, description){
+    function setMarkerToMap(latitude, longitude, description) {
         if (marker) {
             map.removeLayer(marker); // Remove the existing marker
         }
         // Add the new marker at the new location
         marker = L.marker([latitude, longitude]).addTo(map);
-        if (description != null)
-        {
+        if (description != null) {
             marker.bindPopup(description).openPopup();
             if (onPopupOpenCallbackMain && typeof onPopupOpenCallbackMain === 'function') {
                 marker.on('popupopen', function (event) {
@@ -81,7 +79,7 @@ window.addEventListener('load', () => {
         }
     }
 
-    function removeParkPlaceMarkersFromMap(){
+    function removeParkPlaceMarkersFromMap() {
         park_place_markers.forEach(element => {
             map.removeLayer(element);
         });
@@ -89,14 +87,14 @@ window.addEventListener('load', () => {
     }
 
 
-    function setParkPlaceMarkerToMap(latitude, longitude, description, main = false){
+    function setParkPlaceMarkerToMap(latitude, longitude, description, main = false) {
         park_place_markers.forEach(element => {
             element.closePopup();
         });
         ppmarker = L.marker([latitude, longitude]).addTo(map);
         park_place_markers.push(ppmarker);
         ppmarker.bindPopup(description);
-        if (main){
+        if (main) {
             ppmarker.openPopup();
             // Check if a callback is provided for when the popup is opened
             if (onPopupOpenCallback && typeof onPopupOpenCallback === 'function') {
@@ -107,31 +105,31 @@ window.addEventListener('load', () => {
         }
     }
 
-    function onPopupOpenCallbackMain(){
+    function onPopupOpenCallbackMain() {
         park_place_markers.forEach(element => {
             element.closePopup()
         });
     }
 
-    function onPopupOpenCallback(map_marker){
+    function onPopupOpenCallback(map_marker) {
         marker.closePopup()
-        for (let i = 0; i < park_place_markers.length; i++){
-            if (park_place_markers[i] !== map_marker){
+        for (let i = 0; i < park_place_markers.length; i++) {
+            if (park_place_markers[i] !== map_marker) {
                 park_place_markers[i].closePopup()
             }
         }
         //close all the popups and open this one
 
     }
-   
-    async function searchAndPlaceMarkers(latitude, longitude, description){
+
+    async function searchAndPlaceMarkers(latitude, longitude, description) {
         removeParkPlaceMarkersFromMap()
         setMarkerToMap(latitude, longitude, description)
         let nearestParkingLots = await findNearestParkingLots(latitude, longitude)
         let is_first = true
         nearestParkingLots.forEach(element => {
             setParkPlaceMarkerToMap(element.geopos_x, element.geopos_y, element.name, is_first)
-            if (is_first){
+            if (is_first) {
                 is_first = false
             }
         })
@@ -166,50 +164,84 @@ window.addEventListener('load', () => {
             .catch(error => console.error('Error fetching geocode:', error));
     }
 
-    async function findNearestParkingLots(lat, lon){
+    async function findNearestParkingLots(lat, lon) {
 
         return result = await (new dataRequester()).loadParkingLots(lat, lon, 1500, 5)
     }
 
     function openCoordinatesInGoogleMaps() {
         open_marker = getActiveMarker()
-        if (open_marker)
-        {
+        if (open_marker) {
             lat_lon = getMarkerCoordinance(open_marker)
             if (lat_lon[0] && lat_lon[1]) {
                 const url = `https://www.google.com/maps?q=${lat_lon[0]},${lat_lon[1]}`;
                 window.open(url, '_blank');
-            }
-            else{
+            } else {
                 alert("Missing latitude or longitude!")
             }
-        }
-        else{
+        } else {
             alert("Please search and select a place to navigate.")
         }
-       
+
     }
 
-    function getActiveMarker(){
-        if (marker.getPopup().isOpen()){
+    function getActiveMarker() {
+        if (marker.getPopup().isOpen()) {
             return marker
         }
         for (let i = 0; i < park_place_markers.length; i++) {
-            if (park_place_markers[i].getPopup().isOpen()){
+            if (park_place_markers[i].getPopup().isOpen()) {
                 return park_place_markers[i]
             }
         }
     }
 
-    function getMarkerCoordinance(marker){
+    function getMarkerCoordinance(marker) {
         const latLng = marker.getLatLng();
         return [latLng.lat, latLng.lng]
     }
 
-    function setMapCenter(latitude, longitude, zoom){
+    function setMapCenter(latitude, longitude, zoom) {
         map.setView([latitude, longitude], zoom);
     }
 
+//////////////////////
+    // Setup map
+    const shapes = ['circle', 'square', 'star', 'penta'];
+    const colors = ['red', 'orange-dark', 'orange', 'yellow', 'blue-dark', 'cyan', 'purple', 'violet', 'pink', 'green-dark', 'green', 'white', 'black'];
+
+    function betterMarker(options, pos) {
+        L.marker(pos, {icon: options}).addTo(map);
+        map.eachLayer(function (layer) {
+            if (layer._icon && layer._icon.className.includes('leaflet-marker-icon')) {
+                var popUpTextArray = [];
+                popUpTextArray.push('shape: \'' + layer.options.icon.options.shape + '\'');
+                popUpTextArray.push('markerColor: \'' + layer.options.icon.options.markerColor + '\'');
+                popUpTextArray.push('prefix: \'' + layer.options.icon.options.prefix + '\'');
+                popUpTextArray.push('icon: \'' + layer.options.icon.options.icon + '\'');
+                popUpTextArray.push('iconColor: \'' + layer.options.icon.options.iconColor + '\'');
+                popUpTextArray.push('iconRotate: ' + layer.options.icon.options.iconRotate);
+                popUpTextArray.push('extraClasses: \'' + layer.options.icon.options.extraClasses + '\'');
+                popUpTextArray.push('number: \'' + layer.options.icon.options.number + '\'');
+                popUpTextArray.push('svg: ' + layer.options.icon.options.svg);
+                var popUpText = popUpTextArray.join('<br />');
+                layer.bindPopup(popUpText);
+            }
+        });
+    }
+
+    //test
+
+    betterMarker(L.ExtraMarkers.icon({
+        icon: 'fa-number',
+        markerColor: colors[0],
+        shape: 'square',
+        number: '11',
+        prefix: 'fa'
+    }), [51.50, -0.05])
+
+
+//////////////////////
 
 });
 
