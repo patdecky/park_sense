@@ -6,7 +6,7 @@ class statsChart {
     timeDiv = 1 * 60; // 5mins
     _dcChart = null;
     config = null;
-    /* @var loader loadingScreen*/
+    perHour = false;
 
     colorChart = '#7E60BF'
     colorBackground = '#D3EE98'
@@ -35,14 +35,35 @@ class statsChart {
         let title = ["Statistiky"];
 
         if (dhs.statistics.length > 1) {
-            dhs.statistics.forEach((stati) => {
-                /** @var stati {Cl_statistics} */
-                labels.push(stati.hours.toString().padStart(2, '0') + ':' + stati.minutes.toString().padStart(2, '0'));
-                counted.push(stati.total_arrival_count);
-            });
+            if (!this.perHour) {
+                dhs.statistics.forEach((stati) => {
+                    /** @var stati {Cl_statistics} */
+                    labels.push(stati.hours.toString().padStart(2, '0') + ':' + stati.minutes.toString().padStart(2, '0'));
+                    counted.push(stati.total_arrival_count);
+                });
+            } else {
+                const hourMap = new Map();
+
+                dhs.statistics.forEach((stati) => {
+                    const hour = stati.hours.toString().padStart(2, '0');
+                    if (!hourMap.has(hour)) {
+                        hourMap.set(hour, {total: 0, count: 0});
+                    }
+                    const entry = hourMap.get(hour);
+                    entry.total += stati.total_arrival_count;
+                    entry.count += 1;
+                });
+
+                hourMap.forEach((value, key) => {
+                    labels.push(key);
+                    counted.push(value.total / value.count);
+                });
+            }
+
             if (labels.length < 1) {
                 title.push("No data found for the time period");
             }
+
         } else {
             title.push('Time selection range too wide!');
         }
