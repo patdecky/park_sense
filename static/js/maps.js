@@ -123,17 +123,14 @@ window.addEventListener('load', () => {
         park_place_markers.forEach(element => {
             element.closePopup();
         });
-        ppmarker = L.marker([latitude, longitude]).addTo(map);
+        ppmarker = betterMarkerUse(latitude, longitude, description, 10, 100, main)
         park_place_markers.push(ppmarker);
-        ppmarker.bindPopup(description);
-        if (main) {
-            ppmarker.openPopup();
-            // Check if a callback is provided for when the popup is opened
-            if (onPopupOpenCallback && typeof onPopupOpenCallback === 'function') {
-                ppmarker.on('popupopen', function (event) {
-                    onPopupOpenCallback(event.target); // Pass the marker (event.target is the marker)
-                });
-            }
+        ppmarker.openPopup();
+        // Check if a callback is provided for when the popup is opened
+        if (onPopupOpenCallback && typeof onPopupOpenCallback === 'function') {
+            ppmarker.on('popupopen', function (event) {
+                onPopupOpenCallback(event.target); // Pass the marker (event.target is the marker)
+            });
         }
     }
 
@@ -245,6 +242,7 @@ window.addEventListener('load', () => {
 function betterMarker(options, pos, name) {
     const marker = L.marker(pos, {icon: options}).addTo(map);
     marker.bindPopup(name);
+    return marker
 }
 
     //test
@@ -257,6 +255,21 @@ function betterMarker(options, pos, name) {
         prefix: 'fa'
     }), [51.50, -0.05], 'skibbidy toilet')
 
+    betterMarkerUse(51.50, -0.051, "desc", 10, 100, true)
+
+function betterMarkerUse(latitude, longitude,description, vacancy, capacity, main = false){
+    marker = betterMarker(L.ExtraMarkers.icon({
+        icon: 'fa-number',
+        markerColor: colors[0],
+        shape: 'square',
+        number: vacancy,
+        prefix: 'fa'
+    }), [latitude, longitude], vacancy + "/" + capacity + "<br>" + description)
+
+    if (main){
+        marker.openPopup()
+    }
+}
 
 //////////////////////
 
