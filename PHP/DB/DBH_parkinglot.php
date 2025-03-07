@@ -11,8 +11,8 @@ class DBH_parkinglot extends DBH_abstract
 
     const TABLE_NAME = 'parkinglot';
     const MAX_PER_SELECT = 64;
-    const FULL_SELECT = '`id`, `car_capacity`, ST_X(geopos) as longitude, ST_Y(geopos) as latitude, `name`';
-    const FULL_INSERT = '( `car_capacity`, `geopos`, `name`)';
+    const FULL_SELECT = '`id`, `car_capacity`, ST_X(geopos) as longitude, ST_Y(geopos) as latitude, `name`, `description`';
+    const FULL_INSERT = '( `car_capacity`, `geopos`, `name`, `description)';
     protected array $tablesToLock = [self::TABLE_NAME];
 
     protected function setLanguage(): void
@@ -166,13 +166,14 @@ class DBH_parkinglot extends DBH_abstract
             $row->car_capacity,
             $row->longitude,
             $row->latitude,
-            $row->name
+            $row->name,
+            $row->description
         );
     }
 
     private function insertSql(CL_parkinglot $geopos):string
     {
-        return "( {$geopos->getCarCapacity()} , POINT({$this->escpNull($geopos->getGeoposX())}, {$this->escpNull($geopos->getGeoposY())}, {$this->mres($geopos->getName())}) )";
+        return "( {$geopos->getCarCapacity()} , POINT({$this->escpNull($geopos->getGeoposX())}, {$this->escpNull($geopos->getGeoposY())}, {$this->mres($geopos->getName())}, {$this->mres($geopos->getDescription())}) )";
     }
 
 }

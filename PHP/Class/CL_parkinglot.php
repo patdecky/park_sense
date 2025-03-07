@@ -13,20 +13,23 @@ class CL_parkinglot extends CL_DBDataParser
     protected float $geopos_y;
     protected int $car_capacity;
     protected string $name;
+    protected string|null $description;
 
     /**
      * @param float $geopos_x
      * @param float $geopos_y
      * @param int $car_capacity
      * @param string $name
+     * @param string|null $description
      */
-    public function __construct(int $id, int $car_capacity, float $geopos_x, float $geopos_y, string $name)
+    public function __construct(int $id, int $car_capacity, float $geopos_x, float $geopos_y, string $name, string|null $description)
     {
         $this->ID = $id;
         $this->geopos_x = $geopos_x;
         $this->geopos_y = $geopos_y;
         $this->car_capacity = $car_capacity;
         $this->name = $name;
+        $this->description = $description;
     }
 
     public static function pointToXY(int $id, int $car_capacity, array $point): CL_parkinglot
@@ -69,6 +72,18 @@ class CL_parkinglot extends CL_DBDataParser
     {
         $this->car_capacity = $car_capacity;
     }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): void
+    {
+        $this->description = $description;
+    }
+
+
 
 
     public function count(): int
