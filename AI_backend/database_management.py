@@ -3,6 +3,7 @@ from mysql.connector import Error
 from dataclasses import dataclass
 
 def list_tables_in_database(host, user, password, database, port=3306):
+    connection = None
     try:
         # Establish the connection
         connection = mysql.connector.connect(
@@ -34,10 +35,11 @@ def list_tables_in_database(host, user, password, database, port=3306):
         print(f"Error while connecting to MySQL: {e}")
     
     finally:
-        if connection.is_connected():
-            cursor.close()
-            connection.close()
-            print("MySQL connection is closed")
+        if connection is not None:
+            if connection.is_connected():
+                cursor.close()
+                connection.close()
+                print("MySQL connection is closed")
 
 @dataclass
 class ParkingLot:
