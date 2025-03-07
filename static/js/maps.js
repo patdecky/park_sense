@@ -108,10 +108,16 @@ window.addEventListener('load', () => {
         }), [49.5876267,17.2553681], 'skibbidy toilet')*/
 
         // Add click event listener to the map
-        map.on('click', function (e) {
-            const {lat, lng} = e.latlng;
-            const location = `${lat},${lng}`;
-            geocodePlace(location);
+        map.on('click', async function(e) {
+            const { lat, lng } = e.latlng;
+            const nearestParkingLots = await findNearestParkingLots(lat, lng);
+            if (nearestParkingLots && nearestParkingLots.length > 0) {
+                const nearestParking = nearestParkingLots[0];
+                const location = `${nearestParking.geopos_x},${nearestParking.geopos_y}`;
+                geocodePlace(location);
+            } else {
+                alert('No parking lots found nearby.');
+            }
         });
     }
 
@@ -239,7 +245,7 @@ window.addEventListener('load', () => {
             alert("Please search and select a place to navigate.")
             return;
         }
-        
+
         lat_lon = getMarkerCoordinance(open_marker)
         if (lat_lon[0] && lat_lon[1]) {
             const url = `https://www.google.com/maps?q=${lat_lon[0]},${lat_lon[1]}`;

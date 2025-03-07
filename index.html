@@ -94,7 +94,7 @@
             border: none;
             border-radius: 10px 0 0 10px; /* Increased border-radius */
             font-size: 18px;
-            text-align: center; 
+            text-align: center;
         }
 
         #searchBar::placeholder {
@@ -133,16 +133,12 @@
         #chartContainer {
             display: flex;
             flex-direction: column;
-            width: calc(100% - 20px); /* Subtract 20px to account for 10px padding on each side */
-            height: 100%; /* Ensure it takes full height */
+            width: calc(100% - 20px);
+            /*height: 100%;*/
             position: absolute;
-            bottom: 0; /* Adjusted to 0 to align with full height */
             align-items: center;
-            justify-content: center; /* Center vertically */
+            justify-content: center;
             z-index: 1000;
-            padding: 0 10px; /* Add 10px padding on the left and right */
-            border-radius: 10px; /* Round the corners */
-            /*background-color: var(--color4);*/
         }
 
         .wideButton {
@@ -152,7 +148,7 @@
             background: white;
             border: 1px solid #ccc;
             border-radius: 10px;
-            cursor: pointer;    
+            cursor: pointer;
             text-align: center;
         }
 
@@ -232,7 +228,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Modální okno O nás -->
     <div id="aboutUsModal">
         <div id="aboutUsContent">
@@ -253,7 +249,7 @@
             </ul>
         </div>
     </div>
-    
+
     <script>
         document.getElementById("aboutUsBtn").onclick = function() {
             document.getElementById("aboutUsModal").style.display = "block";
