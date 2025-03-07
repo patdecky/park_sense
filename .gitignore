@@ -2,3 +2,6 @@
 ./.code
 
 php/globals.php
+
+
+/AI_backend/config.json
