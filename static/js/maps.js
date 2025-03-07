@@ -235,16 +235,17 @@ window.addEventListener('load', () => {
 
     function openCoordinatesInGoogleMaps() {
         open_marker = getActiveMarker()
-        if (open_marker) {
-            lat_lon = getMarkerCoordinance(open_marker)
-            if (lat_lon[0] && lat_lon[1]) {
-                const url = `https://www.google.com/maps?q=${lat_lon[0]},${lat_lon[1]}`;
-                window.open(url, '_blank');
-            } else {
-                alert("Missing latitude or longitude!")
-            }
-        } else {
+        if (!open_marker) {
             alert("Please search and select a place to navigate.")
+            return;
+        }
+        
+        lat_lon = getMarkerCoordinance(open_marker)
+        if (lat_lon[0] && lat_lon[1]) {
+            const url = `https://www.google.com/maps?q=${lat_lon[0]},${lat_lon[1]}`;
+            window.open(url, '_blank');
+        } else {
+            alert("Missing latitude or longitude!")
         }
 
     }
