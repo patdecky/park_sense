@@ -137,17 +137,18 @@ ALTER TABLE `data_source`
   ADD CONSTRAINT `data_source_ibfk_1` FOREIGN KEY (`parkinglot_id`) REFERENCES `parkinglot` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `parkinglot`
---
-ALTER TABLE `parkinglot`
-  ADD CONSTRAINT `parkinglot_ibfk_1` FOREIGN KEY (`id`) REFERENCES `camera` (`parkinglot_id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `parkinglot_ibfk_2` FOREIGN KEY (`id`) REFERENCES `pl_history` (`parkinglot_id`) ON DELETE CASCADE;
-
---
 -- Constraints for table `pl_prediction`
 --
 ALTER TABLE `pl_prediction`
   ADD CONSTRAINT `pl_prediction_ibfk_1` FOREIGN KEY (`parkinglot_id`) REFERENCES `parkinglot` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+
+--
+-- Constraints for table `pl_history`
+--
+ALTER TABLE `pl_history`
+    ADD CONSTRAINT `pl_history_ibfk_1` FOREIGN KEY (`parkinglot_id`) REFERENCES `parkinglot` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

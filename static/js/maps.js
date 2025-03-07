@@ -18,6 +18,9 @@ window.addEventListener('load', () => {
     document.getElementById('navigate').addEventListener('click', () => {
         openCoordinatesInGoogleMaps()
     });
+    document.getElementById('occupancy').addEventListener('click', () => {
+        communityOcuppacy()
+    });
 
 
     function onHashChange() {
@@ -239,6 +242,14 @@ window.addEventListener('load', () => {
         return result = await (new dataRequester()).loadParkingLotsVacancy(parkinglot_id)
     }
 
+    function communityOcuppacy() {
+        open_marker = getActiveMarker()
+        if (!open_marker) {
+            alert("You may only add occupancy to watched parking lot.")
+            return;
+        }
+        // todo
+    }
     function openCoordinatesInGoogleMaps() {
         open_marker = getActiveMarker()
         if (!open_marker) {
