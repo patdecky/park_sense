@@ -87,7 +87,6 @@ window.addEventListener('load', () => {
         };
 
 
-
         // Layer control for switching between base layers
         var baseMaps = {
             "OpenStreetMap": openStreetMap,
@@ -98,7 +97,7 @@ window.addEventListener('load', () => {
         // Add layer control to the map
         L.control.layers(baseMaps).addTo(map);
 
-        setMapCenter(50.106788,14.450860, 13)
+        setMapCenter(50.106788, 14.450860, 13)
         // setMarkerToMap(51.505, -0.09, null)
         /*betterMarker(L.ExtraMarkers.icon({
             icon: 'fa-number',
@@ -107,6 +106,13 @@ window.addEventListener('load', () => {
             number: '11',
             prefix: 'fa'
         }), [49.5876267,17.2553681], 'skibbidy toilet')*/
+
+        // Add click event listener to the map
+        map.on('click', function (e) {
+            const {lat, lng} = e.latlng;
+            const location = `${lat},${lng}`;
+            geocodePlace(location);
+        });
     }
 
     function setMarkerToMap(latitude, longitude, description) {
@@ -115,10 +121,13 @@ window.addEventListener('load', () => {
         }
         // Add the new marker at the new location
 
-        marker = L.marker([latitude, longitude], {icon: L.ExtraMarkers.icon({
-                        icon: 'fa-number',
-                        markerColor: "red",
-                        prefix: 'fa'})}).addTo(map)
+        marker = L.marker([latitude, longitude], {
+            icon: L.ExtraMarkers.icon({
+                icon: 'fa-number',
+                markerColor: "red",
+                prefix: 'fa'
+            })
+        }).addTo(map)
         if (description != null) {
             marker.bindPopup(description).openPopup();
             if (onPopupOpenCallbackMain && typeof onPopupOpenCallbackMain === 'function') {
@@ -137,7 +146,7 @@ window.addEventListener('load', () => {
     }
 
 
-    function setParkPlaceMarkerToMap(latitude, longitude, description,vacancy, capacity, main = false) {
+    function setParkPlaceMarkerToMap(latitude, longitude, description, vacancy, capacity, main = false) {
         park_place_markers.forEach(element => {
             element.closePopup();
         });
@@ -174,14 +183,15 @@ window.addEventListener('load', () => {
         setMarkerToMap(latitude, longitude, description)
         let nearestParkingLots = await findNearestParkingLots(latitude, longitude)
         let is_first = true
-        if (nearestParkingLots){
-        nearestParkingLots.forEach(async (element) => {
-            vacancy_element = await findVacancy(element.id)
-            setParkPlaceMarkerToMap(element.geopos_x, element.geopos_y, element.name, vacancy_element.vacancy, element.car_capacity, is_first)
-            if (is_first) {
-                is_first = false
-            }
-        })}
+        if (nearestParkingLots) {
+            nearestParkingLots.forEach(async (element) => {
+                vacancy_element = await findVacancy(element.id)
+                setParkPlaceMarkerToMap(element.geopos_x, element.geopos_y, element.name, vacancy_element.vacancy, element.car_capacity, is_first)
+                if (is_first) {
+                    is_first = false
+                }
+            })
+        }
         // setParkPlaceMarkerToMap(latitude - 0.001, longitude, "1", true);
         // setParkPlaceMarkerToMap(latitude, longitude - 0.001, "2", true);
         // setParkPlaceMarkerToMap(latitude + 0.001, longitude, "3", true);
@@ -262,27 +272,27 @@ window.addEventListener('load', () => {
 //////////////////////
     // Setup map
 
-function betterMarker(options, pos, name) {
-    const marker = L.marker(pos, {icon: options}).addTo(map);
-    marker.bindPopup(name);
-    return marker
-}
-    
-
-function betterMarkerUse(latitude, longitude,description, vacancy, capacity, main = false){
-    my_marker = betterMarker(L.ExtraMarkers.icon({
-        icon: 'fa-number',
-        markerColor: "blue",
-        shape: 'square',
-        number: vacancy,
-        prefix: 'fa'
-    }), [latitude, longitude], "Volno: "+ vacancy + "/" + capacity + "<br>" + description)
-
-    if (main){
-        my_marker.openPopup()
+    function betterMarker(options, pos, name) {
+        const marker = L.marker(pos, {icon: options}).addTo(map);
+        marker.bindPopup(name);
+        return marker
     }
-    return my_marker
-}
+
+
+    function betterMarkerUse(latitude, longitude, description, vacancy, capacity, main = false) {
+        my_marker = betterMarker(L.ExtraMarkers.icon({
+            icon: 'fa-number',
+            markerColor: "blue",
+            shape: 'square',
+            number: vacancy,
+            prefix: 'fa'
+        }), [latitude, longitude], "Volno: " + vacancy + "/" + capacity + "<br>" + description)
+
+        if (main) {
+            my_marker.openPopup()
+        }
+        return my_marker
+    }
 
 });
 
