@@ -44,14 +44,35 @@ def list_tables_in_database(host, user, password, database, port=3306):
 @dataclass
 class ParkingLot:
     id:int
+    geopos:str
+    name:str
+    description:str
     car_capacity:int
 
+
 @dataclass
-class Camera:
+class DataSource:
+    id: int
+    parkinglot_id: int
+    type: int
+    source: str
+    
+
+@dataclass
+class PLHistory:
     id:int
     parkinglot_id:int
-    address:str
-    
+    vacancy:int
+    current_timestamp:str
+
+@dataclass
+class PLPrediction:
+    id:int
+    parkinglot_id:int
+    vacancy:int
+    day:int
+    day_timestamp:int
+
 
 
 class DatabaseMapper:
@@ -90,7 +111,7 @@ class DatabaseMapper:
             
             # Query to retrieve all parking lots
             query = """
-                SELECT id, car_capacity FROM parkinglot
+                SELECT id, geopos, car_capacity, name, description FROM parkinglot
             """
             self.cursor.execute(query)
 
@@ -100,16 +121,16 @@ class DatabaseMapper:
             parking_lots = []
             # Print each parking lot's details
             for row in results:
-                parking_lots.append(ParkingLot(id=row[0], car_capacity=row[1]))
+                parking_lots.append(ParkingLot(id=row[0], geopos=row[1], car_capacity=row[2], name=row[3], description=row[4]))
             return parking_lots
 
-    def get_cameras_by_parkinglot(self, parkinglot_id:int) -> list[Camera]:
+    def get_data_sources_by_parkinglot(self, parkinglot_id:int) -> list[DataSource]:
         if self.connection.is_connected():
             
             # Query to retrieve all cameras linked to a parking lot
             query = """
-                SELECT id, parkinglot_id, address
-                FROM camera
+                SELECT id, parkinglot_id, type, source
+                FROM data_source
                 WHERE parkinglot_id = %s
             """
             self.cursor.execute(query, (parkinglot_id,))
@@ -121,35 +142,65 @@ class DatabaseMapper:
             cameras = []
             # Print each camera's details
             for row in results:
-                cameras.append(Camera(id=row[0], parkinglot_id=row[1], address=row[2]))
+                cameras.append(DataSource(id=row[0], parkinglot_id=row[1], type=row[2], source=row[3]))
             return cameras
 
+    def get_pl_history(self, parkinglot_id:int) -> list[PLHistory]:
+        if self.connection.is_connected():
+            
+            # Query to retrieve all cameras linked to a parking lot
+            query = """
+                SELECT id, parkinglot_id, vacancy, current_timestamp
+                FROM pl_history
+                WHERE parkinglot_id = %s
+            """
+            self.cursor.execute(query, (parkinglot_id,))
 
-    def write_parking_lot(self, geopos:tuple[float, float], car_capacity, name):
-        """
-        Inserts a new parking lot into the `parkinglot` table.
+            # Fetch all the results
+            results = self.cursor.fetchall()
 
-        Args:
-            geopos (tuple): A tuple of latitude and longitude for the parking lot.
-            car_capacity (int): The capacity of the parking lot.
 
-        `id` bigint UNSIGNED NOT NULL,
-        `geopos` point NOT NULL,
-        `car_capacity` int UNSIGNED NOT NULL
-        """
+            data = []
+            # Print each camera's details
+            for row in results:
+                data.append(PLHistory(id=row[0], parkinglot_id=row[1], vacancy=row[2], current_timestamp=row[3]))
+            return data
+        
+    def get_pl_prediction(self, parkinglot_id:int) -> list[PLPrediction]:
+        if self.connection.is_connected():
+            
+            # Query to retrieve all cameras linked to a parking lot
+            query = """
+                SELECT id, parkinglot_id, vacancy, day, day_timestamp
+                FROM pl_prediction
+                WHERE parkinglot_id = %s
+            """
+            self.cursor.execute(query, (parkinglot_id,))
+
+            # Fetch all the results
+            results = self.cursor.fetchall()
+
+
+            data = []
+            # Print each camera's details
+            for row in results:
+                data.append(PLPrediction(id=row[0], parkinglot_id=row[1], vacancy=row[2], day=row[3], day_timestamp=row[4]))
+            return data
+
+    def write_parking_lot(self, geopos:tuple[float, float], car_capacity, name, description):
         if self.connection.is_connected():
             try:
                 # Query to insert a new parking lot into the table
                 query = """
-                    INSERT INTO parkinglot (geopos, car_capacity, name)
-                    VALUES (ST_GeomFromText(%s), %s, %s)
+                    INSERT INTO parkinglot (geopos, car_capacity, name, description)
+                    VALUES (ST_GeomFromText(%s), %s, %s, %s)
                 """
                 
                 # Construct the point value as WKT (Well-Known Text) format for the `POINT` type
                 point_wkt = f'POINT({geopos[0]} {geopos[1]})'
 
                 # Execute the query with the provided geopos and car_capacity
-                self.cursor.execute(query, (point_wkt, car_capacity, name))
+                self.cursor.execute(query, (point_wkt, car_capacity, name, description))
 
                 # Commit the transaction to ensure the row is inserted
                 self.connection.commit()
@@ -158,24 +209,17 @@ class DatabaseMapper:
                 print(f"Error while inserting the parking lot: {e}")
 
 
-    def write_camera(self, parkinglot_id, address):
-        """
-        Inserts a new camera into the `camera` table.
-
-        Args:
-            parkinglot_id (int): The ID of the parking lot to which this camera belongs.
-            address (str): The address/location of the camera.
-        """
+    def write_data_source(self, parkinglot_id, type, source):
         if self.connection.is_connected():
             try:
                 # Query to insert a new camera into the table
                 query = """
-                    INSERT INTO camera (parkinglot_id, address)
-                    VALUES (%s, %s)
+                    INSERT INTO data_source (parkinglot_id, type, source)
+                    VALUES (%s, %s, %s)
                 """
                 
                 # Execute the query with the provided parkinglot_id and address
-                self.cursor.execute(query, (parkinglot_id, address))
+                self.cursor.execute(query, (parkinglot_id, type, source))
 
                 # Commit the transaction to ensure the row is inserted
                 self.connection.commit()
@@ -183,44 +227,8 @@ class DatabaseMapper:
             except Error as e:
                 print(f"Error while inserting the camera: {e}")
 
-    def write_statistics_row(self, day_w, hours, minutes, total_arrival_count):
-            """
-            Args:
-                CREATE TABLE `statistics` (
-                `id` bigint UNSIGNED NOT NULL,
-                `day_w` tinyint UNSIGNED NOT NULL,
-                `hours` tinyint UNSIGNED NOT NULL,
-                `minutes` tinyint UNSIGNED NOT NULL,
-                `total_arrival_count` int UNSIGNED NOT NULL
-                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-            """
-            if self.connection.is_connected():
-                try:
-                    # Query to insert a new camera into the table
-                    query = """
-                        INSERT INTO statistics (day_w, hours, minutes, total_arrival_count)
-                        VALUES (%s, %s, %s, %s)
-                    """
-                    
-                    # Execute the query with the provided parkinglot_id and address
-                    self.cursor.execute(query, (day_w, hours, minutes, total_arrival_count))
-
-                    # Commit the transaction to ensure the row is inserted
-                    self.connection.commit()
-
-                except Error as e:
-                    print(f"Error while inserting the camera: {e}")
-
     def write_vacancy(self, parkinglot_id, vacancy):
-        """
-        Args:
-            CREATE TABLE `pl_history` (
-            `id` bigint UNSIGNED NOT NULL,
-            `parkinglot_id` bigint UNSIGNED NOT NULL,
-            `vacancy` int UNSIGNED NOT NULL,
-            `current_timestamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-        """
+
         if self.connection.is_connected():
             try:
                 # Query to insert a new camera into the table
@@ -238,80 +246,45 @@ class DatabaseMapper:
             except Error as e:
                 print(f"Error while inserting the camera: {e}")
 
+    def write_prediction(self, parkinglot_id, vacancy, day, day_timestamp):
 
-    def get_newest_pl_history(self, parkinglot_id):
-        """
-        Retrieves the newest row from the `pl_history` table.
-        
-        Args:
-            parkinglot_id (int, optional): If provided, filters the results by this parking lot ID.
-        
-        Returns:
-            tuple: The newest record from `pl_history` table or None if no records exist.
-        """
-
-            
         if self.connection.is_connected():
-            print("Connected to MySQL database")
-            
-            # Create a cursor object
+            try:
+                # Query to insert a new camera into the table
+                query = """
+                    INSERT INTO pl_prediction (parkinglot_id, vacancy, day, day_timestamp)
+                    VALUES (%s, %s, %s, %s)
+                """
+                
+                # Execute the query with the provided parkinglot_id and address
+                self.cursor.execute(query, (parkinglot_id, vacancy, day, day_timestamp))
 
+                # Commit the transaction to ensure the row is inserted
+                self.connection.commit()
 
-            query = """
-                SELECT id, parkinglot_id, vacancy, current_timestamp
-                FROM pl_history
-                WHERE parkinglot_id = %s
-                ORDER BY current_timestamp DESC
-                LIMIT 1
-            """
-            self.cursor.execute(query, (parkinglot_id,))
+            except Error as e:
+                print(f"Error while inserting the camera: {e}")
 
-            # Fetch the newest row
-            result = self.cursor.fetchone()
+    def get_newest_pl_history(self, parkinglot_id):          
+        if self.connection.is_connected():
+            try:
+                query = """
+                    SELECT id, parkinglot_id, vacancy, current_timestamp
+                    FROM pl_history
+                    WHERE parkinglot_id = %s
+                    ORDER BY current_timestamp DESC
+                    LIMIT 1
+                """
+                self.cursor.execute(query, (parkinglot_id,))
 
-            if result:
-                print(f"Newest PL History: ID: {result[0]}, Parking Lot ID: {result[1]}, Vacancy: {result[2]}, Timestamp: {result[3]}")
-            else:
-                print("No data found in the pl_history table.")
+                # Fetch the newest row
+                result = self.cursor.fetchone()
+                
+            except Error as e:
+                print(f"Error while inserting the camera: {e}")
 
             return result
         
-    def get_pl_history(self, parkinglot_id):
-        """
-        Retrieves the newest row from the `pl_history` table.
-        
-        Args:
-            parkinglot_id (int, optional): If provided, filters the results by this parking lot ID.
-        
-        Returns:
-            tuple: The newest record from `pl_history` table or None if no records exist.
-        """
-
-            
-        if self.connection.is_connected():
-            print("Connected to MySQL database")
-            
-            # Create a cursor object
-
-
-            query = """
-                SELECT id, parkinglot_id, vacancy, `current_timestamp`
-                FROM pl_history
-                WHERE parkinglot_id = %s
-                ORDER BY `current_timestamp` DESC
-            """
-            self.cursor.execute(query, (parkinglot_id,))
-
-            # Fetch the newest row
-            results = self.cursor.fetchall()
-
-
-            data = []
-            # Print each camera's details
-            for result in results:
-                data.append(f"Newest PL History: ID: {result[0]}, Parking Lot ID: {result[1]}, Vacancy: {result[2]}, Timestamp: {result[3]}")
-            return data
-
 
 
 
