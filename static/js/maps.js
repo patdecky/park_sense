@@ -98,7 +98,7 @@ window.addEventListener('load', () => {
         // Add layer control to the map
         L.control.layers(baseMaps).addTo(map);
 
-        setMapCenter(49.5940567,17.251143, 13)
+        setMapCenter(50.106788,14.450860, 13)
         // setMarkerToMap(51.505, -0.09, null)
         /*betterMarker(L.ExtraMarkers.icon({
             icon: 'fa-number',
