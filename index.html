@@ -70,7 +70,7 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            border: 2px solid var(--map_frame);
+            border: 2px solid #ccc;
             border-radius: 12px;
         }
 
@@ -82,8 +82,8 @@
             top: 10px;
             left: 60px;
             z-index: 1000;
-            border: 2px solid var(--serach_frame);
-            border-radius: 12px; /* Increased border-radius */
+            border: 1px solid #ccc;
+            border-radius: 10px; /* Increased border-radius */
         }
 
         #searchBar {
@@ -92,7 +92,7 @@
             padding: 10px;
             box-sizing: border-box;
             border: none;
-            border-radius: 12px 0 0 12px; /* Increased border-radius */
+            border-radius: 10px 0 0 10px; /* Increased border-radius */
             font-size: 18px;
             text-align: center; 
         }
@@ -106,8 +106,8 @@
             padding: 10px;
             background: var(--search_background);
             border: none;
-            border-left: 1px solid var(--serach_frame);
-            border-radius: 0 12px 12px 0; /* Increased border-radius */
+            border: 1px solid #ccc;
+            border-radius: 0 10px 10px 0; /* Increased border-radius */
             cursor: pointer;
             font-size: 20px; /* icon size */
         }
@@ -120,12 +120,10 @@
 
         #buttonContainer {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-around;
             width: 100%;
-            position: absolute;
-            bottom: 10px;
-            align-items: center;
-            z-index: 1000;
+            padding: 10px;
         }
 
         #chartCanvas {
@@ -148,13 +146,14 @@
         }
 
         .wideButton {
-            width: 90%;
-            padding: 7px;
-            margin-bottom: 8px;
+            flex: 1;
+            padding: 10px;
+            margin: 5px;
             background: white;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 10px;
             cursor: pointer;    
+            text-align: center;
         }
 
         .colorZebraCl{
@@ -165,14 +164,14 @@
 
         .colorZebraCl:nth-child(even) {
             /* time chart */
-            background-color: #6db9f7;
-            border: 1px solid #0F67B1;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
         }
 
         .colorZebraCl:nth-child(odd) {
             /* navigate */
-             background-color: #96d2f4;
-            border: 1px solid #0F67B1;
+             background-color: #ffffff;
+            border: 1px solid #ccc;
         }
 
         @media (max-width: 800px) {
@@ -180,24 +179,88 @@
                 width: 100%;
             }
         }
+
+        #aboutUsModal {
+            display: none;
+            position: fixed;
+            font-family: 'Poppins', sans-serif;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        #aboutUsContent {
+            background-color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 10% auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            height: 60%;
+        }
+
+        #closeAboutUs {
+            float: right;
+            cursor: pointer;
+        }
+
+        #closeChart {
+            float: right;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-<div id="mainContainer">
-    <div id="mapDivContainer">
-        <div id="searchContainer">
-            <input type="text" id="searchBar" placeholder="Search...">
-            <button type="button" id="searchButton">&#128269;</button> <!-- Magnifying glass icon -->
-        </div>
-        <div id="map"></div>
-        <div id="chartContainer" style="display: none;">
-            <canvas id="chartCanvas"></canvas>
-        </div>
-        <div id="buttonContainer">
-            <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat &#127757</button>
-            <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase 📊</button>
+    <div id="mainContainer">
+        <div id="mapDivContainer">
+            <div id="searchContainer">
+                <input type="text" id="searchBar" placeholder="Search...">
+                <button type="button" id="searchButton">🔍</button>
+            </div>
+            <div id="map"></div>
+                <div id="chartContainer" style="display: none;">
+                    <canvas id="chartCanvas"></canvas>
+                </div>
+            <div id="buttonContainer">
+                <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat 🌍</button>
+                <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase 📊</button>
+                <button type="button" class="wideButton colorZebraCl" id="aboutUsBtn">O nás 📜</button>
+            </div>
         </div>
     </div>
-</div>
-</body>
+    
+    <!-- Modální okno O nás -->
+    <div id="aboutUsModal">
+        <div id="aboutUsContent">
+            <span id="closeAboutUs">❌</span>
+            <h2>O nás</h2>
+            <img src="static/team.jpg" alt="Týmová fotka" style="width:100%; border-radius: 10px">
+            <h3>Náš tým</h3>
+            <p><strong>Jan Novák</strong> - Vedoucí vývoje</p>
+            <p><strong>Petra Malá</strong> - Designérka UX/UI</p>
+            <p><strong>Martin Dvořák</strong> - Backend vývojář</p>
+            <p><strong>Eva Kovářová</strong> - Datový analytik</p>
+            <h3>O aplikaci</h3>
+            <p>Park Sense je moderní nástroj pro optimalizaci parkování ve městech.</p>
+            <h3>Použité datové sady</h3>
+            <ul>
+                <li><a href="#">Dataset 1</a></li>
+                <li><a href="#">Dataset 2</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("aboutUsBtn").onclick = function() {
+            document.getElementById("aboutUsModal").style.display = "block";
+        };
+        document.getElementById("closeAboutUs").onclick = function() {
+            document.getElementById("aboutUsModal").style.display = "none";
+        };
+    </script>
+    </body>
 </html>
