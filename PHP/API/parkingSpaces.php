@@ -28,6 +28,26 @@ switch ($_GET['req']) {
         }
         $parkingLots = $DPL->searchNearestFreeParking([$lat, $long], $radius, $limit);
         responseOK($parkingLots);
+
+
+    case "getNearestParkingLotsWithInfo":
+        $lat = floatFilter('lat');
+        $long = floatFilter('long');
+        $radius = intFilter('radius');
+        $limit = intFilter('limit');
+        $day=intFilter('day');
+        $day_timestamp = intFilter('day_timestamp');
+
+        if ($lat === false || $long === false) {
+            quitExe(400, QE_INPUT_INVALID);
+        }
+
+        $parkingLots = $DPL->searchNearestFreeParkingWithInfo([$lat, $long], $radius, $limit, $day, $day_timestamp);
+
+        # for each parking lot find available vacancies, predicted vacancies and 
+
+        responseOK($parkingLots);
+
     case "getRecentHistoryForParkingLot":
         $parkingLotID = intFilter('parkingLotID');
         $hoursBack = intFilter('hoursBack');
@@ -103,4 +123,6 @@ switch ($_GET['req']) {
 
     default:
         quitExe(400, QE_NO_KNOWN_REQ);
+
+
 }

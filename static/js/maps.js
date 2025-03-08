@@ -160,14 +160,27 @@ window.addEventListener('load', () => {
 
         let description = buildMarkerDescription(name, vacancy, predicted_vacancy, community_vacancy, capacity)
         let marker_vacancy = vacancy != null ? vacancy : predicted_vacancy
-        let ppmarker = betterMarkerUse(latitude, longitude, description, marker_vacancy)
+        let color = "blue"
+        if (vacancy != null){
+            color = "green"
+        } else if (predicted_vacancy != null){
+            color = "yellow"
+        }
+
+
+        let ppmarker = betterMarkerUse(latitude, longitude, description, marker_vacancy, color)
         ppmarker.parkinglot_id = parkinglot_id
         park_place_markers.push(ppmarker);
         //ppmarker.openPopup();
         // Check if a callback is provided for when the popup is opened
         if (onPopupOpenCallback && typeof onPopupOpenCallback === 'function') {
             ppmarker.on('popupopen', function (event) {
-                onPopupOpenCallback(event.target); // Pass the marker (event.target is the marker)
+            onPopupOpenCallback(event.target); // Pass the marker (event.target is the marker)
+            });
+        }
+        if (onPopupCloseCallback && typeof onPopupCloseCallback === 'function') {
+            ppmarker.on('popupclose', function (event) {
+            onPopupCloseCallback(event.target); // Pass the marker (event.target is the marker)
             });
         }
     }
@@ -216,6 +229,12 @@ window.addEventListener('load', () => {
 
     }
 
+    function onPopupCloseCallback(map_marker) {
+        hideSubMenu()
+    }
+
+    
+
     function hideSubMenu(){
         document.getElementById('subMenu').style.display = 'none';
     }
@@ -228,6 +247,8 @@ window.addEventListener('load', () => {
         removeParkPlaceMarkersFromMap()
         latest_parklot_id = 0;
         setMarkerToMap(latitude, longitude, description)
+        //let all_data = await findNearestParkingLotsWithInfo(latitude, longitude)
+        //console.log(all_data)
         let nearestParkingLots = await findNearestParkingLots(latitude, longitude)
         if (nearestParkingLots) {
             for (const element of nearestParkingLots) {
@@ -308,6 +329,10 @@ window.addEventListener('load', () => {
 
     async function findNearestParkingLots(lat, lon) {
         return await (new dataRequester()).loadParkingLots(lat, lon, 1500, 5)
+    }
+
+    async function findNearestParkingLotsWithInfo(lat, lon) {
+        return await (new dataRequester()).loadParkingLotsWithInfo(lat, lon, 1500, 5)
     }
 
     async function findVacancy(parkinglot_id) {
@@ -397,10 +422,10 @@ window.addEventListener('load', () => {
     }
 
 
-    function betterMarkerUse(latitude, longitude, description, vacancy) {
+    function betterMarkerUse(latitude, longitude, description, vacancy, color) {
         my_marker = betterMarker(L.ExtraMarkers.icon({
             icon: 'fa-number',
-            markerColor: "blue",
+            markerColor: color,
             shape: 'square',
             number: vacancy,
             prefix: 'fa'

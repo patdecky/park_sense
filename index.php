@@ -11,6 +11,7 @@
     <script src="static/js/Class/Cl_statistics.js"></script>
     <script src="static/js/Class/Cl_camera.js"></script>
     <script src="static/js/Class/Cl_parkinglot.js"></script>
+    <script src="static/js/Class/Cl_parkinglotwithinfo.js"></script>
     <script src="static/js/Class/Cl_pl_history.js"></script>
     <script src="static/js/Class/CL_pl_prediction.js"></script>
     <script src="static/js/Class/CL_occupancy_community.js"></script>
@@ -308,6 +309,11 @@
             cursor: pointer;
             border-radius: 10px;
         }
+        #navigate{
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+        }
 
         #loginModal, #userMenu, #voteModal {
             display: none;
@@ -462,9 +468,10 @@
                 <button type="button" class="wideButton colorZebraCl" id="occupancy">Obsazení 🚗</button>
                 <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase 📊</button> -->
 
-                <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat</button>
+                
                 <button type="button" class="wideButton colorZebraCl" id="occupancy">Zadat stav</button>
                 <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase</button>
+                <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat</button>
             </div>
             <div class="mapButtons">
                 <!-- <button type="button" class="wideButton colorZebraCl" id="aboutUsBtn">O nás 📜</button> -->

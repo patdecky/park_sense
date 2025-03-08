@@ -267,6 +267,31 @@ class dataRequester extends dataHolderBase {
         return mvs
     }
 
+    async loadParkingLotsWithInfo(lat, long, radius, limit) {
+        let currentDay = new Date().getDay();
+        let day = currentDay === 0 ? 6 : currentDay - 1; // Convert Sunday (0) to 6 and adjust other days
+        let currentTime = Math.floor((new Date().getTime() - new Date().setHours(0, 0, 0, 0)) / 1000);
+        let ret = await fetchAPI.AllInOneReq("parkingSpaces.php", "getNearestParkingLotsWithInfo", {
+            'lat': lat,
+            "long": long,
+            "radius": radius,
+            "limit": limit, 
+            "day": day,
+            "day_timestamp":currentTime
+        }, 0);
+        if (ret.length <= 0) {
+            //observer triggered in vendorList setter
+            return
+        }
+
+        let mvs = [];
+        ret.forEach(el => {
+            mvs.push(new Cl_parkinglotwithinfo(el.ID, el.geopos_x, el.geopos_y, el.car_capacity, el.name, el.vacancy, el.predicted_vacancy, el.community_vacancy));
+        });
+        //observer triggered in vendorList setter
+        return mvs
+    }
+
     async loadParkingLotsVacancy(parkinglot_id) {
         let ret = await fetchAPI.AllInOneReq("parkingSpaces.php", "getRecentHistoryForParkingLot", {
             'parkingLotID': parkinglot_id,
@@ -306,7 +331,6 @@ class dataRequester extends dataHolderBase {
 
         return mvs[0]
     }
-
 
     async loadOccupancyCommunity(parkinglot_id) {
         let ret = await fetchAPI.AllInOneReq("parkingSpaces.php", "getCommunityOccupancy", {'parkingLotID': parkinglot_id}, 0);

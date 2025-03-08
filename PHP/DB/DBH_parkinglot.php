@@ -110,6 +110,35 @@ class DBH_parkinglot extends DBH_abstract
         return $parkingLots;
     }
 
+ /**
+     * @param array $carPosition
+     * @param int $distanceMeters
+     * @param int $limit
+     * @return array
+     * @todo check if meters are really meters and not some random unit
+     */
+    public function searchNearestFreeParkingWithInfo(array $carPosition, int $distanceMeters = 500, int $limit = 5, $day=0, $dayTimestamp=0): array
+    {
+        $limit = min($limit, self::MAX_PER_SELECT);
+        $sql = 'SELECT ' . self::FULL_SELECT . ', ST_Distance_Sphere(geopos, POINT(' . $carPosition[1] . ', ' . $carPosition[0] . ')) AS distancee, ' . chr(0xa)
+            . '(SELECT vacancy FROM pl_history t2 WHERE `t2`.`parkinglot_id` = `t1`.`id` ORDER BY `t2`.`current_timestamp` DESC LIMIT 1) AS vacancy, ' . chr(0xa)
+            . ' (SELECT vacancy, CAST(`t3`.`day_timestamp` AS SIGNED) AS signed_day_timestamp FROM pl_prediction t3 WHERE `t3`.`parkinglot_id` = `t1`.`id` AND `day` = ' . $day .   ' AND `parkinglot_id` = `t1`.`id`  ORDER BY ABS(signed_day_timestamp - ' . $dayTimestamp . ') LIMIT 1 ) AS community_vacancy, signed_day_timestamp   ' . chr(0xa)
+            . ' FROM `' . self::TABLE_NAME . '` t1 ' . chr(0xa)
+            . 'WHERE `car_capacity` > 0 ' . chr(0xa)
+            . 'AND ST_Distance_Sphere(geopos, POINT(' . $carPosition[1] . ', ' . $carPosition[0] . ')) <= ' . $distanceMeters . ' ' . chr(0xa)
+            . 'ORDER BY distancee ASC ' . chr(0xa)
+            . "LIMIT $limit";
+
+            // var_dump($sql);
+            // exit(0);
+        $result = mysqli_query($this->linkDB, $sql);
+        $parkingLots = [];
+        while ($row = mysqli_fetch_object($result)) {
+            $parkingLots[] = $this->rowToObj($row);
+        }
+        return $parkingLots;
+    }
+
     /**
      *
      * shows collected data per day within the provided interval

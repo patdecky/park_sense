@@ -100,7 +100,7 @@ class DBH_occupancy_community extends DBH_abstract
     /**
      * @throws DateMalformedStringException
      */
-    public function getRecentHistory($parkinglot_id, $hoursBack = 12, $limit = self::MAX_PER_SELECT): array
+    public function getRecentHistory($parkinglot_id, $hoursBack = 1, $limit = self::MAX_PER_SELECT): array
     {
         $limit = min($limit, self::MAX_PER_SELECT);
         $sql = 'SELECT ' . self::FULL_SELECT . ' FROM `' . self::TABLE_NAME . '` ' . chr(0xa) .
