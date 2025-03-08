@@ -21,6 +21,7 @@ window.addEventListener('load', () => {
     document.getElementById('occupancy').addEventListener('click', () => {
         setCommunityOcuppacy()
     });
+    hideSubMenu()
 
 
     function onHashChange() {
@@ -169,12 +170,14 @@ window.addEventListener('load', () => {
     }
 
     function onPopupOpenCallbackMain() {
+        hideSubMenu()
         park_place_markers.forEach(element => {
             element.closePopup()
         });
     }
 
     function onPopupOpenCallback(map_marker) {
+        showSubMenu()
         marker.closePopup()
         for (let i = 0; i < park_place_markers.length; i++) {
             if (park_place_markers[i] !== map_marker) {
@@ -183,6 +186,14 @@ window.addEventListener('load', () => {
         }
         //close all the popups and open this one
 
+    }
+
+    function hideSubMenu(){
+        document.getElementById('subMenu').style.display = 'none';
+    }
+
+    function showSubMenu(){
+        document.getElementById('subMenu').style.display = "";
     }
 
     async function searchAndPlaceMarkers(latitude, longitude, description) {

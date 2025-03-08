@@ -231,6 +231,8 @@
             font-size: 16px;
         }
 
+        
+
 
         #chartCanvas {
             border-radius: 10px; /* Round the corners */
@@ -254,10 +256,17 @@
         }
 
         @media (max-width: 600px) {
-    #mapDivContainer {
-        width: 100%;
-        height: 80vh;
-    }
+            .mapButtons > button {
+                height: 6vh;
+            }
+            #searchContainer{
+                width: 68%;
+                left: 48%;
+            }
+        #mapDivContainer {
+            width: 100%;
+            height: 80vh;
+        }
 }
     #aboutUsModal {
         display: none;
@@ -437,13 +446,13 @@
                     <canvas id="chartCanvas"></canvas>
                 </div>
             <div class="buttonContainer">
-                <div class="mapButtons">
+                <div id="subMenu" class="mapButtons">
                     <!-- <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat 🌍</button>
                     <button type="button" class="wideButton colorZebraCl" id="occupancy">Obsazení 🚗</button>
                     <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase 📊</button> -->
 
                     <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat</button>
-                    <button type="button" class="wideButton colorZebraCl" id="occupancy">Obsazení</button>
+                    <button type="button" class="wideButton colorZebraCl" id="occupancy">Zadat stav</button>
                     <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase</button>
                 </div>
                 <div class="mapButtons">
@@ -527,6 +536,7 @@
             document.getElementById("aboutUsModal").style.display = "none";
         };
 
+        
 
         document.getElementById("loginButton").onclick = function() {
             document.getElementById("loginModal").style.display = "unset";
