@@ -55,11 +55,20 @@ class statsChart {
             });
 
             if (labels.length < 1) {
-                title.push("No data found for the time period");
+                title.push("Žádná data pro dané parkoviště");
+                // hide chart if empty
+                if (location.hash === '#in_time') {
+                    location.hash = '';
+                    document.getElementById('chartContainer').style.display='none';
+                }
             }
 
         } else {
-            title.push('Time selection range too wide!');
+            title.push('Žádná data pro dané parkoviště');
+            if (location.hash === '#in_time') {
+                location.hash = '';
+                document.getElementById('chartContainer').style.display='none';
+            }
         }
 
         const data = {
@@ -115,4 +124,8 @@ window.addEventListener('load', () => {
     });
 
     ddc.chartMaker();
+
+    if (location.hash === '#in_time') {
+        location.hash = '';
+    }
 });

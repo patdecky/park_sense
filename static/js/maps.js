@@ -183,6 +183,11 @@ window.addEventListener('load', () => {
             onPopupCloseCallback(event.target); // Pass the marker (event.target is the marker)
             });
         }
+
+        ppmarker.on('click', function (event) {
+            // Your custom onClick callback logic here
+            (new dataHolderStatistics()).setStatisticsId(parkinglot_id);
+        });
     }
 
     function buildMarkerDescription(name, vacancy, predicted_vacancy, community_vacancy, capacity) {
