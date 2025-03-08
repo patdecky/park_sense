@@ -153,11 +153,14 @@ window.addEventListener('load', () => {
     }
 
 
-    function setParkPlaceMarkerToMap(latitude, longitude, description, vacancy, capacity, parkinglot_id) {
+    function setParkPlaceMarkerToMap(latitude, longitude, name, vacancy, predicted_vacancy, community_vacancy, capacity, parkinglot_id) {
         park_place_markers.forEach(element => {
             element.closePopup();
         });
-        ppmarker = betterMarkerUse(latitude, longitude, description, vacancy, capacity)
+
+        let description = buildMarkerDescription(name, vacancy, predicted_vacancy, community_vacancy, capacity)
+        marker_vacancy = vacancy != null ? vacancy : predicted_vacancy
+        ppmarker = betterMarkerUse(latitude, longitude, description, marker_vacancy)
         ppmarker.parkinglot_id = parkinglot_id
         park_place_markers.push(ppmarker);
         //ppmarker.openPopup();
@@ -167,6 +170,31 @@ window.addEventListener('load', () => {
                 onPopupOpenCallback(event.target); // Pass the marker (event.target is the marker)
             });
         }
+    }
+
+    function buildMarkerDescription(name, vacancy, predicted_vacancy, community_vacancy, capacity) {
+        let description = null
+        if (capacity != null && capacity > 0){
+            if (vacancy != null){
+                description = name + "<br> Volno: " + vacancy + "/" + capacity
+            }
+            else if (predicted_vacancy != null){
+                description = name + "<br> Volno: " + predicted_vacancy + "/" + capacity
+            }
+            else{
+                description = name + "<br> Kapacita: " + capacity
+            }
+            if (community_vacancy != null){
+                if (community_vacancy > capacity){
+                    community_vacancy = capacity
+                }
+                description += "<br> Komunita: " + round(community_vacancy/capacity*100) + " %"
+            }
+        }
+        else{
+            description = name
+        }
+        return description
     }
 
     function onPopupOpenCallbackMain() {
@@ -203,23 +231,27 @@ window.addEventListener('load', () => {
         let nearestParkingLots = await findNearestParkingLots(latitude, longitude)
         if (nearestParkingLots) {
             for (const element of nearestParkingLots) {
-                let vacancy_element = await findVacancy(element.id)
-                let vacancy = 0;
-                let predicted_vacancy = await findPredictedVacancy(element.id)
-                console.log(predicted_vacancy)
-                // zde pridat vyhledani v historii
-                if (vacancy_element != null) {
-                    vacancy = vacancy_element.vacancy
+                let vacancy = null;
+                let predicted_vacancy = null;
+                let community_vacancy = null;
+
+                let vacancy_ret = await findVacancy(element.id)
+                
+                if (vacancy_ret != null) {
+                    vacancy = vacancy_ret.vacancy
                 } else {
-                    let ret = await (new dataRequester()).loadOccupancyCommunity(element.id);
-                    if (ret && ret.length > 0) {
-                        vacancy = ret[0].occupancy;
-                        element.name += " (Community)";
+                    predicted_vacancy = await findPredictedVacancy(element.id)
+                    if (predicted_vacancy != null) {
+                        predicted_vacancy = predicted_vacancy.vacancy
                     }
                 }
-                await setParkPlaceMarkerToMap(element.geopos_y, element.geopos_x, element.name, vacancy, element.car_capacity, element.id)
+                let ret = await (new dataRequester()).loadOccupancyCommunity(element.id);
+                if (ret && ret.length > 0) {
+                    community_vacancy = ret[0].occupancy;
+                }
+                await setParkPlaceMarkerToMap(element.geopos_y, element.geopos_x, element.name, vacancy, predicted_vacancy, community_vacancy, element.car_capacity, element.id)
             }
-            openLastMarker()
+            openFirstMarker()
             zoomMapToMarkers()
             return true
         } else {
@@ -232,9 +264,9 @@ window.addEventListener('load', () => {
         // setParkPlaceMarkerToMap(latitude, longitude + 0.001, "4", true);
     }
 
-    function openLastMarker() {
+    function openFirstMarker() {
         if (park_place_markers.length > 0) {
-            park_place_markers[park_place_markers.length - 1].openPopup()
+            park_place_markers[0].openPopup()
         }
     }
 
@@ -365,16 +397,14 @@ window.addEventListener('load', () => {
     }
 
 
-    function betterMarkerUse(latitude, longitude, description, vacancy, capacity) {
+    function betterMarkerUse(latitude, longitude, description, vacancy) {
         my_marker = betterMarker(L.ExtraMarkers.icon({
             icon: 'fa-number',
             markerColor: "blue",
             shape: 'square',
             number: vacancy,
             prefix: 'fa'
-        }), [latitude, longitude], "Volno: " + vacancy + "/" + capacity + "<br>" + description)
-
-
+        }), [latitude, longitude], description)
         return my_marker
     }
 
