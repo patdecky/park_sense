@@ -499,7 +499,7 @@
                 dostupnosti parkovacích míst.
                 Mobilní a webová aplikace nadále spolupracuje s Google Maps API, umožňuje vyhledávat nejbližší
                 parkoviště, zobrazit počet volných míst a umožňuje snadnou navigaci přes aplikace jako Google Maps.
-                ParkSense tak přispívá k hladšímu parkování a zlepšuje mobilitu v dynamickém prostředí Prahy.</p>
+                ParkSense tak přispívá k hladšímu parkování a zlepšuje mobilitu v dynamickém prostředí Prahy. <p> <b>Do budoucna je plánovaná integrace a sběr dat z kontrolních vozů TSV Praha a.s.</b></p>
             <h2>Použité datové sady</h2>
             <ul>
                 <li><a href="https://golemio.cz/data/doprava">Golemio - Doprava v datech</a></li>
