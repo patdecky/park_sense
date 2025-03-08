@@ -74,6 +74,7 @@ switch ($_GET['req']) {
             quitExe(400, QE_INPUT_INVALID);
         }
         $oc = $DOC->getRecentHistory($parkingLotID);
+        responseOK($oc);
 
     default:
         quitExe(400, QE_NO_KNOWN_REQ);

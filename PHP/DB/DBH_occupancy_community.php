@@ -14,7 +14,7 @@ class DBH_occupancy_community extends DBH_abstract
     const TABLE_NAME = 'occupancy_community';
     const MAX_PER_SELECT = 1024;
     const FULL_SELECT = '`id`, `occupancy`, `current_timestamp`, `parkinglot_id`';
-    const FULL_INSERT = '(`occupancy`, `current_timestamp`, `parkinglot_id`)';
+    const FULL_INSERT = '(`occupancy`, `parkinglot_id`)';
     protected array $tablesToLock = [self::TABLE_NAME];
 
     protected function setLanguage(): void
@@ -36,7 +36,6 @@ class DBH_occupancy_community extends DBH_abstract
         parent::insert($ObjToBeInserted);
         $sql = 'INSERT INTO `' . self::TABLE_NAME . '` ' . self::FULL_INSERT . ' VALUES '
             . '(' . $ObjToBeInserted->occupancy . ', '
-            . '"' . $ObjToBeInserted->current_timestamp->format('Y-m-d H:i:s') . '", '
             . $ObjToBeInserted->parkinglot_id . ');';
         mysqli_query($this->linkDB, $sql) or $this->dbError();
         return mysqli_insert_id($this->linkDB);
@@ -160,9 +159,9 @@ class DBH_occupancy_community extends DBH_abstract
     {
         return new CL_occupancy_community(
             $row->id,
+            $row->parkinglot_id,
             $row->occupancy,
-            new \DateTime($row->current_timestamp),
-            $row->parkinglot_id
+            new \DateTime($row->current_timestamp)
         );
     }
 
@@ -177,6 +176,6 @@ class DBH_occupancy_community extends DBH_abstract
 
     private function insertSql(CL_occupancy_community $occupancy): string
     {
-        return "( {$occupancy->occupancy} , \"{$occupancy->current_timestamp->format('Y-m-d H:i:s')}\" , {$occupancy->parkinglot_id} )";
+        return "( {$occupancy->occupancy}, {$occupancy->parkinglot_id} )";
     }
 }
