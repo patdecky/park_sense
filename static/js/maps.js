@@ -159,7 +159,7 @@ window.addEventListener('load', () => {
         });
         ppmarker = betterMarkerUse(latitude, longitude, description, vacancy, capacity, main)
         park_place_markers.push(ppmarker);
-        ppmarker.openPopup();
+        //ppmarker.openPopup();
         // Check if a callback is provided for when the popup is opened
         if (onPopupOpenCallback && typeof onPopupOpenCallback === 'function') {
             ppmarker.on('popupopen', function (event) {
@@ -204,12 +204,14 @@ window.addEventListener('load', () => {
                         element.name += " (Community)";
                     }
                 }
-                setParkPlaceMarkerToMap(element.geopos_y, element.geopos_x, element.name, vacancy, element.car_capacity, is_first)
+                await setParkPlaceMarkerToMap(element.geopos_y, element.geopos_x, element.name, vacancy, element.car_capacity, is_first)
                 if (is_first) {
                     latest_parklot_id = element.id;
                     is_first = false
                 }
             }
+            openLastMarker()
+            zoomMapToMarkers()
             return !is_first;
         } else return 0;
         // setParkPlaceMarkerToMap(latitude - 0.001, longitude, "1", true);
@@ -217,6 +219,23 @@ window.addEventListener('load', () => {
         // setParkPlaceMarkerToMap(latitude + 0.001, longitude, "3", true);
         // setParkPlaceMarkerToMap(latitude, longitude + 0.001, "4", true);
     }
+
+    function openLastMarker() {
+        if (park_place_markers.length > 0) {
+            park_place_markers[park_place_markers.length - 1].openPopup()
+        }
+    }
+
+    function zoomMapToMarkers() {
+        let points = []
+        park_place_markers.forEach(element => {
+            points.push(element.getLatLng())
+        });
+        points.push(marker.getLatLng())
+        let bounds = L.latLngBounds(points)
+        map.fitBounds(bounds);}
+
+
 
     function geocodePlace(place) {
         const nominatimUrl = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(place)}&format=json&limit=1`;
@@ -332,9 +351,9 @@ window.addEventListener('load', () => {
             prefix: 'fa'
         }), [latitude, longitude], "Volno: " + vacancy + "/" + capacity + "<br>" + description)
 
-        if (main) {
-            my_marker.openPopup()
-        }
+        //if (main) {
+        //    my_marker.openPopup()
+        //}
         return my_marker
     }
 

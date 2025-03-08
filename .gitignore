@@ -6,6 +6,8 @@
 php/globals.php
 
 
+.vscode/*
+
 /AI_backend/config.json
 
 /AI_backend/yolo*.pt
