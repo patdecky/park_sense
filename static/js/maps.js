@@ -413,7 +413,7 @@ window.addEventListener('load', () => {
         map.setView([latitude, longitude], zoom);
     }
 
-//////////////////////
+
     // Setup map
 
     function betterMarker(options, pos, name) {
