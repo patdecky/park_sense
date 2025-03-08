@@ -53,6 +53,7 @@
 
         body{
             background-color: #fff;
+            font-family: Arial, sans-serif;
         }
         #mainContainer {
             display: flex;
