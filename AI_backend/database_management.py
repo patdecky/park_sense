@@ -41,6 +41,45 @@ def list_tables_in_database(host, user, password, database, port=3306):
                 connection.close()
                 print("MySQL connection is closed")
 
+def list_all_capacity(host, user, password, database, port=3306):
+    connection = None
+    try:
+        # Establish the connection
+        connection = mysql.connector.connect(
+            host=host,
+            user=user,
+            password=password,
+            database=database,
+            port=port  # Use the port provided by Aiven
+        )
+
+        if connection.is_connected():
+            print(f"Successfully connected to the database: {database}")
+            
+            # Create a cursor object
+            cursor = connection.cursor()
+            
+            # Execute the query to list tables
+            cursor.execute("SELECT SUM(car_capacity) FROM parkinglot TABLES")
+            
+            # Fetch all the table names
+            tables = cursor.fetchall()
+            
+            # Print the table names
+            print("Tables in the database:")
+            for table in tables:
+                print(table[0])
+    
+    except Error as e:
+        print(f"Error while connecting to MySQL: {e}")
+    
+    finally:
+        if connection is not None:
+            if connection.is_connected():
+                cursor.close()
+                connection.close()
+                print("MySQL connection is closed")
+
 @dataclass
 class ParkingLot:
     id:int
