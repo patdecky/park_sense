@@ -89,14 +89,6 @@ window.addEventListener('load', () => {
             "Terrain": terrainLayer
         };
 
-
-        // Layer control for switching between base layers
-        var baseMaps = {
-            "OpenStreetMap": openStreetMap,
-            "Satellite": satelliteLayer,
-            "Terrain": terrainLayer
-        };
-
         // Add layer control to the map
         L.control.layers(baseMaps).addTo(map);
 
@@ -254,10 +246,23 @@ window.addEventListener('load', () => {
     function communityOcuppacy() {
         open_marker = getActiveMarker()
         if (!open_marker) {
-            alert("You may only add occupancy to watched parking lot.")
+            alert("Můžete vyplnit obsazenost pouze u vybraných sledovaných parkovišť.")
             return;
         }
-        // todo
+        // check if the current open marker is in park_place_markers
+        let found = false
+        for (let i = 0; i < park_place_markers.length; i++) {
+            if (park_place_markers[i] === open_marker) {
+                found = true
+                break
+            }
+        }
+        if (!found) {
+            alert("Můžete vyplnit obsazenost pouze u vybraných sledovaných parkovišť.")
+            return;
+        }
+        let vacancy = prompt("Please enter the number of free parking spots:", "0");
+        console.log(vacancy);
     }
     function openCoordinatesInGoogleMaps() {
         open_marker = getActiveMarker()
