@@ -104,7 +104,7 @@ if __name__ == "__main__":
     import sys
     sys.stdout.reconfigure(encoding='utf-8')
 
-    parking_lot = ParkingLotSourceLoader("datasource/parkinglots_praha_api.json")
+    parking_lot = ParkingLotSourceLoader("datasource/parkinglots_praha_api_4.json")
 
 
     data_loader = DataSourceSourceLoader("datasource/datasource_praha_bezp_1.json")

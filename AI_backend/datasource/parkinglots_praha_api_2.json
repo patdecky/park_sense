@@ -1,0 +1,6925 @@
+[
+    {
+        "name": "K Hájům",
+        "longitude": 14.324935922222222,
+        "latitude": 50.05538798888889,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "K Hájům",
+        "longitude": 14.324613918181818,
+        "latitude": 50.055578781818184,
+        "car_capacity": 55,
+        "description": ""
+    },
+    {
+        "name": "K Hájům",
+        "longitude": 14.32529292,
+        "latitude": 50.05566422,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Hněvkovského",
+        "longitude": 14.51934258,
+        "latitude": 50.03438112,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Hněvkovského",
+        "longitude": 14.51961038,
+        "latitude": 50.0340159,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Hněvkovského",
+        "longitude": 14.51951386,
+        "latitude": 50.03373684,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Hněvkovského",
+        "longitude": 14.518941120000003,
+        "latitude": 50.03315039,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Brandlova",
+        "longitude": 14.52033544,
+        "latitude": 50.03318222,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Chalupkova",
+        "longitude": 14.51804214,
+        "latitude": 50.033971,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Brandlova",
+        "longitude": 14.516947920000002,
+        "latitude": 50.0327969,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Brandlova",
+        "longitude": 14.51460994,
+        "latitude": 50.03266466,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Markušova",
+        "longitude": 14.514456247368424,
+        "latitude": 50.033497178947364,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Machkova",
+        "longitude": 14.512390985714285,
+        "latitude": 50.03385457142857,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Machkova",
+        "longitude": 14.5125112,
+        "latitude": 50.033821499999995,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Bachova",
+        "longitude": 14.510441542857142,
+        "latitude": 50.03084774285714,
+        "car_capacity": 17,
+        "description": ""
+    },
+    {
+        "name": "Bachova",
+        "longitude": 14.511336516666667,
+        "latitude": 50.030947733333335,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Bachova",
+        "longitude": 14.512342375,
+        "latitude": 50.03106121249999,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Mikulova",
+        "longitude": 14.51519016,
+        "latitude": 50.0309642,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Mikulova",
+        "longitude": 14.51532038,
+        "latitude": 50.030480499999996,
+        "car_capacity": 19,
+        "description": ""
+    },
+    {
+        "name": "Mikulova",
+        "longitude": 14.514361359999999,
+        "latitude": 50.02993250000001,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Podjavorinské",
+        "longitude": 14.521825119999999,
+        "latitude": 50.032151999999996,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Benkova",
+        "longitude": 14.500735685714286,
+        "latitude": 50.03701745714286,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Benkova",
+        "longitude": 14.500891636363635,
+        "latitude": 50.03661878181819,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Benkova",
+        "longitude": 14.501784657142858,
+        "latitude": 50.03630997142857,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Türkova",
+        "longitude": 14.501948966666669,
+        "latitude": 50.031876020000006,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Starochodovská",
+        "longitude": 14.501977053846154,
+        "latitude": 50.03137399999999,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Valentova",
+        "longitude": 14.50673526,
+        "latitude": 50.0322644,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Chilská",
+        "longitude": 14.508165880000002,
+        "latitude": 50.02602502,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Šalounova",
+        "longitude": 14.511504339999998,
+        "latitude": 50.025538940000004,
+        "car_capacity": 29,
+        "description": ""
+    },
+    {
+        "name": "Křejpského",
+        "longitude": 14.512500966666666,
+        "latitude": 50.028047283333336,
+        "car_capacity": 19,
+        "description": ""
+    },
+    {
+        "name": "Křejpského",
+        "longitude": 14.51338444,
+        "latitude": 50.02806576,
+        "car_capacity": 60,
+        "description": ""
+    },
+    {
+        "name": "Ocelářská",
+        "longitude": 14.50163876,
+        "latitude": 50.1054775,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Tenisová",
+        "longitude": 14.542896579999999,
+        "latitude": 50.049537400000006,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Sáňkařská",
+        "longitude": 14.545175700000001,
+        "latitude": 50.049129300000004,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Sáňkařská",
+        "longitude": 14.54549606,
+        "latitude": 50.04888388,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Plukovníka Mráze",
+        "longitude": 14.543450860000002,
+        "latitude": 50.053060900000006,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Bělinského",
+        "longitude": 14.5442616,
+        "latitude": 50.0524913,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Horolezecká",
+        "longitude": 14.54503926,
+        "latitude": 50.052266960000004,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Horolezecká",
+        "longitude": 14.545133439999997,
+        "latitude": 50.05221139999999,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Horolezecká",
+        "longitude": 14.543554359999998,
+        "latitude": 50.051930000000006,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Gercenova",
+        "longitude": 14.543943680000002,
+        "latitude": 50.05067364,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Bruslařská",
+        "longitude": 14.546877839999999,
+        "latitude": 50.0507581,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Tenisová",
+        "longitude": 14.545395780000002,
+        "latitude": 50.04968668,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Gercenova",
+        "longitude": 14.542640160000001,
+        "latitude": 50.0504347,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Horolezecká",
+        "longitude": 14.54197278,
+        "latitude": 50.051647,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Horolezecká",
+        "longitude": 14.54193562,
+        "latitude": 50.051544060000005,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Boloňská",
+        "longitude": 14.557706719999999,
+        "latitude": 50.04728268,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Boloňská",
+        "longitude": 14.557779880000002,
+        "latitude": 50.04718396,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Nad přehradou",
+        "longitude": 14.553083963636366,
+        "latitude": 50.04302557272727,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Nad přehradou",
+        "longitude": 14.552434630769234,
+        "latitude": 50.042534053846154,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Livornská",
+        "longitude": 14.553327180000002,
+        "latitude": 50.041627180000006,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Lessnerova",
+        "longitude": 14.558400528571427,
+        "latitude": 50.03989404285714,
+        "car_capacity": 120,
+        "description": ""
+    },
+    {
+        "name": "Milánská",
+        "longitude": 14.554563771428572,
+        "latitude": 50.0403873,
+        "car_capacity": 200,
+        "description": ""
+    },
+    {
+        "name": "Rezlerova",
+        "longitude": 14.562188983333334,
+        "latitude": 50.03819653333334,
+        "car_capacity": 140,
+        "description": ""
+    },
+    {
+        "name": "Rezlerova",
+        "longitude": 14.563563239999999,
+        "latitude": 50.03713032,
+        "car_capacity": 100,
+        "description": ""
+    },
+    {
+        "name": "Rezlerova",
+        "longitude": 14.563517599999999,
+        "latitude": 50.03693447142856,
+        "car_capacity": 100,
+        "description": ""
+    },
+    {
+        "name": "Rezlerova",
+        "longitude": 14.563059299999997,
+        "latitude": 50.03590768,
+        "car_capacity": 150,
+        "description": ""
+    },
+    {
+        "name": "Parkoviště Na Křečku",
+        "longitude": 14.562176383333336,
+        "latitude": 50.04328906666666,
+        "car_capacity": 90,
+        "description": ""
+    },
+    {
+        "name": "Parkoviště Na Křečku",
+        "longitude": 14.561918200000003,
+        "latitude": 50.043345800000004,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Parmská",
+        "longitude": 14.56427162,
+        "latitude": 50.043177740000004,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "Janovská",
+        "longitude": 14.565207257142857,
+        "latitude": 50.04278117142858,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Parkoviště Janovská",
+        "longitude": 14.56601972857143,
+        "latitude": 50.04177165714286,
+        "car_capacity": 151,
+        "description": ""
+    },
+    {
+        "name": "Janovská",
+        "longitude": 14.56575406,
+        "latitude": 50.03867462000001,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "Přátelství",
+        "longitude": 14.61620996,
+        "latitude": 50.02773406,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Rezidence Eliška",
+        "longitude": 14.5018627,
+        "latitude": 50.10520196,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Auto Kelly",
+        "longitude": 14.498357439999998,
+        "latitude": 50.10636842,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Hlavní",
+        "longitude": 14.48662828,
+        "latitude": 50.0469598,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Hlavní",
+        "longitude": 14.48773294166667,
+        "latitude": 50.047148308333334,
+        "car_capacity": 52,
+        "description": ""
+    },
+    {
+        "name": "Hlavní",
+        "longitude": 14.488247828571428,
+        "latitude": 50.047368514285715,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Hlavní",
+        "longitude": 14.4902605,
+        "latitude": 50.0478036,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Hlavní",
+        "longitude": 14.490443357142855,
+        "latitude": 50.047653871428565,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Choceradská",
+        "longitude": 14.4945042,
+        "latitude": 50.04529466,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Bělčická",
+        "longitude": 14.492975841666668,
+        "latitude": 50.04585795,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Struhařovská",
+        "longitude": 14.491108700000002,
+        "latitude": 50.045150060000005,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Struhařovská",
+        "longitude": 14.489916160000002,
+        "latitude": 50.04490752,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Přeštická",
+        "longitude": 14.513900580000001,
+        "latitude": 50.04547176,
+        "car_capacity": 100,
+        "description": ""
+    },
+    {
+        "name": "Chudenická",
+        "longitude": 14.518925018181818,
+        "latitude": 50.046451418181825,
+        "car_capacity": 60,
+        "description": ""
+    },
+    {
+        "name": "Vajdova",
+        "longitude": 14.519889957142857,
+        "latitude": 50.04727368571429,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Vajdova",
+        "longitude": 14.51720188333333,
+        "latitude": 50.04692310000001,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Záveská",
+        "longitude": 14.52007314,
+        "latitude": 50.0544669,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "U Meteoru",
+        "longitude": 14.47020496,
+        "latitude": 50.10910396,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Kotlaska",
+        "longitude": 14.479269380000002,
+        "latitude": 50.1064669,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Pilská",
+        "longitude": 14.561372180000001,
+        "latitude": 50.091362860000004,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Dolnopočernická",
+        "longitude": 14.615216669230769,
+        "latitude": 50.082165669230776,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Janovská",
+        "longitude": 14.566492057142858,
+        "latitude": 50.04387444285714,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "Hlavní",
+        "longitude": 14.556451,
+        "latitude": 50.17513746,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Hlavní",
+        "longitude": 14.556080360000001,
+        "latitude": 50.174937979999996,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Parking",
+        "longitude": 14.580230433333334,
+        "latitude": 50.11197533333333,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Mototechna",
+        "longitude": 14.31717506666667,
+        "latitude": 50.05445893636364,
+        "car_capacity": 48,
+        "description": ""
+    },
+    {
+        "name": "Bavorská",
+        "longitude": 14.316052745454543,
+        "latitude": 50.055712054545445,
+        "car_capacity": 160,
+        "description": ""
+    },
+    {
+        "name": "Bavorská",
+        "longitude": 14.314440137500002,
+        "latitude": 50.05479307499999,
+        "car_capacity": 250,
+        "description": ""
+    },
+    {
+        "name": "Bavorská",
+        "longitude": 14.315375349999998,
+        "latitude": 50.054470650000006,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "Jeremiášova",
+        "longitude": 14.3103308,
+        "latitude": 50.054636788888885,
+        "car_capacity": 52,
+        "description": ""
+    },
+    {
+        "name": "Jeremiášova",
+        "longitude": 14.310619883333331,
+        "latitude": 50.05578454166666,
+        "car_capacity": 110,
+        "description": ""
+    },
+    {
+        "name": "Jeremiášova",
+        "longitude": 14.31070454,
+        "latitude": 50.05517124,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Jeremiášova",
+        "longitude": 14.310979881818183,
+        "latitude": 50.055185845454545,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Jeremiášova",
+        "longitude": 14.311263271428572,
+        "latitude": 50.05499872142858,
+        "car_capacity": 225,
+        "description": ""
+    },
+    {
+        "name": "Jeremiášova",
+        "longitude": 14.31140858,
+        "latitude": 50.05479768,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Bavorská",
+        "longitude": 14.312317071428572,
+        "latitude": 50.0543146,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Jeremiášova",
+        "longitude": 14.311702350000001,
+        "latitude": 50.0554052375,
+        "car_capacity": 36,
+        "description": ""
+    },
+    {
+        "name": "Jeremiášova",
+        "longitude": 14.312269289999998,
+        "latitude": 50.05496924,
+        "car_capacity": 160,
+        "description": ""
+    },
+    {
+        "name": "Parking",
+        "longitude": 14.31348927,
+        "latitude": 50.05447093,
+        "car_capacity": 28,
+        "description": ""
+    },
+    {
+        "name": "Parking",
+        "longitude": 14.31386922,
+        "latitude": 50.05418332,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Jeremiášova",
+        "longitude": 14.314138633333334,
+        "latitude": 50.056350716666664,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "Šafránkova",
+        "longitude": 14.33815486,
+        "latitude": 50.05778251,
+        "car_capacity": 58,
+        "description": ""
+    },
+    {
+        "name": "Šafránkova",
+        "longitude": 14.338956668421055,
+        "latitude": 50.05779364736841,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Lýskova",
+        "longitude": 14.3145864,
+        "latitude": 50.05281434,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Kocianova",
+        "longitude": 14.313074460000001,
+        "latitude": 50.05233118,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Kocianova",
+        "longitude": 14.31357694,
+        "latitude": 50.052320480000006,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Kocianova",
+        "longitude": 14.314392978947367,
+        "latitude": 50.05190333684211,
+        "car_capacity": 90,
+        "description": ""
+    },
+    {
+        "name": "Lýskova",
+        "longitude": 14.311438599999999,
+        "latitude": 50.05178214,
+        "car_capacity": 22,
+        "description": ""
+    },
+    {
+        "name": "Flöglova",
+        "longitude": 14.309488227777779,
+        "latitude": 50.04832694444443,
+        "car_capacity": 80,
+        "description": ""
+    },
+    {
+        "name": "Vlachova",
+        "longitude": 14.308630014285713,
+        "latitude": 50.04824631428571,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Vlachova",
+        "longitude": 14.308608249999999,
+        "latitude": 50.047869112499995,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Vlachova",
+        "longitude": 14.309656383333333,
+        "latitude": 50.04712444999999,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Šostakovičovo náměstí",
+        "longitude": 14.310745059999999,
+        "latitude": 50.04722632000001,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Hábova",
+        "longitude": 14.308230833333333,
+        "latitude": 50.04644905,
+        "car_capacity": 22,
+        "description": ""
+    },
+    {
+        "name": "Hábova",
+        "longitude": 14.308560133333335,
+        "latitude": 50.0462477,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Hábova",
+        "longitude": 14.309094399999998,
+        "latitude": 50.04560808,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Hábova",
+        "longitude": 14.31053618,
+        "latitude": 50.04493302,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Vackova",
+        "longitude": 14.311861353846153,
+        "latitude": 50.044782053846156,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Vackova",
+        "longitude": 14.313723084615386,
+        "latitude": 50.04473248461537,
+        "car_capacity": 45,
+        "description": ""
+    },
+    {
+        "name": "Hostinského",
+        "longitude": 14.314393757142856,
+        "latitude": 50.04620888571428,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Klukovická",
+        "longitude": 14.314840983333333,
+        "latitude": 50.046639,
+        "car_capacity": 19,
+        "description": ""
+    },
+    {
+        "name": "Klukovická",
+        "longitude": 14.314906014285715,
+        "latitude": 50.04685308571429,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "U kašny",
+        "longitude": 14.312991383333333,
+        "latitude": 50.04708754999999,
+        "car_capacity": 54,
+        "description": ""
+    },
+    {
+        "name": "Kovářova",
+        "longitude": 14.313274900000001,
+        "latitude": 50.04881584285714,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Kovářova",
+        "longitude": 14.315518785714286,
+        "latitude": 50.0490413,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Kovářova",
+        "longitude": 14.316441980000002,
+        "latitude": 50.04856024000001,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Chalabalova",
+        "longitude": 14.318165400000002,
+        "latitude": 50.05113344,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Chalabalova",
+        "longitude": 14.31853036,
+        "latitude": 50.05144208,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Ke skalce",
+        "longitude": 14.318552616666665,
+        "latitude": 50.05155403333333,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Chalabalova",
+        "longitude": 14.317587220000002,
+        "latitude": 50.051468299999996,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Chalabalova",
+        "longitude": 14.316078028571429,
+        "latitude": 50.051600557142855,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Chalabalova",
+        "longitude": 14.316392220000001,
+        "latitude": 50.05189282,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Za Lužinami",
+        "longitude": 14.323782966666666,
+        "latitude": 50.054125433333326,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Za Lužinami",
+        "longitude": 14.32493057777778,
+        "latitude": 50.054112844444454,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Nárožní",
+        "longitude": 14.329622244444446,
+        "latitude": 50.053205433333325,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Nárožní",
+        "longitude": 14.332158380000001,
+        "latitude": 50.05305268,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Nárožní",
+        "longitude": 14.332666485714286,
+        "latitude": 50.05280674285715,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Dismanova",
+        "longitude": 14.33294958,
+        "latitude": 50.05199246,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Dismanova",
+        "longitude": 14.331793659999999,
+        "latitude": 50.05207582,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Harmonická",
+        "longitude": 14.331439179999999,
+        "latitude": 50.05082272,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Armády",
+        "longitude": 14.331373787499999,
+        "latitude": 50.0507081875,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Armády",
+        "longitude": 14.330357499999996,
+        "latitude": 50.05075744,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Harmonická",
+        "longitude": 14.32943118,
+        "latitude": 50.05116738,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Pod kulturním domem",
+        "longitude": 14.32907382,
+        "latitude": 50.05191972000001,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Armády",
+        "longitude": 14.334105014285713,
+        "latitude": 50.05215662857143,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Armády",
+        "longitude": 14.334242460000002,
+        "latitude": 50.0518702,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Armády",
+        "longitude": 14.33463356,
+        "latitude": 50.05147169999999,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Nárožní",
+        "longitude": 14.337125760000001,
+        "latitude": 50.053899380000004,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Nová kolonie",
+        "longitude": 14.33188986,
+        "latitude": 50.049740400000005,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Nová kolonie",
+        "longitude": 14.33145752,
+        "latitude": 50.0494647,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Nová kolonie",
+        "longitude": 14.33202596,
+        "latitude": 50.04900836,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Nová kolonie",
+        "longitude": 14.331744805882352,
+        "latitude": 50.04908144705882,
+        "car_capacity": 17,
+        "description": ""
+    },
+    {
+        "name": "K zahrádkám",
+        "longitude": 14.33076054,
+        "latitude": 50.049131779999996,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "K zahrádkám",
+        "longitude": 14.330760979999999,
+        "latitude": 50.049235519999996,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "K zahrádkám",
+        "longitude": 14.329928360000002,
+        "latitude": 50.04907974,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "K zahrádkám",
+        "longitude": 14.32952475,
+        "latitude": 50.048922100000006,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "K zahrádkám",
+        "longitude": 14.328695639999998,
+        "latitude": 50.04905130000001,
+        "car_capacity": 42,
+        "description": ""
+    },
+    {
+        "name": "K zahrádkám",
+        "longitude": 14.327532020000001,
+        "latitude": 50.048856740000005,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "K zahrádkám",
+        "longitude": 14.327314040000001,
+        "latitude": 50.04912352,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "K zahrádkám",
+        "longitude": 14.327206199999997,
+        "latitude": 50.04901586,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "K zahrádkám",
+        "longitude": 14.32576752,
+        "latitude": 50.048981299999994,
+        "car_capacity": 55,
+        "description": ""
+    },
+    {
+        "name": "Na dolnici",
+        "longitude": 14.323631420000002,
+        "latitude": 50.04892696,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "K zahrádkám",
+        "longitude": 14.321667455555554,
+        "latitude": 50.04906204444445,
+        "car_capacity": 21,
+        "description": ""
+    },
+    {
+        "name": "Horákova",
+        "longitude": 14.31983756,
+        "latitude": 50.04682876,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Kettnerova",
+        "longitude": 14.320901959459462,
+        "latitude": 50.047457735135126,
+        "car_capacity": 110,
+        "description": ""
+    },
+    {
+        "name": "Kettnerova",
+        "longitude": 14.321284613333336,
+        "latitude": 50.04767008333332,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "Neustupného",
+        "longitude": 14.32375485,
+        "latitude": 50.044014507142855,
+        "car_capacity": 80,
+        "description": ""
+    },
+    {
+        "name": "Trávníčkova",
+        "longitude": 14.318092445454544,
+        "latitude": 50.045340445454535,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Trávníčkova",
+        "longitude": 14.317901080000002,
+        "latitude": 50.04597689,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Fantova",
+        "longitude": 14.316515240000001,
+        "latitude": 50.04561616,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Fantova",
+        "longitude": 14.316028030000002,
+        "latitude": 50.04514468999999,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Fantova",
+        "longitude": 14.31656806,
+        "latitude": 50.043925519999995,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Fantova",
+        "longitude": 14.317763257142856,
+        "latitude": 50.04388838571428,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Fantova",
+        "longitude": 14.317652559999999,
+        "latitude": 50.04403442,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Fantova",
+        "longitude": 14.316556133333332,
+        "latitude": 50.044133133333325,
+        "car_capacity": 55,
+        "description": ""
+    },
+    {
+        "name": "Fantova",
+        "longitude": 14.319363880000001,
+        "latitude": 50.0436964,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Mukařovského",
+        "longitude": 14.322073255555555,
+        "latitude": 50.045005466666666,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Neustupného",
+        "longitude": 14.322053819999999,
+        "latitude": 50.044237620000004,
+        "car_capacity": 33,
+        "description": ""
+    },
+    {
+        "name": "Neustupného",
+        "longitude": 14.321713819999996,
+        "latitude": 50.04410634,
+        "car_capacity": 39,
+        "description": ""
+    },
+    {
+        "name": "Neustupného",
+        "longitude": 14.321149944444443,
+        "latitude": 50.04408102222223,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.321283339999999,
+        "latitude": 50.0427897,
+        "car_capacity": 26,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.321082636363634,
+        "latitude": 50.04223722727272,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.32102442,
+        "latitude": 50.04279166,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.321114559999998,
+        "latitude": 50.0427977,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.321154955555556,
+        "latitude": 50.04248626666666,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.321277455555556,
+        "latitude": 50.042081744444445,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.321388483333335,
+        "latitude": 50.04215618333333,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.321688600000002,
+        "latitude": 50.04209594,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.322897000000001,
+        "latitude": 50.04138519,
+        "car_capacity": 54,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.322882253333335,
+        "latitude": 50.04153118666666,
+        "car_capacity": 46,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.322930966666666,
+        "latitude": 50.04128706666667,
+        "car_capacity": 48,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.322988808333333,
+        "latitude": 50.04163725833333,
+        "car_capacity": 42,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.324437900000001,
+        "latitude": 50.04162142,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.324578342857142,
+        "latitude": 50.0414831,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.325126616666667,
+        "latitude": 50.04174956666666,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.32589711,
+        "latitude": 50.04283191,
+        "car_capacity": 60,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.32571338,
+        "latitude": 50.04291344000001,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Bellušova",
+        "longitude": 14.325048616666669,
+        "latitude": 50.04358406666666,
+        "car_capacity": 145,
+        "description": ""
+    },
+    {
+        "name": "náměstí Osvoboditelů",
+        "longitude": 14.360139733333334,
+        "latitude": 49.98315015,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Nad Kolčavkou",
+        "longitude": 14.48238816,
+        "latitude": 50.108581560000005,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Kovanecká",
+        "longitude": 14.4867882375,
+        "latitude": 50.109025925,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Kovanecká",
+        "longitude": 14.487700733333332,
+        "latitude": 50.10845518333334,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Českomoravská",
+        "longitude": 14.495656059999998,
+        "latitude": 50.10289932,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Kettnerova",
+        "longitude": 14.323837726666666,
+        "latitude": 50.04627521333334,
+        "car_capacity": 26,
+        "description": ""
+    },
+    {
+        "name": "U jezera",
+        "longitude": 14.325190673333333,
+        "latitude": 50.046504933333345,
+        "car_capacity": 75,
+        "description": ""
+    },
+    {
+        "name": "U jezera",
+        "longitude": 14.325149593333332,
+        "latitude": 50.046680040000005,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "U jezera",
+        "longitude": 14.325024430000003,
+        "latitude": 50.04692197999999,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Sezemínská",
+        "longitude": 14.32639144,
+        "latitude": 50.04602852,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Sezemínská",
+        "longitude": 14.326235879999999,
+        "latitude": 50.04615556,
+        "car_capacity": 48,
+        "description": ""
+    },
+    {
+        "name": "Sezemínská",
+        "longitude": 14.327085738461536,
+        "latitude": 50.046341653846156,
+        "car_capacity": 45,
+        "description": ""
+    },
+    {
+        "name": "Sezemínská",
+        "longitude": 14.327436236363637,
+        "latitude": 50.046238300000006,
+        "car_capacity": 19,
+        "description": ""
+    },
+    {
+        "name": "Bronzová",
+        "longitude": 14.328629857142857,
+        "latitude": 50.045227385714284,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Bronzová",
+        "longitude": 14.328812414285713,
+        "latitude": 50.04529677142857,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Bronzová",
+        "longitude": 14.329152462962961,
+        "latitude": 50.046158437037036,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "Bronzová",
+        "longitude": 14.329553268,
+        "latitude": 50.04632385200001,
+        "car_capacity": 72,
+        "description": ""
+    },
+    {
+        "name": "Bronzová",
+        "longitude": 14.33060332,
+        "latitude": 50.04557228,
+        "car_capacity": 28,
+        "description": ""
+    },
+    {
+        "name": "Zázvorkova",
+        "longitude": 14.332333199999999,
+        "latitude": 50.04561916,
+        "car_capacity": 28,
+        "description": ""
+    },
+    {
+        "name": "Zázvorkova",
+        "longitude": 14.33341308148148,
+        "latitude": 50.04651102592593,
+        "car_capacity": 74,
+        "description": ""
+    },
+    {
+        "name": "Zázvorkova",
+        "longitude": 14.333071632000003,
+        "latitude": 50.04661608800001,
+        "car_capacity": 72,
+        "description": ""
+    },
+    {
+        "name": "Zázvorkova",
+        "longitude": 14.33448104,
+        "latitude": 50.0459998,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Zázvorkova",
+        "longitude": 14.33451773333333,
+        "latitude": 50.04635779166667,
+        "car_capacity": 26,
+        "description": ""
+    },
+    {
+        "name": "Amforová",
+        "longitude": 14.326797594444445,
+        "latitude": 50.04309624722222,
+        "car_capacity": 125,
+        "description": ""
+    },
+    {
+        "name": "Amforová",
+        "longitude": 14.326968177777777,
+        "latitude": 50.042501644444435,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Amforová",
+        "longitude": 14.327311,
+        "latitude": 50.042236779999996,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "Mukařovského",
+        "longitude": 14.327470212500002,
+        "latitude": 50.041438906249994,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Jeremiášova",
+        "longitude": 14.328416659999998,
+        "latitude": 50.04033764,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Kolovečská",
+        "longitude": 14.329085316666667,
+        "latitude": 50.040443744444445,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Kolovečská",
+        "longitude": 14.328980918181816,
+        "latitude": 50.040847818181824,
+        "car_capacity": 26,
+        "description": ""
+    },
+    {
+        "name": "Amforová",
+        "longitude": 14.328670283333333,
+        "latitude": 50.04131999999999,
+        "car_capacity": 44,
+        "description": ""
+    },
+    {
+        "name": "Amforová",
+        "longitude": 14.328882274999998,
+        "latitude": 50.04151782499999,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Amforová",
+        "longitude": 14.329928355555555,
+        "latitude": 50.04158917777778,
+        "car_capacity": 26,
+        "description": ""
+    },
+    {
+        "name": "Amforová",
+        "longitude": 14.329528400000003,
+        "latitude": 50.041732371428566,
+        "car_capacity": 34,
+        "description": ""
+    },
+    {
+        "name": "Amforová",
+        "longitude": 14.330422319999997,
+        "latitude": 50.041921499999994,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Brdičkova",
+        "longitude": 14.331454142857144,
+        "latitude": 50.04250837142858,
+        "car_capacity": 28,
+        "description": ""
+    },
+    {
+        "name": "Brdičkova",
+        "longitude": 14.33086562,
+        "latitude": 50.04344638,
+        "car_capacity": 22,
+        "description": ""
+    },
+    {
+        "name": "Archeologická",
+        "longitude": 14.329669580000001,
+        "latitude": 50.0437446,
+        "car_capacity": 22,
+        "description": ""
+    },
+    {
+        "name": "Píškova",
+        "longitude": 14.3327341,
+        "latitude": 50.04388614,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Píškova",
+        "longitude": 14.333542976923077,
+        "latitude": 50.042439207692304,
+        "car_capacity": 36,
+        "description": ""
+    },
+    {
+        "name": "Píškova",
+        "longitude": 14.33300064,
+        "latitude": 50.04430516,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Píškova",
+        "longitude": 14.333442964285712,
+        "latitude": 50.04442094285714,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Píškova",
+        "longitude": 14.3343188,
+        "latitude": 50.04459238,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Zvoncovitá",
+        "longitude": 14.33529082,
+        "latitude": 50.04512368,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Zvoncovitá",
+        "longitude": 14.33583994,
+        "latitude": 50.04511482,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Böhmova",
+        "longitude": 14.337982733333332,
+        "latitude": 50.04517688888889,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Böhmova",
+        "longitude": 14.33776848,
+        "latitude": 50.04521654,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Böhmova",
+        "longitude": 14.33846997,
+        "latitude": 50.045292329999995,
+        "car_capacity": 32,
+        "description": ""
+    },
+    {
+        "name": "Böhmova",
+        "longitude": 14.338669312499999,
+        "latitude": 50.04575955,
+        "car_capacity": 34,
+        "description": ""
+    },
+    {
+        "name": "Modrá",
+        "longitude": 14.337508736363635,
+        "latitude": 50.046635163636374,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Modrá",
+        "longitude": 14.336839606666665,
+        "latitude": 50.04669242666667,
+        "car_capacity": 38,
+        "description": ""
+    },
+    {
+        "name": "Modrá",
+        "longitude": 14.336487649999997,
+        "latitude": 50.04646268571429,
+        "car_capacity": 23,
+        "description": ""
+    },
+    {
+        "name": "Modrá",
+        "longitude": 14.33590974090909,
+        "latitude": 50.04598297272727,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "Modrá",
+        "longitude": 14.3360939,
+        "latitude": 50.045995899999994,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Staromlýnská",
+        "longitude": 14.498598359999999,
+        "latitude": 50.10888976,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Rubeška",
+        "longitude": 14.4950273,
+        "latitude": 50.11063738,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Pod strojírnami",
+        "longitude": 14.508366900000002,
+        "latitude": 50.10920226,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Braunerova",
+        "longitude": 14.474999020000002,
+        "latitude": 50.11369254,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Kašparovo náměstí",
+        "longitude": 14.46886266,
+        "latitude": 50.11407018,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Bulovka",
+        "longitude": 14.466897499999998,
+        "latitude": 50.11506264,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Kundratka",
+        "longitude": 14.483761488888891,
+        "latitude": 50.11481247777777,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Soví vršek",
+        "longitude": 14.480986820000002,
+        "latitude": 50.11416228,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Pod Bání",
+        "longitude": 14.48058505,
+        "latitude": 50.115135383333325,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Karla Hlaváčka",
+        "longitude": 14.4795361,
+        "latitude": 50.11512236,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "V zahradách",
+        "longitude": 14.476252579999999,
+        "latitude": 50.11486864,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "S. K. Neumanna",
+        "longitude": 14.450277066666667,
+        "latitude": 50.118708133333335,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Nad Rokoskou",
+        "longitude": 14.45059602,
+        "latitude": 50.11907634000001,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "V hůrkách",
+        "longitude": 14.340560119999997,
+        "latitude": 50.04875018,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "V hůrkách",
+        "longitude": 14.341319279999999,
+        "latitude": 50.04881754,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Husníkova",
+        "longitude": 14.341255038461536,
+        "latitude": 50.04743156153846,
+        "car_capacity": 26,
+        "description": ""
+    },
+    {
+        "name": "Husníkova",
+        "longitude": 14.341147062500001,
+        "latitude": 50.047933262499996,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Husníkova",
+        "longitude": 14.3413312,
+        "latitude": 50.04787953333334,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "V hůrkách",
+        "longitude": 14.34137706,
+        "latitude": 50.04838138,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Husníkova",
+        "longitude": 14.341494019999999,
+        "latitude": 50.04831264,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Husníkova",
+        "longitude": 14.341917950000001,
+        "latitude": 50.0487136,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "V hůrkách",
+        "longitude": 14.343026700000001,
+        "latitude": 50.04908032000001,
+        "car_capacity": 36,
+        "description": ""
+    },
+    {
+        "name": "V hůrkách",
+        "longitude": 14.34334064,
+        "latitude": 50.048998340000004,
+        "car_capacity": 32,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.34457276,
+        "latitude": 50.049219619999995,
+        "car_capacity": 22,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.34414788,
+        "latitude": 50.0488491,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.34421782,
+        "latitude": 50.048518,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.344394150000001,
+        "latitude": 50.04833956666666,
+        "car_capacity": 19,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.344114600000001,
+        "latitude": 50.04813484,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.34368136923077,
+        "latitude": 50.04841889230769,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.343633119999998,
+        "latitude": 50.04812726,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.343859080000001,
+        "latitude": 50.047837339999994,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.34378332,
+        "latitude": 50.04743206,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.34428608,
+        "latitude": 50.047449719999996,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.3443206,
+        "latitude": 50.0473447,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.34528128,
+        "latitude": 50.04754054,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.34537826,
+        "latitude": 50.04743884,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.34600206,
+        "latitude": 50.047915880000005,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.346148379999999,
+        "latitude": 50.04800184,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.34539714,
+        "latitude": 50.04835742666666,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Suchý vršek",
+        "longitude": 14.345315399999999,
+        "latitude": 50.04875126,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "V hůrkách",
+        "longitude": 14.34555312,
+        "latitude": 50.0493096,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "V Hůrkách",
+        "longitude": 14.34604174,
+        "latitude": 50.04939072500001,
+        "car_capacity": 38,
+        "description": ""
+    },
+    {
+        "name": "Sluneční náměstí",
+        "longitude": 14.34589824,
+        "latitude": 50.05025254,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "V Hůrkách",
+        "longitude": 14.34591888,
+        "latitude": 50.05094138,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Seydlerova",
+        "longitude": 14.346316250000001,
+        "latitude": 50.05084018333333,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Seydlerova",
+        "longitude": 14.346737539999998,
+        "latitude": 50.05012268,
+        "car_capacity": 32,
+        "description": ""
+    },
+    {
+        "name": "Seydlerova",
+        "longitude": 14.347044540000002,
+        "latitude": 50.05003706,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Seydlerova",
+        "longitude": 14.348192885714285,
+        "latitude": 50.050251871428564,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Seydlerova",
+        "longitude": 14.34834444,
+        "latitude": 50.05015848,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Fingerova",
+        "longitude": 14.347879842105263,
+        "latitude": 50.04975761052632,
+        "car_capacity": 45,
+        "description": ""
+    },
+    {
+        "name": "Seydlerova",
+        "longitude": 14.347900240000001,
+        "latitude": 50.04983398,
+        "car_capacity": 22,
+        "description": ""
+    },
+    {
+        "name": "Seydlerova",
+        "longitude": 14.34980792,
+        "latitude": 50.05039670000001,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.3501858,
+        "latitude": 50.0500569,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.349778145454547,
+        "latitude": 50.049986318181816,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.35078348,
+        "latitude": 50.04943508,
+        "car_capacity": 33,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.350932537499999,
+        "latitude": 50.0495267875,
+        "car_capacity": 29,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.35142256,
+        "latitude": 50.048926400000006,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.350688120000001,
+        "latitude": 50.04805846,
+        "car_capacity": 80,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.350731575,
+        "latitude": 50.04834579166666,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.350462279999999,
+        "latitude": 50.048247079999996,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.350037166666665,
+        "latitude": 50.047466441666664,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.349617771428571,
+        "latitude": 50.047522328571425,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.34900231818182,
+        "latitude": 50.04720152727273,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.348578415384615,
+        "latitude": 50.047009761538455,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.346051928571429,
+        "latitude": 50.04675571428571,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.34537937142857,
+        "latitude": 50.04692845714285,
+        "car_capacity": 42,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.346923320000002,
+        "latitude": 50.04723868,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.347081659999997,
+        "latitude": 50.04742804,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Ovčí hájek",
+        "longitude": 14.346986500000002,
+        "latitude": 50.04798657857143,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Petržílkova",
+        "longitude": 14.34915398,
+        "latitude": 50.051412979999995,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Petržílkova",
+        "longitude": 14.3481787,
+        "latitude": 50.0513232,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Nušlova",
+        "longitude": 14.3485186,
+        "latitude": 50.051786400000005,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Petržílkova",
+        "longitude": 14.347014000000001,
+        "latitude": 50.05148142,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "Petržílkova",
+        "longitude": 14.345249719999998,
+        "latitude": 50.05098348,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Petržílkova",
+        "longitude": 14.343168457142857,
+        "latitude": 50.05079248571429,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Sluneční náměstí",
+        "longitude": 14.34222618,
+        "latitude": 50.05069974,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Petržílkova",
+        "longitude": 14.342825377777778,
+        "latitude": 50.0505276,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Volutová",
+        "longitude": 14.337523513636365,
+        "latitude": 50.049893,
+        "car_capacity": 64,
+        "description": ""
+    },
+    {
+        "name": "Pod Hranicí",
+        "longitude": 14.337391550000001,
+        "latitude": 50.049842579166665,
+        "car_capacity": 80,
+        "description": ""
+    },
+    {
+        "name": "Kodymova",
+        "longitude": 14.337209683870968,
+        "latitude": 50.051277767741944,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Kodymova",
+        "longitude": 14.337002100000001,
+        "latitude": 50.05216934,
+        "car_capacity": 34,
+        "description": ""
+    },
+    {
+        "name": "Kodymova",
+        "longitude": 14.337172200000001,
+        "latitude": 50.05217114,
+        "car_capacity": 22,
+        "description": ""
+    },
+    {
+        "name": "Běhounkova",
+        "longitude": 14.338736123076924,
+        "latitude": 50.053162,
+        "car_capacity": 62,
+        "description": ""
+    },
+    {
+        "name": "Běhounkova",
+        "longitude": 14.33866883,
+        "latitude": 50.05324895,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Běhounkova",
+        "longitude": 14.339316525000001,
+        "latitude": 50.053626924999996,
+        "car_capacity": 32,
+        "description": ""
+    },
+    {
+        "name": "Běhounkova",
+        "longitude": 14.340193100000002,
+        "latitude": 50.05383134,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Běhounkova",
+        "longitude": 14.340591071428571,
+        "latitude": 50.05375541428572,
+        "car_capacity": 60,
+        "description": ""
+    },
+    {
+        "name": "Běhounkova",
+        "longitude": 14.34139936,
+        "latitude": 50.05393702,
+        "car_capacity": 17,
+        "description": ""
+    },
+    {
+        "name": "Běhounkova",
+        "longitude": 14.34248844117647,
+        "latitude": 50.054189211764715,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Běhounkova",
+        "longitude": 14.342069583333334,
+        "latitude": 50.054185933333336,
+        "car_capacity": 17,
+        "description": ""
+    },
+    {
+        "name": "Běhounkova",
+        "longitude": 14.34287074,
+        "latitude": 50.05429440000001,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Dominova",
+        "longitude": 14.342020866666665,
+        "latitude": 50.05325027777778,
+        "car_capacity": 42,
+        "description": ""
+    },
+    {
+        "name": "Dominova",
+        "longitude": 14.342212222222221,
+        "latitude": 50.053096644444445,
+        "car_capacity": 42,
+        "description": ""
+    },
+    {
+        "name": "Mezi školami",
+        "longitude": 14.341690899999998,
+        "latitude": 50.05232650000001,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Mezi Školami",
+        "longitude": 14.34295698,
+        "latitude": 50.05243946,
+        "car_capacity": 17,
+        "description": ""
+    },
+    {
+        "name": "Mezi školami",
+        "longitude": 14.344533,
+        "latitude": 50.052673533333326,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Mezi školami",
+        "longitude": 14.34400234,
+        "latitude": 50.0525304,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Blattného",
+        "longitude": 14.343424916666665,
+        "latitude": 50.053133933333335,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Blattného",
+        "longitude": 14.343250466666666,
+        "latitude": 50.05317278333334,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Běhounkova",
+        "longitude": 14.34387956,
+        "latitude": 50.05416438,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Běhounkova",
+        "longitude": 14.344474639999998,
+        "latitude": 50.05410866000001,
+        "car_capacity": 52,
+        "description": ""
+    },
+    {
+        "name": "Běhounkova",
+        "longitude": 14.344878816666666,
+        "latitude": 50.054437650000004,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Běhounkova",
+        "longitude": 14.34508486,
+        "latitude": 50.054269440000006,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Běhounkova",
+        "longitude": 14.345767862499999,
+        "latitude": 50.054455006249995,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Nušlova",
+        "longitude": 14.348950241666666,
+        "latitude": 50.05356724999999,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Nušlova",
+        "longitude": 14.34831992,
+        "latitude": 50.05369202,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Nušlova",
+        "longitude": 14.348297220000001,
+        "latitude": 50.05357052,
+        "car_capacity": 33,
+        "description": ""
+    },
+    {
+        "name": "Nušlova",
+        "longitude": 14.349091620000001,
+        "latitude": 50.05331638,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Nušlova",
+        "longitude": 14.349236153846155,
+        "latitude": 50.05291551538461,
+        "car_capacity": 28,
+        "description": ""
+    },
+    {
+        "name": "Nušlova",
+        "longitude": 14.34943882,
+        "latitude": 50.052842840000004,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Nušlova",
+        "longitude": 14.349474609090912,
+        "latitude": 50.052258099999996,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Nušlova",
+        "longitude": 14.349012879999998,
+        "latitude": 50.05213948000001,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Nušlova",
+        "longitude": 14.3489644,
+        "latitude": 50.0522417,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Bořanovická",
+        "longitude": 14.511546820000001,
+        "latitude": 50.178228520000005,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Toufarova",
+        "longitude": 14.313112959999998,
+        "latitude": 50.04292126,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Toufarova",
+        "longitude": 14.31257378,
+        "latitude": 50.042985,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Toufarova",
+        "longitude": 14.31189825714286,
+        "latitude": 50.043015957142856,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Toufarova",
+        "longitude": 14.31271,
+        "latitude": 50.04287409999999,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Toufarova",
+        "longitude": 14.31147258,
+        "latitude": 50.0429209,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Toufarova",
+        "longitude": 14.312231180000001,
+        "latitude": 50.042915040000004,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "Toufarova",
+        "longitude": 14.31105596,
+        "latitude": 50.04299776,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "U Řepory",
+        "longitude": 14.311524471428573,
+        "latitude": 50.04140864285715,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "K Třebonicům",
+        "longitude": 14.30707462,
+        "latitude": 50.03596804,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "K Třebonicům",
+        "longitude": 14.305520422222221,
+        "latitude": 50.035782899999994,
+        "car_capacity": 42,
+        "description": ""
+    },
+    {
+        "name": "K Betonárně",
+        "longitude": 14.291246057142859,
+        "latitude": 50.034676371428574,
+        "car_capacity": 150,
+        "description": ""
+    },
+    {
+        "name": "Třebonice",
+        "longitude": 14.29227382,
+        "latitude": 50.034064380000004,
+        "car_capacity": 120,
+        "description": ""
+    },
+    {
+        "name": "Třebonice",
+        "longitude": 14.291945544444445,
+        "latitude": 50.03362956666666,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "K závětinám",
+        "longitude": 14.309236859999999,
+        "latitude": 50.02980478,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Ořešská",
+        "longitude": 14.310759442857144,
+        "latitude": 50.031231128571434,
+        "car_capacity": 28,
+        "description": ""
+    },
+    {
+        "name": "Na požáru",
+        "longitude": 14.321463499999998,
+        "latitude": 50.02941284,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Smíchovská",
+        "longitude": 14.320707480000001,
+        "latitude": 50.037134339999994,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Smíchovská",
+        "longitude": 14.320464300000001,
+        "latitude": 50.03746244,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Dělená",
+        "longitude": 14.32135206,
+        "latitude": 50.03757237999999,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Dělená",
+        "longitude": 14.321892,
+        "latitude": 50.037812188888886,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Dělená",
+        "longitude": 14.32245522,
+        "latitude": 50.03794868,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Wiesenthalova",
+        "longitude": 14.3214381,
+        "latitude": 50.03807272857143,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Wiesenthalova",
+        "longitude": 14.322038925000001,
+        "latitude": 50.038524175,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Wiesenthalova",
+        "longitude": 14.321157380000002,
+        "latitude": 50.039205620000004,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Wiesenthalova",
+        "longitude": 14.321293780000001,
+        "latitude": 50.039108680000005,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Kakosova",
+        "longitude": 14.321755685714285,
+        "latitude": 50.039166085714285,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Wiesenthalova",
+        "longitude": 14.322088399999998,
+        "latitude": 50.03904168571429,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Kakosova",
+        "longitude": 14.323264590909089,
+        "latitude": 50.03911688181818,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Kakosova",
+        "longitude": 14.323442559999998,
+        "latitude": 50.038956299999995,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Kakosova",
+        "longitude": 14.323989019999999,
+        "latitude": 50.03888254,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Kakosova",
+        "longitude": 14.32370497142857,
+        "latitude": 50.038566871428564,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Dělená",
+        "longitude": 14.32456137142857,
+        "latitude": 50.03843990000001,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Jeremiášova",
+        "longitude": 14.325213066666667,
+        "latitude": 50.03970054444445,
+        "car_capacity": 66,
+        "description": ""
+    },
+    {
+        "name": "Jeremiášova",
+        "longitude": 14.3270354,
+        "latitude": 50.03932712,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Jeremiášova",
+        "longitude": 14.326708444444446,
+        "latitude": 50.03965997777778,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Raichlova",
+        "longitude": 14.32890334,
+        "latitude": 50.03881768000001,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Raichlova",
+        "longitude": 14.329110085714287,
+        "latitude": 50.038509628571425,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Anny Rybníčkové",
+        "longitude": 14.33004456,
+        "latitude": 50.038275160000005,
+        "car_capacity": 23,
+        "description": ""
+    },
+    {
+        "name": "Raichlova",
+        "longitude": 14.329014940000002,
+        "latitude": 50.038312659999995,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Raichlova",
+        "longitude": 14.329185671428572,
+        "latitude": 50.03751937142857,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Raichlova",
+        "longitude": 14.329299899999999,
+        "latitude": 50.03761680000001,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Raichlova",
+        "longitude": 14.329339114285714,
+        "latitude": 50.03682608571429,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Raichlova",
+        "longitude": 14.32947974,
+        "latitude": 50.0367923,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Karla Kryla",
+        "longitude": 14.330386100000002,
+        "latitude": 50.03676622,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Švejcarovo náměstí",
+        "longitude": 14.329570392307694,
+        "latitude": 50.036194776923075,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Přeučilova",
+        "longitude": 14.327757449999998,
+        "latitude": 50.03711164999999,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Přeučilova",
+        "longitude": 14.32811812,
+        "latitude": 50.036681509999994,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Přeučilova",
+        "longitude": 14.3280189,
+        "latitude": 50.03655325999999,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Přeučilova",
+        "longitude": 14.328440019999999,
+        "latitude": 50.036002079999996,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Švejcarovo náměstí",
+        "longitude": 14.328684311111111,
+        "latitude": 50.03594392222222,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Nad Dalejským údolím",
+        "longitude": 14.329310800000002,
+        "latitude": 50.0356644875,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Nad Dalejským údolím",
+        "longitude": 14.330488654545455,
+        "latitude": 50.035816463636365,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Karla Kryla",
+        "longitude": 14.3346612,
+        "latitude": 50.034877640000005,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Petrbokova",
+        "longitude": 14.3356923,
+        "latitude": 50.036159819999995,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Petrbokova",
+        "longitude": 14.33499504,
+        "latitude": 50.03635796,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Ohradské náměstí",
+        "longitude": 14.33442964,
+        "latitude": 50.03701980000001,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Ohradské náměstí",
+        "longitude": 14.334314966666666,
+        "latitude": 50.037104066666664,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Červeňanského",
+        "longitude": 14.33418123076923,
+        "latitude": 50.03807603846154,
+        "car_capacity": 42,
+        "description": ""
+    },
+    {
+        "name": "Červeňanského",
+        "longitude": 14.334556359999999,
+        "latitude": 50.038053520000005,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Červeňanského",
+        "longitude": 14.334370795238096,
+        "latitude": 50.03910735238095,
+        "car_capacity": 27,
+        "description": ""
+    },
+    {
+        "name": "Jaroslava Foglara",
+        "longitude": 14.33127156,
+        "latitude": 50.03835582,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Rotavská",
+        "longitude": 14.33317268,
+        "latitude": 50.03861826,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Rotavská",
+        "longitude": 14.3325042,
+        "latitude": 50.03904358333333,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Řípská",
+        "longitude": 14.658987366666665,
+        "latitude": 49.984753125,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Dvořišťská",
+        "longitude": 14.5414013,
+        "latitude": 50.095095660000005,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Dvořišťská",
+        "longitude": 14.539237199999999,
+        "latitude": 50.094794560000004,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Podlišovská",
+        "longitude": 14.53905776,
+        "latitude": 50.09453032,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Podedvorská",
+        "longitude": 14.54023694,
+        "latitude": 50.09434838,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Dvořišťská",
+        "longitude": 14.54172092,
+        "latitude": 50.094905319999995,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Dřítenská",
+        "longitude": 14.542436675000001,
+        "latitude": 50.09487871249999,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Velkoborská",
+        "longitude": 14.541914839999999,
+        "latitude": 50.094311239999996,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Koberkova",
+        "longitude": 14.541124566666667,
+        "latitude": 50.093886216666654,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Koberkova",
+        "longitude": 14.539820216666667,
+        "latitude": 50.093703016666666,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Koberkova",
+        "longitude": 14.54111212,
+        "latitude": 50.0937724,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Koberkova",
+        "longitude": 14.5420779,
+        "latitude": 50.09377023999999,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Podedvorská",
+        "longitude": 14.538412220000001,
+        "latitude": 50.09408989999999,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Dvořišťská",
+        "longitude": 14.53821006,
+        "latitude": 50.0946434,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Koberkova",
+        "longitude": 14.538191360000003,
+        "latitude": 50.093448939999995,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Podedvorská",
+        "longitude": 14.53667037777778,
+        "latitude": 50.09344635555556,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Rožmberská",
+        "longitude": 14.541320440000002,
+        "latitude": 50.09312216,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Zvíkovská",
+        "longitude": 14.541911947058825,
+        "latitude": 50.09281225882354,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Sýkovecká",
+        "longitude": 14.543207139999998,
+        "latitude": 50.092886359999994,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Sýkovecká",
+        "longitude": 14.54215576,
+        "latitude": 50.091675480000006,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Medlovská",
+        "longitude": 14.541036419999998,
+        "latitude": 50.09202460000001,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Zvíkovská",
+        "longitude": 14.53994864,
+        "latitude": 50.09230262,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Zvíkovská",
+        "longitude": 14.538610360000002,
+        "latitude": 50.092101279999994,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Dářská",
+        "longitude": 14.5368493,
+        "latitude": 50.092159679999995,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Dářská",
+        "longitude": 14.53704035,
+        "latitude": 50.09206650000001,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Dářská",
+        "longitude": 14.539071857142858,
+        "latitude": 50.091661085714286,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Dářská",
+        "longitude": 14.53905868,
+        "latitude": 50.0917033,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Dářská",
+        "longitude": 14.54099736,
+        "latitude": 50.091315099999996,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Dářská",
+        "longitude": 14.54097576,
+        "latitude": 50.09127402,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Nad Rokoskou",
+        "longitude": 14.447935260000003,
+        "latitude": 50.117186419999996,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Klapkova",
+        "longitude": 14.45667828,
+        "latitude": 50.12708343999999,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Modřínová",
+        "longitude": 14.47864697142857,
+        "latitude": 50.13783278571428,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Vysočanská",
+        "longitude": 14.493682080000003,
+        "latitude": 50.122080180000005,
+        "car_capacity": 45,
+        "description": ""
+    },
+    {
+        "name": "Zakšínská",
+        "longitude": 14.496094140000002,
+        "latitude": 50.13014937333333,
+        "car_capacity": 37,
+        "description": ""
+    },
+    {
+        "name": "Zakšínská",
+        "longitude": 14.496157899999998,
+        "latitude": 50.1302492,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Zakšínská",
+        "longitude": 14.495406327272729,
+        "latitude": 50.13067845454545,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Zakšínská",
+        "longitude": 14.49411322,
+        "latitude": 50.13053448,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Zakšínská",
+        "longitude": 14.493936360000001,
+        "latitude": 50.13061962,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Makedonská",
+        "longitude": 14.492649259999999,
+        "latitude": 50.130511119999994,
+        "car_capacity": 32,
+        "description": ""
+    },
+    {
+        "name": "Zakšínská",
+        "longitude": 14.49330956,
+        "latitude": 50.13064734,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Makedonská",
+        "longitude": 14.493686180000001,
+        "latitude": 50.12948488,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Makedonská",
+        "longitude": 14.49297478,
+        "latitude": 50.12948242,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Hloubětínská",
+        "longitude": 14.535184049999998,
+        "latitude": 50.105050483333336,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Chvalská",
+        "longitude": 14.5390493,
+        "latitude": 50.10570477142857,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Poděbradská",
+        "longitude": 14.539778940000001,
+        "latitude": 50.10600134,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Horoušanská",
+        "longitude": 14.53956694,
+        "latitude": 50.10554282,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Liblická",
+        "longitude": 14.540714170000001,
+        "latitude": 50.10551634999999,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Poděbradská",
+        "longitude": 14.5415292,
+        "latitude": 50.10564786,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Poděbradská",
+        "longitude": 14.5431778,
+        "latitude": 50.10580926,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Klánovická",
+        "longitude": 14.54314872,
+        "latitude": 50.105739799999995,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Klánovická",
+        "longitude": 14.543659380000003,
+        "latitude": 50.10568876,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Klánovická",
+        "longitude": 14.544188980000001,
+        "latitude": 50.105515759999996,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Klánovická",
+        "longitude": 14.5432769,
+        "latitude": 50.105461319999996,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Klánovická",
+        "longitude": 14.543094700000001,
+        "latitude": 50.10539038,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Horoušanská",
+        "longitude": 14.54162096,
+        "latitude": 50.10524803999999,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Horoušanská",
+        "longitude": 14.542148000000001,
+        "latitude": 50.10526779999999,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Klánovická",
+        "longitude": 14.542609166666667,
+        "latitude": 50.10520703333333,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Vaňkova",
+        "longitude": 14.540985359999999,
+        "latitude": 50.10399848,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Vaňkova",
+        "longitude": 14.54097758,
+        "latitude": 50.103947039999994,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Vaňkova",
+        "longitude": 14.539336783333335,
+        "latitude": 50.10377736666666,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Vaňkova",
+        "longitude": 14.53880441666667,
+        "latitude": 50.10376923333333,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Liblická",
+        "longitude": 14.540285855555554,
+        "latitude": 50.10442316666666,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Čertouská",
+        "longitude": 14.5381351,
+        "latitude": 50.104395339999996,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Čertouská",
+        "longitude": 14.537965080000001,
+        "latitude": 50.10416932,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Klánovická",
+        "longitude": 14.539835300000002,
+        "latitude": 50.10503592,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Klánovická",
+        "longitude": 14.537873679999999,
+        "latitude": 50.1048493,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Tlumačovská",
+        "longitude": 14.336034588888891,
+        "latitude": 50.04008015555556,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Tlumačovská",
+        "longitude": 14.337045319999998,
+        "latitude": 50.04000942,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Mimoňská",
+        "longitude": 14.499216171428571,
+        "latitude": 50.12266052857142,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Terezínská",
+        "longitude": 14.50171152,
+        "latitude": 50.1273699,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Bechlínská",
+        "longitude": 14.503278174999998,
+        "latitude": 50.12721015625,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "Terezínská",
+        "longitude": 14.503968522222221,
+        "latitude": 50.12718026666667,
+        "car_capacity": 60,
+        "description": ""
+    },
+    {
+        "name": "Lomená",
+        "longitude": 14.2825867125,
+        "latitude": 50.025898725,
+        "car_capacity": 45,
+        "description": ""
+    },
+    {
+        "name": "Práčská",
+        "longitude": 14.516601099999999,
+        "latitude": 50.05355061428572,
+        "car_capacity": 3,
+        "description": ""
+    },
+    {
+        "name": "Bašteckého",
+        "longitude": 14.335715060000002,
+        "latitude": 50.03903178,
+        "car_capacity": 22,
+        "description": ""
+    },
+    {
+        "name": "Bašteckého",
+        "longitude": 14.33587006,
+        "latitude": 50.039036419999995,
+        "car_capacity": 21,
+        "description": ""
+    },
+    {
+        "name": "Bašteckého",
+        "longitude": 14.335848200000001,
+        "latitude": 50.038415040000004,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Bašteckého",
+        "longitude": 14.33603134,
+        "latitude": 50.03829738,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Bašteckého",
+        "longitude": 14.336093260000002,
+        "latitude": 50.03801982,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Bašteckého",
+        "longitude": 14.336139639999999,
+        "latitude": 50.03779742,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Pavrovského",
+        "longitude": 14.3360418,
+        "latitude": 50.03752346,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Pavrovského",
+        "longitude": 14.33625998,
+        "latitude": 50.037225500000005,
+        "car_capacity": 33,
+        "description": ""
+    },
+    {
+        "name": "Pavrovského",
+        "longitude": 14.33616072,
+        "latitude": 50.036978,
+        "car_capacity": 17,
+        "description": ""
+    },
+    {
+        "name": "Přecechtělova",
+        "longitude": 14.337189899999998,
+        "latitude": 50.03660474,
+        "car_capacity": 17,
+        "description": ""
+    },
+    {
+        "name": "Přecechtělova",
+        "longitude": 14.33717072,
+        "latitude": 50.03670472,
+        "car_capacity": 37,
+        "description": ""
+    },
+    {
+        "name": "Janského",
+        "longitude": 14.338707789999997,
+        "latitude": 50.035815,
+        "car_capacity": 32,
+        "description": ""
+    },
+    {
+        "name": "Prusíkova",
+        "longitude": 14.338654549999998,
+        "latitude": 50.036230360000005,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Přecechtělova",
+        "longitude": 14.339571911111111,
+        "latitude": 50.03687324444444,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "Prusíkova",
+        "longitude": 14.33851,
+        "latitude": 50.037155240000004,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Prusíkova",
+        "longitude": 14.3383508,
+        "latitude": 50.03714857999999,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Drimlova",
+        "longitude": 14.337947960000003,
+        "latitude": 50.03899554,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Drimlova",
+        "longitude": 14.33808326,
+        "latitude": 50.0391527,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Janského",
+        "longitude": 14.336664379999998,
+        "latitude": 50.03944018,
+        "car_capacity": 38,
+        "description": ""
+    },
+    {
+        "name": "Janského",
+        "longitude": 14.33884642,
+        "latitude": 50.03963408,
+        "car_capacity": 43,
+        "description": ""
+    },
+    {
+        "name": "Kurzova",
+        "longitude": 14.34018115714286,
+        "latitude": 50.03921247142858,
+        "car_capacity": 37,
+        "description": ""
+    },
+    {
+        "name": "Kurzova",
+        "longitude": 14.34033436,
+        "latitude": 50.03927236,
+        "car_capacity": 38,
+        "description": ""
+    },
+    {
+        "name": "Borovanského",
+        "longitude": 14.339441423529413,
+        "latitude": 50.038323923529404,
+        "car_capacity": 32,
+        "description": ""
+    },
+    {
+        "name": "Borovanského",
+        "longitude": 14.341157604761907,
+        "latitude": 50.03847752857144,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Borovanského",
+        "longitude": 14.34190768,
+        "latitude": 50.0385275,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Kurzova",
+        "longitude": 14.340491420000001,
+        "latitude": 50.037768140000004,
+        "car_capacity": 36,
+        "description": ""
+    },
+    {
+        "name": "Kurzova",
+        "longitude": 14.3406952,
+        "latitude": 50.03764257142858,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Kurzova",
+        "longitude": 14.340871741666666,
+        "latitude": 50.0364524,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Přecechtělova",
+        "longitude": 14.341477366666668,
+        "latitude": 50.03703668888888,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Kurzova",
+        "longitude": 14.340949661538463,
+        "latitude": 50.035984823076916,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Janského",
+        "longitude": 14.340115314285715,
+        "latitude": 50.035429442857144,
+        "car_capacity": 46,
+        "description": ""
+    },
+    {
+        "name": "Klausova",
+        "longitude": 14.341766560000002,
+        "latitude": 50.03542710000001,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Janského",
+        "longitude": 14.3429525,
+        "latitude": 50.03751686,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Janského",
+        "longitude": 14.34277988,
+        "latitude": 50.03751832,
+        "car_capacity": 19,
+        "description": ""
+    },
+    {
+        "name": "Janského",
+        "longitude": 14.342632420000001,
+        "latitude": 50.03819466,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Borovanského",
+        "longitude": 14.342785240000001,
+        "latitude": 50.03828908,
+        "car_capacity": 26,
+        "description": ""
+    },
+    {
+        "name": "Janského",
+        "longitude": 14.34264058,
+        "latitude": 50.038971679999996,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Janského",
+        "longitude": 14.342446380000002,
+        "latitude": 50.03906666,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Žitavského",
+        "longitude": 14.393678524999999,
+        "latitude": 49.95967912500001,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Žitavského",
+        "longitude": 14.393493359999999,
+        "latitude": 49.95949486,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Na Baních",
+        "longitude": 14.382094500000003,
+        "latitude": 49.959882140000005,
+        "car_capacity": 36,
+        "description": ""
+    },
+    {
+        "name": "Na drahách",
+        "longitude": 14.38084762,
+        "latitude": 49.958734119999995,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Na drahách",
+        "longitude": 14.382240629999998,
+        "latitude": 49.95900058,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Na Baních",
+        "longitude": 14.38145021764706,
+        "latitude": 49.95915721764706,
+        "car_capacity": 90,
+        "description": ""
+    },
+    {
+        "name": "Na drahách",
+        "longitude": 14.380478480000003,
+        "latitude": 49.95907863,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Na Baních",
+        "longitude": 14.381279760000002,
+        "latitude": 49.959960900000006,
+        "car_capacity": 36,
+        "description": ""
+    },
+    {
+        "name": "Na Baních",
+        "longitude": 14.380723733333332,
+        "latitude": 49.960626116666674,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "U kříže",
+        "longitude": 14.3695399625,
+        "latitude": 50.0540298125,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Komerční",
+        "longitude": 14.60619374,
+        "latitude": 49.98508948,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "K Radotínu",
+        "longitude": 14.369962871428571,
+        "latitude": 49.974768635714284,
+        "car_capacity": 80,
+        "description": ""
+    },
+    {
+        "name": "Parking",
+        "longitude": 14.367447120000003,
+        "latitude": 49.97415464,
+        "car_capacity": 80,
+        "description": ""
+    },
+    {
+        "name": "K Radotínu",
+        "longitude": 14.367607862499998,
+        "latitude": 49.97486101249999,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Na betonce",
+        "longitude": 14.360776179999998,
+        "latitude": 49.985213120000004,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Na betonce",
+        "longitude": 14.360560060000001,
+        "latitude": 49.98519558,
+        "car_capacity": 36,
+        "description": ""
+    },
+    {
+        "name": "Prvomájová",
+        "longitude": 14.35870564,
+        "latitude": 49.9854206,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Prvomájová",
+        "longitude": 14.3578484,
+        "latitude": 49.9851385,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Výpadová",
+        "longitude": 14.37252688,
+        "latitude": 49.98798552,
+        "car_capacity": 60,
+        "description": ""
+    },
+    {
+        "name": "Výpadová",
+        "longitude": 14.373858153846156,
+        "latitude": 49.9890555923077,
+        "car_capacity": 100,
+        "description": ""
+    },
+    {
+        "name": "Parking",
+        "longitude": 14.38890576,
+        "latitude": 50.003772919999996,
+        "car_capacity": 100,
+        "description": ""
+    },
+    {
+        "name": "Strakonická",
+        "longitude": 14.39503398,
+        "latitude": 50.026298440000005,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Na Rovném",
+        "longitude": 14.3541068,
+        "latitude": 50.018217820000004,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Nádražní",
+        "longitude": 14.268876,
+        "latitude": 50.08398761666667,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Imrychova",
+        "longitude": 14.431971,
+        "latitude": 50.0127914,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Daškova",
+        "longitude": 14.425977219999998,
+        "latitude": 50.013108620000004,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Bobkova",
+        "longitude": 14.5771136,
+        "latitude": 50.105777100000005,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Bobkova",
+        "longitude": 14.577515199999999,
+        "latitude": 50.105828200000005,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Bobkova",
+        "longitude": 14.57977188,
+        "latitude": 50.10611754,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Ládevská",
+        "longitude": 14.4524538,
+        "latitude": 50.140054619999994,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Protilehlá",
+        "longitude": 14.452412400000004,
+        "latitude": 50.14051644,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "Počeradská",
+        "longitude": 14.454059660000002,
+        "latitude": 50.139382659999995,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Pod křížem",
+        "longitude": 14.453709960000001,
+        "latitude": 50.14289798,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Pod křížem",
+        "longitude": 14.45308458,
+        "latitude": 50.142855940000004,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Bolebořská",
+        "longitude": 14.449065659999999,
+        "latitude": 50.14795546,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Osecká",
+        "longitude": 14.448285133333334,
+        "latitude": 50.14825133333333,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "U rybníčka",
+        "longitude": 14.446590766666667,
+        "latitude": 50.146822122222225,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Hrušovanské náměstí",
+        "longitude": 14.446046014285715,
+        "latitude": 50.1464486,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "U Václava",
+        "longitude": 14.44203982,
+        "latitude": 50.146062539999996,
+        "car_capacity": 19,
+        "description": ""
+    },
+    {
+        "name": "Spořická",
+        "longitude": 14.4419916,
+        "latitude": 50.145992039999996,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Podhořská",
+        "longitude": 14.44485238,
+        "latitude": 50.14778206,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Podhořská",
+        "longitude": 14.4441388,
+        "latitude": 50.147566044444446,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Kadaňská",
+        "longitude": 14.44121534,
+        "latitude": 50.148001539999996,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Podhořská",
+        "longitude": 14.44152696,
+        "latitude": 50.14738556,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "U Václava",
+        "longitude": 14.4412142,
+        "latitude": 50.14692404,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "U Václava",
+        "longitude": 14.441908139999999,
+        "latitude": 50.14661366,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "V Americe",
+        "longitude": 14.442252299999998,
+        "latitude": 50.14716578,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Podhořská",
+        "longitude": 14.4424001,
+        "latitude": 50.14770299999999,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Libochovická",
+        "longitude": 14.439740160000003,
+        "latitude": 50.14708332,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "U Václava",
+        "longitude": 14.440608399999999,
+        "latitude": 50.14761598,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Doksanská",
+        "longitude": 14.439919457142858,
+        "latitude": 50.14836938571428,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Pod Václavem",
+        "longitude": 14.441046120000001,
+        "latitude": 50.14655818,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Pod Václavem",
+        "longitude": 14.439607720000001,
+        "latitude": 50.14625078,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Pod Václavem",
+        "longitude": 14.4383437,
+        "latitude": 50.14608866,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Velemínská",
+        "longitude": 14.439005942857145,
+        "latitude": 50.14733892857142,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Pod zámečkem",
+        "longitude": 14.441087144444445,
+        "latitude": 50.14986948888888,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Měděnecká",
+        "longitude": 14.44518722,
+        "latitude": 50.149616439999996,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Před sokolovnou",
+        "longitude": 14.44781902,
+        "latitude": 50.149973880000005,
+        "car_capacity": 3,
+        "description": ""
+    },
+    {
+        "name": "U jízdárny",
+        "longitude": 14.4469368625,
+        "latitude": 50.1505475,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "U jízdárny",
+        "longitude": 14.445677971428571,
+        "latitude": 50.15068562857142,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "U jízdárny",
+        "longitude": 14.445452979999999,
+        "latitude": 50.15074267999999,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Pihelská",
+        "longitude": 14.446396580000002,
+        "latitude": 50.15161046000001,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Na šubě",
+        "longitude": 14.448928439999998,
+        "latitude": 50.151813860000004,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Na šubě",
+        "longitude": 14.44931118,
+        "latitude": 50.15119924,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Skalnická",
+        "longitude": 14.47228196,
+        "latitude": 50.14182355999999,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "U hájovny",
+        "longitude": 14.473362439999999,
+        "latitude": 50.1421077,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Říjnová",
+        "longitude": 14.47363454,
+        "latitude": 50.141544120000006,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "U hájovny",
+        "longitude": 14.474648871428572,
+        "latitude": 50.14191544285715,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Poděbradova",
+        "longitude": 14.475571300000002,
+        "latitude": 50.142374239999995,
+        "car_capacity": 23,
+        "description": ""
+    },
+    {
+        "name": "Zákupská",
+        "longitude": 14.47358218,
+        "latitude": 50.14337832,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Říjnová",
+        "longitude": 14.474123100000003,
+        "latitude": 50.14233670000001,
+        "car_capacity": 3,
+        "description": ""
+    },
+    {
+        "name": "Říjnová",
+        "longitude": 14.474266459999999,
+        "latitude": 50.142579239999996,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Poděbradova",
+        "longitude": 14.4727426,
+        "latitude": 50.143092859999996,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Poděbradova",
+        "longitude": 14.47385574,
+        "latitude": 50.1428906,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Liběchovská",
+        "longitude": 14.471828159999998,
+        "latitude": 50.14374696,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Zákupská",
+        "longitude": 14.474035400000002,
+        "latitude": 50.14412571999999,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Říjnová",
+        "longitude": 14.47498094,
+        "latitude": 50.143660520000005,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Pod prodejnou",
+        "longitude": 14.475552519999999,
+        "latitude": 50.14388774,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Pod prodejnou",
+        "longitude": 14.476912879999997,
+        "latitude": 50.143581319999996,
+        "car_capacity": 17,
+        "description": ""
+    },
+    {
+        "name": "Včelařská",
+        "longitude": 14.476853940000002,
+        "latitude": 50.144048680000004,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Sadařská",
+        "longitude": 14.47600262,
+        "latitude": 50.144490000000005,
+        "car_capacity": 17,
+        "description": ""
+    },
+    {
+        "name": "Koníčkovo náměstí",
+        "longitude": 14.4750654,
+        "latitude": 50.14449376,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "U spojů",
+        "longitude": 14.47460422,
+        "latitude": 50.14519094,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Čenkovská",
+        "longitude": 14.475643080000001,
+        "latitude": 50.14508078,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Brigádnická",
+        "longitude": 14.476855480000001,
+        "latitude": 50.14511454,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Ptáčnická",
+        "longitude": 14.477306519999999,
+        "latitude": 50.145356619999994,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "K náměstí",
+        "longitude": 14.48037466,
+        "latitude": 50.1438218,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Osinalická",
+        "longitude": 14.481107766666668,
+        "latitude": 50.144192333333336,
+        "car_capacity": 17,
+        "description": ""
+    },
+    {
+        "name": "Osinalická",
+        "longitude": 14.482709879999998,
+        "latitude": 50.144632200000004,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Osinalická",
+        "longitude": 14.48216482857143,
+        "latitude": 50.14445468571429,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Osinalická",
+        "longitude": 14.481747919999998,
+        "latitude": 50.144943760000004,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "U Prefy",
+        "longitude": 14.48344884,
+        "latitude": 50.144267240000005,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Ďáblická",
+        "longitude": 14.48528757142857,
+        "latitude": 50.14503514285714,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Ďáblická",
+        "longitude": 14.485285057142857,
+        "latitude": 50.14524491428572,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "U Prefy",
+        "longitude": 14.484435880000001,
+        "latitude": 50.145568839999996,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Prácheňská",
+        "longitude": 14.48349206,
+        "latitude": 50.145712079999996,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Osinalická",
+        "longitude": 14.48245904,
+        "latitude": 50.1458524,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Osinalická",
+        "longitude": 14.48094902,
+        "latitude": 50.14477024000001,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Brigádnická",
+        "longitude": 14.476464159999997,
+        "latitude": 50.145689000000004,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Čenkovská",
+        "longitude": 14.477360120000004,
+        "latitude": 50.1455506,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Myslivecká",
+        "longitude": 14.47798894,
+        "latitude": 50.146103960000005,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Myslivecká",
+        "longitude": 14.478955160000002,
+        "latitude": 50.14559472,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Květnová",
+        "longitude": 14.48019902,
+        "latitude": 50.14560176,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Na kopci",
+        "longitude": 14.47993748,
+        "latitude": 50.14614168000001,
+        "car_capacity": 3,
+        "description": ""
+    },
+    {
+        "name": "Kučerové",
+        "longitude": 14.481652500000001,
+        "latitude": 50.146062666666666,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Květnová",
+        "longitude": 14.48085466,
+        "latitude": 50.146333940000005,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Květnová",
+        "longitude": 14.48088854,
+        "latitude": 50.1464656,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Županovická",
+        "longitude": 14.47276534,
+        "latitude": 50.1454698,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "U Parkánu",
+        "longitude": 14.482982285714286,
+        "latitude": 50.14761351428571,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Kučerové",
+        "longitude": 14.48259284,
+        "latitude": 50.14679716,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Osinalická",
+        "longitude": 14.483528414285713,
+        "latitude": 50.14652985714286,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Prácheňská",
+        "longitude": 14.48386044,
+        "latitude": 50.14624664,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "U Prefy",
+        "longitude": 14.48477026,
+        "latitude": 50.146180660000006,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Kokořínská",
+        "longitude": 14.48613306,
+        "latitude": 50.14547264,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Ďáblická",
+        "longitude": 14.4857707,
+        "latitude": 50.14588156000001,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Na terase",
+        "longitude": 14.48460312,
+        "latitude": 50.14683102,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Na terase",
+        "longitude": 14.485387659999997,
+        "latitude": 50.146640760000004,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Legionářů",
+        "longitude": 14.48770888,
+        "latitude": 50.14797906,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Legionářů",
+        "longitude": 14.487489059999998,
+        "latitude": 50.14694738,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Legionářů",
+        "longitude": 14.48697546,
+        "latitude": 50.145742479999996,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Mšenská",
+        "longitude": 14.487877999999998,
+        "latitude": 50.14614924,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Kokořínská",
+        "longitude": 14.487236720000002,
+        "latitude": 50.14523882,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Kokořínská",
+        "longitude": 14.4882355,
+        "latitude": 50.145032549999996,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Chřibská",
+        "longitude": 14.489034679999998,
+        "latitude": 50.145938539999996,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Lobečská",
+        "longitude": 14.48823592,
+        "latitude": 50.14741624,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Chřibská",
+        "longitude": 14.488970839999999,
+        "latitude": 50.14788772,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Chřibská",
+        "longitude": 14.4888713,
+        "latitude": 50.14914575,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Byškovická",
+        "longitude": 14.488155460000002,
+        "latitude": 50.14974926,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Chřibská",
+        "longitude": 14.48883376,
+        "latitude": 50.15020884,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "U chaloupek",
+        "longitude": 14.488258980000001,
+        "latitude": 50.15042092,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "U chaloupek",
+        "longitude": 14.48679932,
+        "latitude": 50.15030338,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Markova",
+        "longitude": 14.367658700000002,
+        "latitude": 50.05756832,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Radlická",
+        "longitude": 14.356517120000001,
+        "latitude": 50.04711021999999,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Radlická",
+        "longitude": 14.358921985714286,
+        "latitude": 50.04898982857143,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Radlická",
+        "longitude": 14.358550433333335,
+        "latitude": 50.04889851666667,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Stodůlecká",
+        "longitude": 14.364885140000002,
+        "latitude": 50.04898132,
+        "car_capacity": 23,
+        "description": ""
+    },
+    {
+        "name": "Parking",
+        "longitude": 14.371670940000001,
+        "latitude": 50.05097266,
+        "car_capacity": 54,
+        "description": ""
+    },
+    {
+        "name": "Pod vodovodem",
+        "longitude": 14.372165575,
+        "latitude": 50.053314637499994,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "Pod vodovodem",
+        "longitude": 14.373193599999999,
+        "latitude": 50.05323122,
+        "car_capacity": 38,
+        "description": ""
+    },
+    {
+        "name": "Pod vodovodem",
+        "longitude": 14.373027718181818,
+        "latitude": 50.053467054545465,
+        "car_capacity": 60,
+        "description": ""
+    },
+    {
+        "name": "Pod vodovodem",
+        "longitude": 14.3724097,
+        "latitude": 50.05408085,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Puchmajerova",
+        "longitude": 14.372330866666667,
+        "latitude": 50.054748499999995,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Pekařská",
+        "longitude": 14.343724649999999,
+        "latitude": 50.05705643333334,
+        "car_capacity": 123,
+        "description": ""
+    },
+    {
+        "name": "Pekařská",
+        "longitude": 14.342516620000001,
+        "latitude": 50.05635874000001,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Pekařská",
+        "longitude": 14.34265849,
+        "latitude": 50.0568695,
+        "car_capacity": 100,
+        "description": ""
+    },
+    {
+        "name": "Pekařská",
+        "longitude": 14.343099846153848,
+        "latitude": 50.057592507692306,
+        "car_capacity": 100,
+        "description": ""
+    },
+    {
+        "name": "Bucharova",
+        "longitude": 14.341955757142857,
+        "latitude": 50.0556527,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Bucharova",
+        "longitude": 14.3431194,
+        "latitude": 50.05486312,
+        "car_capacity": 22,
+        "description": ""
+    },
+    {
+        "name": "Bucharova",
+        "longitude": 14.344269310000001,
+        "latitude": 50.0551271,
+        "car_capacity": 80,
+        "description": ""
+    },
+    {
+        "name": "Bucharova",
+        "longitude": 14.34313302857143,
+        "latitude": 50.05550265714286,
+        "car_capacity": 65,
+        "description": ""
+    },
+    {
+        "name": "Pekařská",
+        "longitude": 14.3450523,
+        "latitude": 50.05578534,
+        "car_capacity": 22,
+        "description": ""
+    },
+    {
+        "name": "Chmelařská",
+        "longitude": 14.34449392,
+        "latitude": 50.0561206,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Pekařská",
+        "longitude": 14.345228988888891,
+        "latitude": 50.05623841111111,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Laténská",
+        "longitude": 14.345841142857141,
+        "latitude": 50.05619757142858,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Pekařská",
+        "longitude": 14.34597522,
+        "latitude": 50.055882600000004,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Pekařská",
+        "longitude": 14.34679174,
+        "latitude": 50.05588772,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Pekařská",
+        "longitude": 14.347498799999999,
+        "latitude": 50.05568456666666,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Pekařská",
+        "longitude": 14.348697679999997,
+        "latitude": 50.05533129999999,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Hlubocká",
+        "longitude": 14.35430208,
+        "latitude": 50.05506836,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "U panské zahrady",
+        "longitude": 14.35511004,
+        "latitude": 50.05517798,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "U panské zahrady",
+        "longitude": 14.354897584615381,
+        "latitude": 50.05463113846153,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Za zámečkem",
+        "longitude": 14.354312561538462,
+        "latitude": 50.0543971923077,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Za zámečkem",
+        "longitude": 14.35427641111111,
+        "latitude": 50.054300877777784,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Za zámečkem",
+        "longitude": 14.353124681818183,
+        "latitude": 50.05431118181818,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Za zámečkem",
+        "longitude": 14.353206777777778,
+        "latitude": 50.05440441111111,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Za zámečkem",
+        "longitude": 14.35462392,
+        "latitude": 50.05396552,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Jaroslava Foglara",
+        "longitude": 14.331653383333332,
+        "latitude": 50.03925221666666,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Jaroslava Foglara",
+        "longitude": 14.33076384,
+        "latitude": 50.03829544,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "U kříže",
+        "longitude": 14.3667744,
+        "latitude": 50.05415248,
+        "car_capacity": 36,
+        "description": ""
+    },
+    {
+        "name": "U kříže",
+        "longitude": 14.366799480000001,
+        "latitude": 50.05425637999999,
+        "car_capacity": 36,
+        "description": ""
+    },
+    {
+        "name": "Naskové",
+        "longitude": 14.360703555555554,
+        "latitude": 50.06315396666667,
+        "car_capacity": 22,
+        "description": ""
+    },
+    {
+        "name": "Za černým mostem",
+        "longitude": 14.554988600000001,
+        "latitude": 50.10793014000001,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Za černým mostem",
+        "longitude": 14.55561912,
+        "latitude": 50.10796764,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Za černým mostem",
+        "longitude": 14.556397766666665,
+        "latitude": 50.10845966666667,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Slévačská",
+        "longitude": 14.547373259999997,
+        "latitude": 50.104199519999995,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Kolbenova",
+        "longitude": 14.547920285714286,
+        "latitude": 50.108757242857145,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Mezi vodami",
+        "longitude": 14.401455559999999,
+        "latitude": 50.013602739999996,
+        "car_capacity": 21,
+        "description": ""
+    },
+    {
+        "name": "Mezi vodami",
+        "longitude": 14.401247620000001,
+        "latitude": 50.012466919999994,
+        "car_capacity": 3,
+        "description": ""
+    },
+    {
+        "name": "Ratajská",
+        "longitude": 14.655375028571427,
+        "latitude": 50.07692408571428,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Baarova",
+        "longitude": 14.449759300000002,
+        "latitude": 50.049478144444436,
+        "car_capacity": 45,
+        "description": ""
+    },
+    {
+        "name": "Baarova",
+        "longitude": 14.451002949999998,
+        "latitude": 50.04967096666667,
+        "car_capacity": 32,
+        "description": ""
+    },
+    {
+        "name": "Skokanská",
+        "longitude": 14.37607572,
+        "latitude": 50.07962481,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Atletická",
+        "longitude": 14.380791966666663,
+        "latitude": 50.079522991666664,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Mezi vodami",
+        "longitude": 14.401186955555554,
+        "latitude": 50.01390542222222,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Křivenická",
+        "longitude": 14.433215180000001,
+        "latitude": 50.14374526,
+        "car_capacity": 42,
+        "description": ""
+    },
+    {
+        "name": "Ouholická",
+        "longitude": 14.43213548,
+        "latitude": 50.14317103999999,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Ouholická",
+        "longitude": 14.433781820000002,
+        "latitude": 50.14247386000001,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Křivenická",
+        "longitude": 14.43475638,
+        "latitude": 50.14218126,
+        "car_capacity": 17,
+        "description": ""
+    },
+    {
+        "name": "Křivenická",
+        "longitude": 14.435031,
+        "latitude": 50.142251040000005,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Křivenická",
+        "longitude": 14.434056219999999,
+        "latitude": 50.141715319999996,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Křivenická",
+        "longitude": 14.4328216,
+        "latitude": 50.14178842000001,
+        "car_capacity": 21,
+        "description": ""
+    },
+    {
+        "name": "Žalovská",
+        "longitude": 14.43288724,
+        "latitude": 50.142081999999995,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Strážnická",
+        "longitude": 14.428988439999998,
+        "latitude": 50.14213424,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Žalovská",
+        "longitude": 14.429671078571428,
+        "latitude": 50.14213877142857,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "K rybníku",
+        "longitude": 14.428456542857143,
+        "latitude": 50.14153697142858,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Libčická",
+        "longitude": 14.43163402,
+        "latitude": 50.14058096,
+        "car_capacity": 27,
+        "description": ""
+    },
+    {
+        "name": "Okořská",
+        "longitude": 14.430959820000002,
+        "latitude": 50.13672964,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Libeňská",
+        "longitude": 14.43038234,
+        "latitude": 50.136863899999994,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Přívorská",
+        "longitude": 14.435518380000001,
+        "latitude": 50.135684899999994,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Chvatěrubská",
+        "longitude": 14.43570358,
+        "latitude": 50.1351101,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Na hranicích",
+        "longitude": 14.43649992,
+        "latitude": 50.1347736,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Na hranicích",
+        "longitude": 14.43507812,
+        "latitude": 50.13476102,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Na hranicích",
+        "longitude": 14.43414592,
+        "latitude": 50.13474458,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Na hranicích",
+        "longitude": 14.432661583333333,
+        "latitude": 50.134491716666666,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Pod Čimickým hájem",
+        "longitude": 14.433097755555556,
+        "latitude": 50.132713466666665,
+        "car_capacity": 53,
+        "description": ""
+    },
+    {
+        "name": "Ústavní",
+        "longitude": 14.42698098,
+        "latitude": 50.132883680000006,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Ústavní",
+        "longitude": 14.426042599999999,
+        "latitude": 50.132949079999996,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Ústavní",
+        "longitude": 14.4246939,
+        "latitude": 50.133038066666664,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Hlivická",
+        "longitude": 14.423305879999997,
+        "latitude": 50.13313146,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Ústavní",
+        "longitude": 14.421499939999999,
+        "latitude": 50.13326422,
+        "car_capacity": 19,
+        "description": ""
+    },
+    {
+        "name": "Ústavní",
+        "longitude": 14.41976856,
+        "latitude": 50.1333785,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Ústavní",
+        "longitude": 14.41842084,
+        "latitude": 50.13347280000001,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Feřtekova",
+        "longitude": 14.40789488,
+        "latitude": 50.13194128,
+        "car_capacity": 48,
+        "description": ""
+    },
+    {
+        "name": "Hackerova",
+        "longitude": 14.406557183333334,
+        "latitude": 50.13396096666667,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Hackerova",
+        "longitude": 14.405983299999999,
+        "latitude": 50.133594020000004,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Dolákova",
+        "longitude": 14.40531162,
+        "latitude": 50.133363020000004,
+        "car_capacity": 17,
+        "description": ""
+    },
+    {
+        "name": "Hackerova",
+        "longitude": 14.40541002307692,
+        "latitude": 50.13469665384615,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "Svídnická",
+        "longitude": 14.412327679999999,
+        "latitude": 50.127957519999995,
+        "car_capacity": 57,
+        "description": ""
+    },
+    {
+        "name": "Štětínská",
+        "longitude": 14.427491377777777,
+        "latitude": 50.129998388888886,
+        "car_capacity": 250,
+        "description": ""
+    },
+    {
+        "name": "Gdaňská",
+        "longitude": 14.429734142857145,
+        "latitude": 50.131018421428564,
+        "car_capacity": 100,
+        "description": ""
+    },
+    {
+        "name": "Bukolská",
+        "longitude": 14.433112257142858,
+        "latitude": 50.13044562857142,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "Čimická",
+        "longitude": 14.431235814285715,
+        "latitude": 50.12951149999999,
+        "car_capacity": 85,
+        "description": ""
+    },
+    {
+        "name": "Lindavská",
+        "longitude": 14.432678618181818,
+        "latitude": 50.12887149090909,
+        "car_capacity": 80,
+        "description": ""
+    },
+    {
+        "name": "Glowackého",
+        "longitude": 14.426906142857144,
+        "latitude": 50.12753667142857,
+        "car_capacity": 45,
+        "description": ""
+    },
+    {
+        "name": "Krosenská",
+        "longitude": 14.4255469,
+        "latitude": 50.12833033636364,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Lešenská",
+        "longitude": 14.4233822125,
+        "latitude": 50.12820478750001,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Lešenská",
+        "longitude": 14.423360400000002,
+        "latitude": 50.12735196,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Krosenská",
+        "longitude": 14.422101061538463,
+        "latitude": 50.12854853076923,
+        "car_capacity": 44,
+        "description": ""
+    },
+    {
+        "name": "Sosnovecká",
+        "longitude": 14.420774660000001,
+        "latitude": 50.12755098,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Sosnovecká",
+        "longitude": 14.42220944,
+        "latitude": 50.127161439999995,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Hnězdenská",
+        "longitude": 14.42514984,
+        "latitude": 50.12610678,
+        "car_capacity": 32,
+        "description": ""
+    },
+    {
+        "name": "Hnězdenská",
+        "longitude": 14.422103459999999,
+        "latitude": 50.1259319,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Pomořanská",
+        "longitude": 14.41431531818182,
+        "latitude": 50.126677545454555,
+        "car_capacity": 68,
+        "description": ""
+    },
+    {
+        "name": "Mazovská",
+        "longitude": 14.412391719999999,
+        "latitude": 50.12538878,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "K Bohnicím",
+        "longitude": 14.40905434,
+        "latitude": 50.11946708,
+        "car_capacity": 120,
+        "description": ""
+    },
+    {
+        "name": "Skandinávská",
+        "longitude": 14.299085700000001,
+        "latitude": 50.049693999999995,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Autobazar",
+        "longitude": 14.301497469230771,
+        "latitude": 50.05329488461538,
+        "car_capacity": 91,
+        "description": ""
+    },
+    {
+        "name": "Skandinávská",
+        "longitude": 14.293402215384615,
+        "latitude": 50.04968375384616,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Parking",
+        "longitude": 14.294884009090907,
+        "latitude": 50.055037527272724,
+        "car_capacity": 60,
+        "description": ""
+    },
+    {
+        "name": "V olšinách",
+        "longitude": 14.496939559999998,
+        "latitude": 50.072232400000004,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Nosická",
+        "longitude": 14.49712476,
+        "latitude": 50.072254879999996,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Nad elektrárnou",
+        "longitude": 14.48184716,
+        "latitude": 50.05909818666667,
+        "car_capacity": 28,
+        "description": ""
+    },
+    {
+        "name": "Na lysině",
+        "longitude": 14.42873936,
+        "latitude": 50.05367794,
+        "car_capacity": 29,
+        "description": ""
+    },
+    {
+        "name": "Botevova",
+        "longitude": 14.418782380000001,
+        "latitude": 50.00888633333333,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Sazečská",
+        "longitude": 14.520794150000002,
+        "latitude": 50.080598775,
+        "car_capacity": 19,
+        "description": ""
+    },
+    {
+        "name": "Prosecká",
+        "longitude": 14.508597666666665,
+        "latitude": 50.12239880833332,
+        "car_capacity": 200,
+        "description": ""
+    },
+    {
+        "name": "Kobrova",
+        "longitude": 14.397920589999998,
+        "latitude": 50.07419677000001,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "K Verneráku",
+        "longitude": 14.492003300000002,
+        "latitude": 50.02126142857143,
+        "car_capacity": 80,
+        "description": ""
+    },
+    {
+        "name": "Liblická",
+        "longitude": 14.540796883333334,
+        "latitude": 50.105423,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Žernosecká",
+        "longitude": 14.475000885714284,
+        "latitude": 50.132306500000006,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Železničářů",
+        "longitude": 14.442104080000002,
+        "latitude": 50.107090819999996,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Průmyslová",
+        "longitude": 14.65885974,
+        "latitude": 50.1764096,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Rolnická",
+        "longitude": 14.65670538,
+        "latitude": 50.17615466,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Tusarova",
+        "longitude": 14.4477998375,
+        "latitude": 50.10114195,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "K cihelně",
+        "longitude": 14.579966919999999,
+        "latitude": 50.122000119999996,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Školní nám.",
+        "longitude": 14.392492600000002,
+        "latitude": 50.16419501666667,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Dolnoměcholupská",
+        "longitude": 14.54433155882353,
+        "latitude": 50.05627561764706,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Evropská",
+        "longitude": 14.339268145454547,
+        "latitude": 50.0948782,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "V olšinách",
+        "longitude": 14.505006500000002,
+        "latitude": 50.07309947142857,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Ke křížkám",
+        "longitude": 14.599161689999997,
+        "latitude": 50.06531461,
+        "car_capacity": 800,
+        "description": ""
+    },
+    {
+        "name": "Hořejší nábřeží",
+        "longitude": 14.410980975,
+        "latitude": 50.06727553749999,
+        "car_capacity": 24,
+        "description": ""
+    },
+    {
+        "name": "Hořejší nábřeží",
+        "longitude": 14.411014374999999,
+        "latitude": 50.067125462499995,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Amortova",
+        "longitude": 14.41379204,
+        "latitude": 50.00698236999999,
+        "car_capacity": 52,
+        "description": ""
+    },
+    {
+        "name": "Drnovská",
+        "longitude": 14.30495538,
+        "latitude": 50.0865387,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "Vlastina",
+        "longitude": 14.30502008,
+        "latitude": 50.08671746,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "Za Křížem",
+        "longitude": 14.567567413333334,
+        "latitude": 50.0522071,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "U školy",
+        "longitude": 14.551500809090907,
+        "latitude": 50.070816863636374,
+        "car_capacity": 34,
+        "description": ""
+    },
+    {
+        "name": "Hrnčířská",
+        "longitude": 14.522572525000001,
+        "latitude": 49.986080875,
+        "car_capacity": 37,
+        "description": ""
+    },
+    {
+        "name": "Hrnčířská",
+        "longitude": 14.52576345,
+        "latitude": 49.98295548333334,
+        "car_capacity": 21,
+        "description": ""
+    },
+    {
+        "name": "Hrnčířská",
+        "longitude": 14.52666392,
+        "latitude": 49.98244952,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Hrnčířská",
+        "longitude": 14.52732164,
+        "latitude": 49.98209672,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Hrnčířská",
+        "longitude": 14.527973079999999,
+        "latitude": 49.98173742,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Hrnčířská",
+        "longitude": 14.52848438,
+        "latitude": 49.98132733999999,
+        "car_capacity": 21,
+        "description": ""
+    },
+    {
+        "name": "Hrnčířská",
+        "longitude": 14.52893908,
+        "latitude": 49.9808408,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Zelenečská",
+        "longitude": 14.53593632,
+        "latitude": 50.10839666,
+        "car_capacity": 22,
+        "description": ""
+    },
+    {
+        "name": "Nehvizdská",
+        "longitude": 14.536047439999999,
+        "latitude": 50.107664220000004,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Zelenečská",
+        "longitude": 14.53675376,
+        "latitude": 50.10863448,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Zelenečská",
+        "longitude": 14.536716460000003,
+        "latitude": 50.10870662000001,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Zelenečská",
+        "longitude": 14.538497300000001,
+        "latitude": 50.10838615,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Zelenečská",
+        "longitude": 14.538415359999998,
+        "latitude": 50.10846434,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Mochovská",
+        "longitude": 14.53920588,
+        "latitude": 50.107853920000004,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Zelenečská",
+        "longitude": 14.540106939999998,
+        "latitude": 50.10829174,
+        "car_capacity": 37,
+        "description": ""
+    },
+    {
+        "name": "Rochovská",
+        "longitude": 14.547458920000002,
+        "latitude": 50.10493904,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Rochovská",
+        "longitude": 14.548024980000003,
+        "latitude": 50.10566678,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Rochovská",
+        "longitude": 14.548869414285715,
+        "latitude": 50.10553206428572,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Zelenečská",
+        "longitude": 14.535503214285715,
+        "latitude": 50.108792785714286,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Zelenečská",
+        "longitude": 14.53439434,
+        "latitude": 50.10893012,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Nedvědická",
+        "longitude": 14.547964322222223,
+        "latitude": 50.10267554444445,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Slévačská",
+        "longitude": 14.548903566666667,
+        "latitude": 50.10305601666666,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Šromova",
+        "longitude": 14.568219100000002,
+        "latitude": 50.10508254,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Bryksova",
+        "longitude": 14.583623171428572,
+        "latitude": 50.105278,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Bryksova",
+        "longitude": 14.58502655,
+        "latitude": 50.1048585,
+        "car_capacity": 43,
+        "description": ""
+    },
+    {
+        "name": "Bryksova",
+        "longitude": 14.585441028571427,
+        "latitude": 50.10366344285715,
+        "car_capacity": 45,
+        "description": ""
+    },
+    {
+        "name": "Pavlišovská",
+        "longitude": 14.620862525000001,
+        "latitude": 50.110122662500004,
+        "car_capacity": 80,
+        "description": ""
+    },
+    {
+        "name": "Pavlišovská",
+        "longitude": 14.620469120000001,
+        "latitude": 50.110733939999996,
+        "car_capacity": 130,
+        "description": ""
+    },
+    {
+        "name": "Pavlišovská",
+        "longitude": 14.620035580000001,
+        "latitude": 50.110400299999995,
+        "car_capacity": 17,
+        "description": ""
+    },
+    {
+        "name": "Pavlišovská",
+        "longitude": 14.62090942,
+        "latitude": 50.11058004,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Pavlišovská",
+        "longitude": 14.621778640000002,
+        "latitude": 50.11077343999999,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Bakovská",
+        "longitude": 14.54913722,
+        "latitude": 50.13442512,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Vlastina",
+        "longitude": 14.314001428571428,
+        "latitude": 50.08981682857142,
+        "car_capacity": 68,
+        "description": ""
+    },
+    {
+        "name": "Vorařská",
+        "longitude": 14.39975914,
+        "latitude": 50.013756820000005,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Na Hůrce",
+        "longitude": 14.292522642857145,
+        "latitude": 50.078164414285716,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Vorařská",
+        "longitude": 14.399951760000002,
+        "latitude": 50.01462964,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Třanovského",
+        "longitude": 14.313087433333331,
+        "latitude": 50.074436600000006,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "P+R Nádraží-Hostivař",
+        "longitude": 14.54102593846154,
+        "latitude": 50.05522365384616,
+        "car_capacity": 78,
+        "description": ""
+    },
+    {
+        "name": "Vorařská",
+        "longitude": 14.400243519999998,
+        "latitude": 50.012467900000004,
+        "car_capacity": 3,
+        "description": ""
+    },
+    {
+        "name": "Vrátnická",
+        "longitude": 14.400395739999999,
+        "latitude": 50.01247070000001,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Vrátnická",
+        "longitude": 14.4005538,
+        "latitude": 50.01247314,
+        "car_capacity": 3,
+        "description": ""
+    },
+    {
+        "name": "Vrátnická",
+        "longitude": 14.400726299999999,
+        "latitude": 50.01247539999999,
+        "car_capacity": 3,
+        "description": ""
+    },
+    {
+        "name": "Parking",
+        "longitude": 14.525031816666667,
+        "latitude": 50.1345289,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Toužimská",
+        "longitude": 14.523363269230769,
+        "latitude": 50.135755538461545,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Beranových",
+        "longitude": 14.517168216666667,
+        "latitude": 50.13587855,
+        "car_capacity": 34,
+        "description": ""
+    },
+    {
+        "name": "Mukařovského",
+        "longitude": 14.32327006470588,
+        "latitude": 50.044769099999996,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "Archeologická",
+        "longitude": 14.332668276470587,
+        "latitude": 50.04422098235295,
+        "car_capacity": 55,
+        "description": ""
+    },
+    {
+        "name": "Píškova",
+        "longitude": 14.333338877777777,
+        "latitude": 50.04237637777778,
+        "car_capacity": 72,
+        "description": ""
+    },
+    {
+        "name": "U jezera",
+        "longitude": 14.323570507142858,
+        "latitude": 50.045263457142866,
+        "car_capacity": 21,
+        "description": ""
+    },
+    {
+        "name": "Zvoncovitá",
+        "longitude": 14.335446268750001,
+        "latitude": 50.04523521875,
+        "car_capacity": 62,
+        "description": ""
+    },
+    {
+        "name": "U jezera",
+        "longitude": 14.323376775000005,
+        "latitude": 50.04556929166666,
+        "car_capacity": 64,
+        "description": ""
+    },
+    {
+        "name": "Píškova",
+        "longitude": 14.334379760000004,
+        "latitude": 50.044779684999995,
+        "car_capacity": 52,
+        "description": ""
+    },
+    {
+        "name": "Bronzová",
+        "longitude": 14.330895999999997,
+        "latitude": 50.04548165,
+        "car_capacity": 69,
+        "description": ""
+    },
+    {
+        "name": "copyshop Luka",
+        "longitude": 14.323578081818182,
+        "latitude": 50.0451161,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Starodubečská",
+        "longitude": 14.590294966666667,
+        "latitude": 50.06281046666666,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Městská",
+        "longitude": 14.585979284615384,
+        "latitude": 50.062096361538465,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Starodubečská",
+        "longitude": 14.589080628571427,
+        "latitude": 50.06149564285714,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "Starodubečská",
+        "longitude": 14.588676040000001,
+        "latitude": 50.061185120000005,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Starodubečská",
+        "longitude": 14.5886923,
+        "latitude": 50.061411879999994,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Zázvorkova",
+        "longitude": 14.33209986,
+        "latitude": 50.0456671,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "Na Panenské",
+        "longitude": 14.371221399999998,
+        "latitude": 50.16290527142856,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Argentinská",
+        "longitude": 14.442706914285713,
+        "latitude": 50.10630402857142,
+        "car_capacity": 200,
+        "description": ""
+    },
+    {
+        "name": "Pod Cihelnou",
+        "longitude": 14.313425,
+        "latitude": 50.092466280000004,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Žukovského",
+        "longitude": 14.30866036,
+        "latitude": 50.091760199999996,
+        "car_capacity": 3,
+        "description": ""
+    },
+    {
+        "name": "Žukovského",
+        "longitude": 14.308772920000001,
+        "latitude": 50.09168672,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "Žukovského",
+        "longitude": 14.30881378125,
+        "latitude": 50.09198380625001,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "U plynárny",
+        "longitude": 14.461481038461537,
+        "latitude": 50.05579126923077,
+        "car_capacity": 144,
+        "description": ""
+    },
+    {
+        "name": "U Botiče",
+        "longitude": 14.456697699999998,
+        "latitude": 50.05534536666667,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Parking",
+        "longitude": 14.4633026375,
+        "latitude": 50.0556062875,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Podchýšská",
+        "longitude": 14.4468536,
+        "latitude": 49.9877714,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Hadovitá",
+        "longitude": 14.461226271428572,
+        "latitude": 50.05192628571429,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "Zenklova",
+        "longitude": 14.474375170000002,
+        "latitude": 50.114640969999996,
+        "car_capacity": 15,
+        "description": ""
+    },
+    {
+        "name": "Teplická",
+        "longitude": 14.486866940000002,
+        "latitude": 50.12658288,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Poděbradská",
+        "longitude": 14.661069876923078,
+        "latitude": 50.11941431538461,
+        "car_capacity": 239,
+        "description": ""
+    },
+    {
+        "name": "parkoviště 11",
+        "longitude": 14.28784590625,
+        "latitude": 50.09873898125,
+        "car_capacity": 16,
+        "description": ""
+    },
+    {
+        "name": "K letišti",
+        "longitude": 14.28703852,
+        "latitude": 50.09929084,
+        "car_capacity": 17,
+        "description": ""
+    },
+    {
+        "name": "Nad Hřištěm",
+        "longitude": 14.66837422,
+        "latitude": 50.010740680000005,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "V Honech",
+        "longitude": 14.4245923,
+        "latitude": 50.183341760000005,
+        "car_capacity": 12,
+        "description": ""
+    },
+    {
+        "name": "K Vltavě",
+        "longitude": 14.41336776,
+        "latitude": 50.00613554,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Možného",
+        "longitude": 14.308457313043478,
+        "latitude": 50.07834156086955,
+        "car_capacity": 136,
+        "description": ""
+    },
+    {
+        "name": "Průběžná",
+        "longitude": 14.503516183333334,
+        "latitude": 50.06393798333334,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Průběžná",
+        "longitude": 14.50401352,
+        "latitude": 50.0639123,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Průběžná",
+        "longitude": 14.503394440000003,
+        "latitude": 50.06424096,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Průběžná",
+        "longitude": 14.504329340000002,
+        "latitude": 50.06394888,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Ztracená",
+        "longitude": 14.307802624999997,
+        "latitude": 50.08202853750001,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Wassermannova",
+        "longitude": 14.367077929999999,
+        "latitude": 50.03116858,
+        "car_capacity": 59,
+        "description": ""
+    },
+    {
+        "name": "Na Dědince",
+        "longitude": 14.471704509523812,
+        "latitude": 50.11470099047618,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Pšenčíkova",
+        "longitude": 14.445530940000001,
+        "latitude": 50.01439703333334,
+        "car_capacity": 50,
+        "description": ""
+    },
+    {
+        "name": "V korytech",
+        "longitude": 14.493977359999999,
+        "latitude": 50.06489046,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Stochovská",
+        "longitude": 14.312175399999997,
+        "latitude": 50.08388934285714,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "Stochovská",
+        "longitude": 14.311817775,
+        "latitude": 50.08382655,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Stochovská",
+        "longitude": 14.312455540000002,
+        "latitude": 50.08346606,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Na Cikorce",
+        "longitude": 14.414507939999998,
+        "latitude": 50.0106851,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Na Cikorce",
+        "longitude": 14.41472638,
+        "latitude": 50.01056338,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "P+R Rudná",
+        "longitude": 14.243732388888889,
+        "latitude": 50.03932612222223,
+        "car_capacity": 40,
+        "description": ""
+    },
+    {
+        "name": "Bryksova",
+        "longitude": 14.582973518181815,
+        "latitude": 50.102001854545456,
+        "car_capacity": 61,
+        "description": ""
+    },
+    {
+        "name": "K Hrnčířům",
+        "longitude": 14.513431609090908,
+        "latitude": 50.01205195454545,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Mezi rybníky",
+        "longitude": 14.51321778,
+        "latitude": 50.01198352,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Mezi rybníky",
+        "longitude": 14.512896287499998,
+        "latitude": 50.011910199999996,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Mezi rybníky",
+        "longitude": 14.513189250000002,
+        "latitude": 50.01188213333333,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "Plkovská",
+        "longitude": 14.626982100000001,
+        "latitude": 50.11923634,
+        "car_capacity": 29,
+        "description": ""
+    },
+    {
+        "name": "U Trojice",
+        "longitude": 14.393726135294118,
+        "latitude": 50.07180586470589,
+        "car_capacity": 35,
+        "description": ""
+    },
+    {
+        "name": "Na Jarově",
+        "longitude": 14.488861827272729,
+        "latitude": 50.090037645454544,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "K Hrnčířům",
+        "longitude": 14.51568814,
+        "latitude": 50.010318919999996,
+        "car_capacity": 1,
+        "description": ""
+    },
+    {
+        "name": "Na Kapličce",
+        "longitude": 14.51668472,
+        "latitude": 50.0106339,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "Na Babách",
+        "longitude": 14.516280099999998,
+        "latitude": 50.0110009,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "Na Babách",
+        "longitude": 14.51548784,
+        "latitude": 50.01069642,
+        "car_capacity": 1,
+        "description": ""
+    },
+    {
+        "name": "Na Kapličce",
+        "longitude": 14.5170006,
+        "latitude": 50.01032818,
+        "car_capacity": 1,
+        "description": ""
+    },
+    {
+        "name": "K Hrnčířům",
+        "longitude": 14.514604639999998,
+        "latitude": 50.01150198,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Pod vsí",
+        "longitude": 14.5149325,
+        "latitude": 50.01162552000001,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Pod vsí",
+        "longitude": 14.51522372,
+        "latitude": 50.01173568,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "K Rozkoši",
+        "longitude": 14.51548782,
+        "latitude": 50.01183574,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Sklenářská",
+        "longitude": 14.43549053,
+        "latitude": 50.01767100000001,
+        "car_capacity": 27,
+        "description": ""
+    },
+    {
+        "name": "Parkoviště Ládví",
+        "longitude": 14.466432611111113,
+        "latitude": 50.12581201111111,
+        "car_capacity": 200,
+        "description": ""
+    },
+    {
+        "name": "Lékařská",
+        "longitude": 14.35628064,
+        "latitude": 50.074640239999994,
+        "car_capacity": 3,
+        "description": ""
+    },
+    {
+        "name": "Lékařská",
+        "longitude": 14.355883420000001,
+        "latitude": 50.074632040000004,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Lékařská",
+        "longitude": 14.355626422222223,
+        "latitude": 50.07461433333334,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Hugo Haase",
+        "longitude": 14.363285999999999,
+        "latitude": 50.02909514,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Hugo Haase",
+        "longitude": 14.362756819999998,
+        "latitude": 50.029160919999995,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Říčanská",
+        "longitude": 14.562519366666665,
+        "latitude": 50.001344483333334,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Nad Opatovem",
+        "longitude": 14.5094825125,
+        "latitude": 50.026431137500005,
+        "car_capacity": 65,
+        "description": ""
+    },
+    {
+        "name": "Olbramovická",
+        "longitude": 14.43735157142857,
+        "latitude": 50.01661890000001,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Zvolská",
+        "longitude": 14.437700216666668,
+        "latitude": 50.01734321666667,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Olbramovická",
+        "longitude": 14.436816357142858,
+        "latitude": 50.016892514285715,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Ve Lhotce",
+        "longitude": 14.433228100000003,
+        "latitude": 50.0177779,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Ve Lhotce",
+        "longitude": 14.433957249999999,
+        "latitude": 50.01905893333333,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Ve Lhotce",
+        "longitude": 14.434646066666666,
+        "latitude": 50.019042766666665,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Nové náměstí",
+        "longitude": 14.599247449999998,
+        "latitude": 50.03258716250001,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Nové náměstí",
+        "longitude": 14.598584590909091,
+        "latitude": 50.03244462727273,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Střelničná",
+        "longitude": 14.471340542857144,
+        "latitude": 50.12727158571429,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "K sokolovně",
+        "longitude": 14.605659450000001,
+        "latitude": 50.02927592142858,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "Na Šabatce",
+        "longitude": 14.405132714285715,
+        "latitude": 49.98807455714285,
+        "car_capacity": 3,
+        "description": ""
+    },
+    {
+        "name": "U uhříněveské obory",
+        "longitude": 14.592496066666667,
+        "latitude": 50.038229480000005,
+        "car_capacity": 65,
+        "description": ""
+    },
+    {
+        "name": "Plzeňská",
+        "longitude": 14.343261592857145,
+        "latitude": 50.067589371428575,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Na vrších",
+        "longitude": 14.480263920000002,
+        "latitude": 50.06894608,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Hevlínská",
+        "longitude": 14.287694779999999,
+        "latitude": 50.06419906,
+        "car_capacity": 7,
+        "description": ""
+    },
+    {
+        "name": "Hnězdenská",
+        "longitude": 14.421908566666666,
+        "latitude": 50.12651905555555,
+        "car_capacity": 43,
+        "description": ""
+    },
+    {
+        "name": "U Pazderek",
+        "longitude": 14.412971981818185,
+        "latitude": 50.131574009090905,
+        "car_capacity": 120,
+        "description": ""
+    },
+    {
+        "name": "Zelenohorská",
+        "longitude": 14.410744753846151,
+        "latitude": 50.131218161538456,
+        "car_capacity": 70,
+        "description": ""
+    },
+    {
+        "name": "Lodžská",
+        "longitude": 14.429154771428573,
+        "latitude": 50.13233393809523,
+        "car_capacity": 60,
+        "description": ""
+    },
+    {
+        "name": "Ratibořská",
+        "longitude": 14.413429266666668,
+        "latitude": 50.128072511111114,
+        "car_capacity": 60,
+        "description": ""
+    },
+    {
+        "name": "U Pentlovky",
+        "longitude": 14.406757644444443,
+        "latitude": 50.12920302222222,
+        "car_capacity": 27,
+        "description": ""
+    },
+    {
+        "name": "Obchodní náměstí",
+        "longitude": 14.403947128571426,
+        "latitude": 50.00507884285714,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Pod lysinami",
+        "longitude": 14.409782479999999,
+        "latitude": 50.020045679999996,
+        "car_capacity": 30,
+        "description": ""
+    },
+    {
+        "name": "Rubensova",
+        "longitude": 14.50893532,
+        "latitude": 50.06855194,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "Švehlova",
+        "longitude": 14.506882644444444,
+        "latitude": 50.06073024444444,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Severní",
+        "longitude": 14.2610246125,
+        "latitude": 50.051256343750005,
+        "car_capacity": 323,
+        "description": ""
+    },
+    {
+        "name": "Čs. tankistů",
+        "longitude": 14.557472071428574,
+        "latitude": 50.05881821428572,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Elišky Přemyslovny",
+        "longitude": 14.3869905,
+        "latitude": 49.968357839999996,
+        "car_capacity": 43,
+        "description": ""
+    },
+    {
+        "name": "Českobrodská",
+        "longitude": 14.56373912,
+        "latitude": 50.08710376,
+        "car_capacity": 80,
+        "description": ""
+    },
+    {
+        "name": "Mladoboleslavská",
+        "longitude": 14.543932866666667,
+        "latitude": 50.12954715,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Za vodárnou",
+        "longitude": 14.473893416666668,
+        "latitude": 50.123802850000004,
+        "car_capacity": 60,
+        "description": ""
+    },
+    {
+        "name": "Toušeňská",
+        "longitude": 14.74555087419355,
+        "latitude": 50.155011103225796,
+        "car_capacity": 217,
+        "description": ""
+    },
+    {
+        "name": "Borského",
+        "longitude": 14.382098639999999,
+        "latitude": 50.0335874,
+        "car_capacity": 5,
+        "description": ""
+    },
+    {
+        "name": "Černokostelecká",
+        "longitude": 14.509631742857142,
+        "latitude": 50.07876866428571,
+        "car_capacity": 86,
+        "description": ""
+    },
+    {
+        "name": "Oddechová",
+        "longitude": 14.349757383333333,
+        "latitude": 49.96002255,
+        "car_capacity": 60,
+        "description": ""
+    },
+    {
+        "name": "Obilní",
+        "longitude": 14.356093879999998,
+        "latitude": 49.96219494999999,
+        "car_capacity": 18,
+        "description": ""
+    },
+    {
+        "name": "Stupická",
+        "longitude": 14.500000285714284,
+        "latitude": 50.06996728571429,
+        "car_capacity": 1,
+        "description": ""
+    },
+    {
+        "name": "Hledíková",
+        "longitude": 14.515485759999997,
+        "latitude": 50.05439371999999,
+        "car_capacity": 25,
+        "description": ""
+    },
+    {
+        "name": "Vídeňská",
+        "longitude": 14.468162755555555,
+        "latitude": 50.020416422222226,
+        "car_capacity": 27,
+        "description": ""
+    },
+    {
+        "name": "Vídeňská",
+        "longitude": 14.464504400000001,
+        "latitude": 50.02323543999999,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Vídeňská",
+        "longitude": 14.46428235,
+        "latitude": 50.022981075,
+        "car_capacity": 38,
+        "description": ""
+    },
+    {
+        "name": "Do koutů",
+        "longitude": 14.41914454,
+        "latitude": 49.99235004,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Pacholíkova",
+        "longitude": 14.419128985714286,
+        "latitude": 49.99174052857143,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "Pleštilova",
+        "longitude": 14.4231857,
+        "latitude": 49.99286539999999,
+        "car_capacity": 2,
+        "description": ""
+    },
+    {
+        "name": "Dostálova",
+        "longitude": 14.421403739999999,
+        "latitude": 49.99194142,
+        "car_capacity": 4,
+        "description": ""
+    },
+    {
+        "name": "Točná",
+        "longitude": 14.428398449999998,
+        "latitude": 49.98743715,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Komořanská",
+        "longitude": 14.4069459,
+        "latitude": 49.99662446,
+        "car_capacity": 37,
+        "description": ""
+    },
+    {
+        "name": "Na Parkáně",
+        "longitude": 14.628200228571428,
+        "latitude": 50.01317578571429,
+        "car_capacity": 3,
+        "description": ""
+    },
+    {
+        "name": "Mladotova",
+        "longitude": 14.63011268,
+        "latitude": 50.01090842000001,
+        "car_capacity": 8,
+        "description": ""
+    },
+    {
+        "name": "Mladotova",
+        "longitude": 14.63072664,
+        "latitude": 50.011168059999996,
+        "car_capacity": 14,
+        "description": ""
+    },
+    {
+        "name": "Mladotova",
+        "longitude": 14.63113046,
+        "latitude": 50.01102968,
+        "car_capacity": 10,
+        "description": ""
+    },
+    {
+        "name": "Mladotova",
+        "longitude": 14.630888859999999,
+        "latitude": 50.0106372,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Mladotova",
+        "longitude": 14.6305746,
+        "latitude": 50.010736339999994,
+        "car_capacity": 6,
+        "description": ""
+    },
+    {
+        "name": "Mladotova",
+        "longitude": 14.630323559999999,
+        "latitude": 50.01082418,
+        "car_capacity": 11,
+        "description": ""
+    },
+    {
+        "name": "Mladotova",
+        "longitude": 14.630364,
+        "latitude": 50.01129236,
+        "car_capacity": 9,
+        "description": ""
+    },
+    {
+        "name": "Švehlova",
+        "longitude": 14.516369860000001,
+        "latitude": 50.05500038,
+        "car_capacity": 13,
+        "description": ""
+    },
+    {
+        "name": "Mírová",
+        "longitude": 14.627861480000002,
+        "latitude": 50.01074846,
+        "car_capacity": 3,
+        "description": ""
+    }
+]
