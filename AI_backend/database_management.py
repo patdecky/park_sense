@@ -73,6 +73,12 @@ class PLPrediction:
     day:int
     day_timestamp:int
 
+@dataclass
+class OccupancyCommunity:
+    id:int
+    parkinglot_id:int
+    occupancy:int
+    current_timestamp:str
 
 
 class DatabaseMapper:
@@ -123,6 +129,27 @@ class DatabaseMapper:
             for row in results:
                 parking_lots.append(ParkingLot(id=row[0], geopos=row[1], car_capacity=row[2], name=row[3], description=row[4]))
             return parking_lots
+        
+    def get_all_parking_lots_with_datasource(self)->list[ParkingLot]:
+        if self.connection.is_connected():
+            
+            # Query to retrieve all parking lots
+            query = """
+                SELECT DISTINCT p.id, p.geopos, p.car_capacity, p.name, p.description
+                FROM parkinglot p
+                INNER JOIN data_source d ON p.id = d.parkinglot_id;
+            """
+            self.cursor.execute(query)
+
+            # Fetch all the results
+            results = self.cursor.fetchall()
+
+            parking_lots = []
+            # Print each parking lot's details
+            for row in results:
+                parking_lots.append(ParkingLot(id=row[0], geopos=row[1], car_capacity=row[2], name=row[3], description=row[4]))
+            return parking_lots
+
 
     def get_data_sources_by_parkinglot(self, parkinglot_id:int) -> list[DataSource]:
         if self.connection.is_connected():
@@ -186,6 +213,23 @@ class DatabaseMapper:
             for row in results:
                 data.append(PLPrediction(id=row[0], parkinglot_id=row[1], vacancy=row[2], day=row[3], day_timestamp=row[4]))
             return data
+        
+    def write_occupancy_community(self, parkinglot_id, occupancy):
+        if self.connection.is_connected():
+            try:
+                query = """
+                    INSERT INTO occupancy_community (parkinglot_id, occupancy)
+                    VALUES (%s, %s)
+                """
+                
+                # Execute the query with the provided parkinglot_id and address
+                self.cursor.execute(query, (parkinglot_id, occupancy))
+
+                # Commit the transaction to ensure the row is inserted
+                self.connection.commit()
+
+            except Error as e:
+                print(f"Error while inserting the camera: {e}")
 
     def write_parking_lot(self, geopos:tuple[float, float], car_capacity, name, description) -> int:
         """
@@ -313,6 +357,24 @@ class DatabaseMapper:
                 self.cursor.execute(query, (parkinglot_id, vacancy, day, day_timestamp))
 
                 # Commit the transaction to ensure the row is inserted
+                self.connection.commit()
+
+                return self.cursor.lastrowid
+
+            except Error as e:
+                print(f"Error while inserting the camera: {e}")
+                return None
+
+    # alter prediction data
+    def alter_prediction(self, prediction_id, parkinglot_id, vacancy, day, day_timestamp):
+        if self.connection.is_connected():
+            try:
+                query = """
+                    UPDATE pl_prediction
+                    SET parkinglot_id = %s, vacancy = %s, day = %s, day_timestamp = %s
+                    WHERE id = %s
+                """
+                self.cursor.execute(query, (parkinglot_id, vacancy, day, day_timestamp, prediction_id))
                 self.connection.commit()
 
             except Error as e:

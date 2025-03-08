@@ -126,15 +126,19 @@ class ParkingLotViewer:
 def calculate_availability(status:list[bool], total_capacity):
     camera_capacity = len(status)
     camera_occupied = sum(status)
+    if camera_capacity == 0:
+        return 0
     camera_occupied_percentage = camera_occupied/camera_capacity
     estimated_vacancy = int(round((1-camera_occupied_percentage)*total_capacity))
     return estimated_vacancy
 
 def process_parking_lot(image, parkinglot_id:int, parkinglot_capacity:int, pl_viewer:ParkingLotViewer):
     cars_in_image = pl_viewer.scan_cars(image)
-    parking_lots_polygons = convert_parking_lot_list(list_parking_places(f"{parkinglot_id}.txt"))
-    parking_lot_status = cars_in_parking_lots_iou_polygon(cars_in_image, parking_lots_polygons, 0.15)
+    iou, polygons = list_parking_places(f"annotations/{parkinglot_id}.txt")
+    parking_lots_polygons = convert_parking_lot_list(polygons)
+    parking_lot_status = cars_in_parking_lots_iou_polygon(cars_in_image, parking_lots_polygons, iou)
     vacancy = calculate_availability(parking_lot_status, parkinglot_capacity)
+    #print(len(cars_in_image), len(parking_lots_polygons), vacancy)
     return vacancy
 
 if __name__ == "__main__":
@@ -147,10 +151,10 @@ if __name__ == "__main__":
     # Load a pre-trained YOLOv8 model (YOLOv8n is a smaller model, faster to run)
     model = YOLO('yolo11l.pt')  # You can also use 'yolov8m.pt' or 'yolov8l.pt' for larger models
 
-    parkinglot_id = 4
+    parkinglot_id = 18
 
     # Load an image where you want to detect cars
-    image_path = f'windy_images/{parkinglot_id}.png'
+    image_path = f'bezp_images/{parkinglot_id}.png'
     img = cv2.imread(image_path)
 
 
@@ -175,6 +179,7 @@ if __name__ == "__main__":
 
 
     cv2.imshow("labeled", img)
+    cv2.imwrite(f"labeled/{parkinglot_id}.png", img)
     cv2.waitKey(0)
 
     print(parking_lot_status)  # Output: [True, True, False]

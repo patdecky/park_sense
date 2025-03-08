@@ -1,0 +1,17 @@
+[
+    {
+        "parkinglot_name": "Podolské nábřeží VO",
+        "type": 2,
+        "data": "{\"url\":\"https://bezpecnost.praha.eu/Intens.CrisisPortalInfrastructureApp/cameras/404014/image?format=json\"}"
+    },
+    {
+        "parkinglot_name": "5.května 51",
+        "type": 2,
+        "data": "{\"url\":\"https://bezpecnost.praha.eu/Intens.CrisisPortalInfrastructureApp/cameras/404032/image?format=json\"}"
+    },
+    {
+        "parkinglot_name": "TSK-náměstí I. P. Pavlova",
+        "type": 2,
+        "data": "{\"url\":\"https://bezpecnost.praha.eu/Intens.CrisisPortalInfrastructureApp/cameras/500005/image?format=json\"}"
+    }
+]
