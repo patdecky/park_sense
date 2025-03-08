@@ -187,7 +187,10 @@ class DatabaseMapper:
                 data.append(PLPrediction(id=row[0], parkinglot_id=row[1], vacancy=row[2], day=row[3], day_timestamp=row[4]))
             return data
 
-    def write_parking_lot(self, geopos:tuple[float, float], car_capacity, name, description):
+    def write_parking_lot(self, geopos:tuple[float, float], car_capacity, name, description) -> int:
+        """
+        geopos (longitude, latitude)
+        """
         if self.connection.is_connected():
             try:
                 # Query to insert a new parking lot into the table
@@ -205,11 +208,39 @@ class DatabaseMapper:
                 # Commit the transaction to ensure the row is inserted
                 self.connection.commit()
 
+                # Return the ID of the newly inserted row
+                return self.cursor.lastrowid
+
             except Error as e:
                 print(f"Error while inserting the parking lot: {e}")
+                return None
+            
+    def alter_parking_lot(self, parkinglot_id, geopos:tuple[float, float], car_capacity, name, description):
+        """
+        geopos (longitude, latitude)
+        """
+        if self.connection.is_connected():
+            try:
+                # Query to insert a new parking lot into the table
+                query = """
+                    UPDATE parkinglot
+                    SET geopos = ST_GeomFromText(%s), car_capacity = %s, name = %s, description = %s
+                    WHERE id = %s
+                """
+                
+                # Construct the point value as WKT (Well-Known Text) format for the `POINT` type
+                point_wkt = f'POINT({geopos[0]} {geopos[1]})'
 
+                # Execute the query with the provided geopos and car_capacity
+                self.cursor.execute(query, (point_wkt, car_capacity, name, description, parkinglot_id))
 
-    def write_data_source(self, parkinglot_id, type, source):
+                # Commit the transaction to ensure the row is inserted
+                self.connection.commit()
+
+            except Error as e:
+                print(f"Error while altering the parking lot: {e}")
+
+    def write_data_source(self, parkinglot_id, type, source) -> int:
         if self.connection.is_connected():
             try:
                 # Query to insert a new camera into the table
@@ -224,8 +255,30 @@ class DatabaseMapper:
                 # Commit the transaction to ensure the row is inserted
                 self.connection.commit()
 
+                return self.cursor.lastrowid
+
             except Error as e:
-                print(f"Error while inserting the camera: {e}")
+                print(f"Error while inserting the datasource: {e}")
+                return None
+
+    def alter_data_source(self, data_source_id, parkinglot_id, type, source):
+        if self.connection.is_connected():
+            try:
+                # Query to insert a new camera into the table
+                query = """
+                    UPDATE data_source
+                    SET parkinglot_id = %s, type = %s, source = %s
+                    WHERE id = %s
+                """
+                
+                # Execute the query with the provided parkinglot_id and address
+                self.cursor.execute(query, (parkinglot_id, type, source, data_source_id))
+
+                # Commit the transaction to ensure the row is inserted
+                self.connection.commit()
+
+            except Error as e:
+                print(f"Error while inserting the datasource: {e}")
 
     def write_vacancy(self, parkinglot_id, vacancy):
 
@@ -284,7 +337,7 @@ class DatabaseMapper:
                 print(f"Error while inserting the camera: {e}")
 
             return result
-        
+
 
 
 
