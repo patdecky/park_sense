@@ -11,7 +11,7 @@ require_once __DIR__ . '/../DB/DBH_occupancy_community.php';
 
 $DPL = DBH_parkinglot::getInstance();
 $DPLH = DBH_pl_history::getInstance($DPL);
-$DPLPV = DBH_pl_prediction::getInstance($DPL); 
+$DPLPV = DBH_pl_prediction::getInstance($DPL);
 $DC = DBH_camera::getInstance($DPL);
 $DOC = DBH_occupancy_community::getInstance($DPL);
 
@@ -45,25 +45,42 @@ switch ($_GET['req']) {
         }
 
     case "getPredictedVacancyForParkingLot":
-            $parkingLotID = intFilter('parkingLotID');
-            $day = intFilter('day');
-            $day_timestamp = intFilter('day_timestamp');
-            
-            if ($parkingLotID === false) {
-                quitExe(400, QE_INPUT_INVALID);
-            }
-            if ($day === false) {
-                quitExe(400, QE_INPUT_INVALID);
-            }
-            if ($day_timestamp === false) {
-                quitExe(400, QE_INPUT_INVALID);
-            }
-            try {
-                $history = $DPLPV->selectByDayAndSecondsInterval($parkingLotID, $day, $day_timestamp);
-                responseOK($history);
-            } catch (Exception $e) {
-                quitExe(500, QE_DB_ERROR);
-            }
+        $parkingLotID = intFilter('parkingLotID');
+        $day = intFilter('day');
+        $day_timestamp = intFilter('day_timestamp');
+
+        if ($parkingLotID === false) {
+            quitExe(400, QE_INPUT_INVALID);
+        }
+        if ($day === false) {
+            quitExe(400, QE_INPUT_INVALID);
+        }
+        if ($day_timestamp === false) {
+            quitExe(400, QE_INPUT_INVALID);
+        }
+        try {
+            $history = $DPLPV->selectByDayAndSecondsInterval($parkingLotID, $day, $day_timestamp);
+            responseOK($history);
+        } catch (Exception $e) {
+            quitExe(500, QE_DB_ERROR);
+        }
+
+    case "getPredictedVacancyForParkingLotWholeDay":
+        $parkingLotID = intFilter('parkingLotID');
+        $day = intFilter('day');
+
+        if ($parkingLotID === false) {
+            quitExe(400, QE_INPUT_INVALID);
+        }
+        if ($day === false) {
+            quitExe(400, QE_INPUT_INVALID);
+        }
+        try {
+            $history = $DPLPV->selectByDayAndSecondsIntervalWholeDay($parkingLotID, $day);
+            responseOK($history);
+        } catch (Exception $e) {
+            quitExe(500, QE_DB_ERROR);
+        }
 
     case "getParkingIntervalHistory":
         $parkingLotID = intFilter('parkingLotID');

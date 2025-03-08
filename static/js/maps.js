@@ -174,24 +174,21 @@ window.addEventListener('load', () => {
 
     function buildMarkerDescription(name, vacancy, predicted_vacancy, community_vacancy, capacity) {
         let description = null
-        if (capacity != null && capacity > 0){
-            if (vacancy != null){
+        if (capacity != null && capacity > 0) {
+            if (vacancy != null) {
                 description = name + "<br> Volno: " + vacancy + "/" + capacity
-            }
-            else if (predicted_vacancy != null){
+            } else if (predicted_vacancy != null) {
                 description = name + "<br> Volno: " + predicted_vacancy + "/" + capacity
-            }
-            else{
+            } else {
                 description = name + "<br> Kapacita: " + capacity
             }
-            if (community_vacancy != null){
-                if (community_vacancy > capacity){
+            if (community_vacancy != null) {
+                if (community_vacancy > capacity) {
                     community_vacancy = capacity
                 }
-                description += "<br> Komunita: " + Math.round(community_vacancy/capacity*100) + " %"
+                description += "<br> Komunita: " + Math.round(community_vacancy / capacity * 100) + " %"
             }
-        }
-        else{
+        } else {
             description = name
         }
         return description
@@ -216,11 +213,11 @@ window.addEventListener('load', () => {
 
     }
 
-    function hideSubMenu(){
+    function hideSubMenu() {
         document.getElementById('subMenu').style.display = 'none';
     }
 
-    function showSubMenu(){
+    function showSubMenu() {
         document.getElementById('subMenu').style.display = "";
     }
 
@@ -236,7 +233,7 @@ window.addEventListener('load', () => {
                 let community_vacancy = null;
 
                 let vacancy_ret = await findVacancy(element.id)
-                
+
                 if (vacancy_ret != null) {
                     vacancy = vacancy_ret.vacancy
                 } else {
@@ -265,9 +262,11 @@ window.addEventListener('load', () => {
     }
 
     function openFirstMarker() {
-        if (park_place_markers.length > 0) {
-            park_place_markers[0].openPopup()
+        if (park_place_markers.length <= 0) {
+            return;
         }
+        park_place_markers[0].openPopup();
+        (new dataHolderStatistics()).setStatisticsId(park_place_markers[0].parkinglot_id);
     }
 
     function zoomMapToMarkers() {
@@ -277,8 +276,8 @@ window.addEventListener('load', () => {
         });
         points.push(marker.getLatLng())
         let bounds = L.latLngBounds(points)
-        map.fitBounds(bounds);}
-
+        map.fitBounds(bounds);
+    }
 
 
     function geocodePlace(place) {
