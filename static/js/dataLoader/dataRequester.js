@@ -248,7 +248,12 @@ class dataRequester extends dataHolderBase {
     }
 
     async loadParkingLots(lat, long, radius, limit) {
-        let ret = await fetchAPI.AllInOneReq("parkingSpaces.php", "getNearestParkingLots", {'lat': lat, "long": long, "radius":radius, "limit":limit}, 0);
+        let ret = await fetchAPI.AllInOneReq("parkingSpaces.php", "getNearestParkingLots", {
+            'lat': lat,
+            "long": long,
+            "radius": radius,
+            "limit": limit
+        }, 0);
         if (ret.length <= 0) {
             //observer triggered in vendorList setter
             return
@@ -263,18 +268,50 @@ class dataRequester extends dataHolderBase {
     }
 
     async loadParkingLotsVacancy(parkinglot_id) {
-        let ret = await fetchAPI.AllInOneReq("parkingSpaces.php", "getRecentHistoryForParkingLot", {'parkingLotID': parkinglot_id, "hoursBack": 1}, 0);
+        let ret = await fetchAPI.AllInOneReq("parkingSpaces.php", "getRecentHistoryForParkingLot", {
+            'parkingLotID': parkinglot_id,
+            "hoursBack": 1
+        }, 0);
         if (ret.length <= 0) {
             //observer triggered in vendorList setter
             return
         }
         let mvs = [];
         ret.forEach(el => {
-            mvs.push(new Cl_pl_history(el.ID,el.parkinglot_id, el.vacancy, el.current_timestamp));
+            mvs.push(new Cl_pl_history(el.ID, el.parkinglot_id, el.vacancy, el.current_timestamp));
         });
         //observer triggered in vendorList setter
 
         return mvs[0]
+    }
+
+    async loadOccupancyCommunity(parkinglot_id) {
+        let ret = await fetchAPI.AllInOneReq("parkingSpaces.php", "getCommunityOccupancy", {'parkingLotID': parkinglot_id}, 0);
+        if (ret.length <= 0) {
+            //observer triggered in vendorList setter
+            return
+        }
+        let mvs = [];
+        ret.forEach(el => {
+            mvs.push(new CL_occupancy_community(el.ID, el.parkinglot_id, el.occupancy, el.current_timestamp));
+        });
+        //observer triggered in vendorList setter
+
+        return mvs
+    }
+
+    async setOccupancyCommunity(parkinglot_id, occupancy) {
+        let ret = await fetchAPI.AllInOneReq("parkingSpaces.php", "setCommunityOccupancy", {
+            'parkingLotID': parkinglot_id,
+            'occupancy': occupancy
+        }, 0);
+        // if (ret.length <= 0) {
+        //     //observer triggered in vendorList setter
+        //     return
+        // }
+        if (ret >= 0) {
+            console.log("Occupancy set successfully")
+        }
     }
 
 }

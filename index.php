@@ -32,26 +32,28 @@
     <title>Park Sense</title>
     <style>
         :root {
-            --color1: #72BF78;
-            --color2: #A0D683;
-            --color3: #D3EE98;
-            --color4: #FEFF9F;
-
-            --color5: #8C3061;
-            --color6: #C63C51;
-
-            --color7: #7E60BF;
-            --color8: #E4B1F0;
-
-            --search_background: #FFFFFF;
-            --serach_frame: #aaaaaa;
-            --map_frame: #bbbbbb;
-            --button_text_color: #333;
+            --primary-color: #4CAF50;
+            --secondary-color: #388E3C;
+            --background-light: #f4f4f4;
+            --text-dark: #333;
+            --button-hover: #66BB6A;
         }
 
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin-bottom: 18px;
+            font-weight: bold;
+        }
 
         body{
             background-color: #fff;
+            font-family: Arial, sans-serif;
         }
         #mainContainer {
             display: flex;
@@ -75,41 +77,40 @@
         }
 
         #searchContainer {
-            background-color: var(--search_background);
-            width: calc(100% - 140px);
             display: flex;
             position: absolute;
             top: 10px;
-            left: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 20px;
+            padding: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             z-index: 1000;
-            border: 1px solid #ccc;
-            border-radius: 10px; /* Increased border-radius */
         }
 
         #searchBar {
-            width: calc(100% - 50px);
-            background: var(--search_background);
-            padding: 10px;
-            box-sizing: border-box;
             border: none;
-            border-radius: 10px 0 0 10px; /* Increased border-radius */
-            font-size: 18px;
-            text-align: center;
+            padding: 10px;
+            outline: none;
+            font-size: 16px;
+            border-radius: 20px 0 0 20px;
+            flex-grow: 1;
         }
 
         #searchBar::placeholder {
             color: #555; /* Darker color for placeholder text */
             font-weight: bold;
         }
-
         #searchButton {
-            padding: 10px;
-            background: var(--search_background);
             border: none;
-            border: 1px solid #ccc;
-            border-radius: 0 10px 10px 0; /* Increased border-radius */
+            background: var(--primary-color);
+            color: white;
+            padding: 10px;
+            border-radius: 0 20px 20px 0;
             cursor: pointer;
-            font-size: 20px; /* icon size */
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
 
         #map {
@@ -179,26 +180,26 @@
         #aboutUsModal {
             display: none;
             position: fixed;
-            font-family: 'Poppins', sans-serif;
-            z-index: 1000;
+            /* left: 0; */
             left: 0;
-            top: 0;
+            top: 5%;
+            /* transform: translateY(-50%); */
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+            z-index: 1000;
         }
-
         #aboutUsContent {
-            background-color: white;
-            font-family: 'Poppins', sans-serif;
-            margin: 10% auto;
+            background: white;
             padding: 20px;
-            width: 80%;
-            max-width: 600px;
             border-radius: 10px;
-            height: 60%;
+            text-align: justify;
+            max-width: 500px;
+            margin: auto;
         }
-
         #closeAboutUs {
             float: right;
             cursor: pointer;
@@ -207,6 +208,12 @@
         #closeChart {
             float: right;
             cursor: pointer;
+        }
+
+        .container-custom {
+            max-width: 800px;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
         }
     </style>
 </head>
@@ -223,7 +230,7 @@
                 </div>
             <div id="buttonContainer">
                 <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat 🌍</button>
-                <button type="button" class="wideButton colorZebraCl" id="occupancy">Vytíženost 🚗</button>
+                <button type="button" class="wideButton colorZebraCl" id="occupancy">Aktuální vytíženost 🚗</button>
                 <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase 📊</button>
                 <button type="button" class="wideButton colorZebraCl" id="aboutUsBtn">O nás 📜</button>
             </div>
@@ -235,18 +242,28 @@
         <div id="aboutUsContent">
             <span id="closeAboutUs">❌</span>
             <h2>O nás</h2>
+            <p>Jsme tým „náhodných“ lidí, které všechny spojuje absolvování brigády či pracovního poměru ve společnosti ATEsystem.
+                 Přestože většina z nás v této společnosti již nevykonává žádné aktivity, tak jsme stále dobrý kolektiv a rádi se účastníme různých výzev. </p>
             <img src="static/team.jpg" alt="Týmová fotka" style="width:100%; border-radius: 10px">
-            <h3>Náš tým</h3>
-            <p><strong>Jan Novák</strong> - Vedoucí vývoje</p>
-            <p><strong>Petra Malá</strong> - Designérka UX/UI</p>
-            <p><strong>Martin Dvořák</strong> - Backend vývojář</p>
-            <p><strong>Eva Kovářová</strong> - Datový analytik</p>
-            <h3>O aplikaci</h3>
-            <p>Park Sense je moderní nástroj pro optimalizaci parkování ve městech.</p>
-            <h3>Použité datové sady</h3>
+            <h2>Náš tým zleva</h2>
+            <p><strong>Patrik Děcký</strong> - SW Architekt</p>
+            <p><strong>Alexandra Bodzás</strong> - Data Analyst</p>
+            <p><strong>Lukáš Malík</strong> - Camera Enthusiast</p>
+            <p><strong>Pavel Kodytek</strong> - Project Lead</p>
+            <p><strong>Boris Pustějovský</strong> - SW Developer</p>
+            <p><strong>Přemysl Bílek</strong> - Database Expert</p>
+            <h2>O aplikaci</h2>
+            <p>ParkSense nyní přináší inovativní řešení optimalizace parkování zaměřené speciálně na hlavní město Prahu. 
+                Aplikace využívá kamerové záznamy k monitorování veřejných parkovišť v reálném čase, které jsou vyhodnocovány pomocí umělé inteligence. 
+                Dále je aplikace obohacena i o integraci s offline daty parkovišť, které jsou dostupné v otevřených datových sadách. Díky této kombinaci poskytuje uživatelům ještě přesnější a aktuálnější informace o dostupnosti parkovacích míst.
+                 Mobilní a webová aplikace nadále spolupracuje s Google Maps API, umožňuje vyhledávat nejbližší parkoviště, zobrazit počet volných míst a umožňuje snadnou navigaci přes aplikace jako Google Maps. 
+                 ParkSense tak přispívá k hladšímu parkování a zlepšuje mobilitu v dynamickém prostředí Prahy.</p>
+            <h2>Použité datové sady</h2>
             <ul>
-                <li><a href="#">Dataset 1</a></li>
-                <li><a href="#">Dataset 2</a></li>
+                <li><a href="https://golemio.cz/data/doprava">Golemio - Doprava v datech</a></li>
+                <li><a href="https://data.praha.eu/dashboardy/obsazenost-pr-parkovist">Obsazenost P+R parkovišť v Praze</a></li>
+                <li><a href="https://www.windy.com/cs/-Webkamery-Praha-Horn%C3%AD-M%C4%9Bcholupy-Petrovice/webcams/1268410152?50.050,14.546,5">Windy.com - webkamery</a></li>
+                <li><a href="https://bezpecnost.praha.eu/mapy/kamery">Veřejné kamery v Praze</a></li>
             </ul>
         </div>
     </div>

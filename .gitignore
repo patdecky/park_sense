@@ -1,5 +1,7 @@
-./.idea
-./.code
+.idea/*
+.idea/
+.code
+.code/*
 
 php/globals.php
 
