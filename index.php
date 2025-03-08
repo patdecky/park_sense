@@ -12,7 +12,8 @@
     <script src="static/js/Class/Cl_camera.js"></script>
     <script src="static/js/Class/Cl_parkinglot.js"></script>
     <script src="static/js/Class/Cl_pl_history.js"></script>
-    <script src="static/js/Class/Cl_pl_prediction.js"></script>
+    <script src="static/js/Class/CL_pl_prediction.js"></script>
+    <script src="static/js/Class/CL_occupancy_community.js"></script>
     <script src="static/js/Class/DateMK2.js"></script>
 
     <script src="static/js/globals.js"></script>
