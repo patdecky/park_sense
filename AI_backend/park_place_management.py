@@ -130,6 +130,13 @@ def calculate_availability(status:list[bool], total_capacity):
     estimated_vacancy = int(round((1-camera_occupied_percentage)*total_capacity))
     return estimated_vacancy
 
+def process_parking_lot(image, parkinglot_id:int, parkinglot_capacity:int, pl_viewer:ParkingLotViewer):
+    cars_in_image = pl_viewer.scan_cars(image)
+    parking_lots_polygons = convert_parking_lot_list(list_parking_places(f"{parkinglot_id}.txt"))
+    parking_lot_status = cars_in_parking_lots_iou_polygon(cars_in_image, parking_lots_polygons, 0.15)
+    vacancy = calculate_availability(parking_lot_status, parkinglot_capacity)
+    return vacancy
+
 if __name__ == "__main__":
 
         # Import necessary libraries
@@ -140,7 +147,7 @@ if __name__ == "__main__":
     # Load a pre-trained YOLOv8 model (YOLOv8n is a smaller model, faster to run)
     model = YOLO('yolo11l.pt')  # You can also use 'yolov8m.pt' or 'yolov8l.pt' for larger models
 
-    parkinglot_id = 3
+    parkinglot_id = 4
 
     # Load an image where you want to detect cars
     image_path = f'windy_images/{parkinglot_id}.png'
