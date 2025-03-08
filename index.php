@@ -25,7 +25,7 @@
     <link rel="icon" href="static/favicon.ico" type="image/x-icon">
 
     <!-- Extra Markers -->
-    <link rel="stylesheet" href="static/libs/ll_extra/css/leaflet.extra-markers.min.css" />
+    <link rel="stylesheet" href="static/libs/ll_extra/css/leaflet.extra-markers.min.css"/>
     <script src="static/libs/ll_extra/js/leaflet.extra-markers.min.js"></script>
 
     <script src="static/js/maps.js"></script>
@@ -39,11 +39,10 @@
             font-weight: bold;
         }
 
-        body{
+        body {
             background-color: #fff;
             font-family: Arial, sans-serif;
         }
-
 
 
         .colorZebraCl:nth-child(even) {
@@ -54,26 +53,26 @@
 
         .colorZebraCl:nth-child(odd) {
             /* navigate */
-             background-color: #ffffff;
+            background-color: #ffffff;
             border: 1px solid #ccc;
         }
 
-/* 
-        #aboutUsModal {
-            display: none;
-            position: fixed;
-            /* left: 0; 
-            left: 0;
-            top: 5%;
-            /* transform: translateY(-50%); 
-            width: 100%;
-            height: 100%;
-            /* background-color: rgba(0, 0, 0, 0.5); 
-            align-items: center;
-            justify-content: center;
-            text-align: justify;
-            z-index: 1000;
-        } */
+        /*
+                #aboutUsModal {
+                    display: none;
+                    position: fixed;
+                    /* left: 0;
+                    left: 0;
+                    top: 5%;
+                    /* transform: translateY(-50%);
+                    width: 100%;
+                    height: 100%;
+                    /* background-color: rgba(0, 0, 0, 0.5);
+                    align-items: center;
+                    justify-content: center;
+                    text-align: justify;
+                    z-index: 1000;
+                } */
         /* #aboutUsContent {
             height: 100%;
             width: 100%;
@@ -231,8 +230,6 @@
             font-size: 16px;
         }
 
-        
-
 
         #chartCanvas {
             border-radius: 10px; /* Round the corners */
@@ -255,53 +252,40 @@
             color: white;
         }
 
-        @media (max-width: 600px) {
-            .mapButtons > button {
-                height: 6vh;
-            }
-            #searchContainer{
-                width: 68%;
-                left: 48%;
-            }
-        #mapDivContainer {
-            width: 100%;
-            height: 80vh;
+        #aboutUsModal {
+            display: none;
+            position: absolute;
+            /* left: 0; */
+            /* left: 0; */
+            top: 6%;
+            /* transform: translateY(-50%); */
+            /* width: calc(100% - 20px); */
+            height: 75%;
+            background: white;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+            z-index: 1000;
+            overflow-y: auto;
+            border-bottom: white solid 15px;
+            border-radius: 10px;
+            border-top: white solid 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
-}
-    #aboutUsModal {
-        display: none;
-        position: absolute;
-    /* left: 0; */
-    /* left: 0; */
-    top: 6%;
-    /* transform: translateY(-50%); */
-    /* width: calc(100% - 20px); */
-    height: 75%;
-    background: white;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-    z-index: 1000;
-    overflow-y: auto;
-    border-bottom: white solid 15px;
-    border-radius: 10px;
-    border-top: white solid 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
-}
 
-#aboutUsContent {
-    height: 100%;
-    /* width: 100%; */
-    /* background: white; */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: justify;
-    max-width: 500px;
-    margin: auto;
-}
+        #aboutUsContent {
+            height: 100%;
+            /* width: 100%; */
+            /* background: white; */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: justify;
+            max-width: 500px;
+            margin: auto;
+        }
 
 
-.buttonContainer {
+        .buttonContainer {
             display: flex;
             justify-content: space-between;
             padding: 10px 20px;
@@ -315,7 +299,6 @@
         }
 
 
-
         #loginButton {
             padding: 10px 20px;
             background-color: var(--primary-color);
@@ -324,6 +307,7 @@
             cursor: pointer;
             border-radius: 10px;
         }
+
         #loginModal, #userMenu, #voteModal {
             display: none;
             position: fixed;
@@ -337,9 +321,11 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
+
         .hidden {
             display: none;
         }
+
         /* .userIcon {
             font-size: 24px;
             cursor: pointer;
@@ -347,7 +333,7 @@
 
         .userIcon {
             /* font-size: 40px; */
-            flex:1;
+            flex: 1;
             text-align: center;
             vertical-align: middle;
             color: var(--primary-color);
@@ -359,116 +345,142 @@
         }
 
         .modal {
-        display: none;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
-        width: 90%;
-        max-width: 400px;
-        text-align: center;
-    }
-    .modal h2 {
-        color: var(--primary-color);
-    }
-    .modal input {
-        width: calc(100% - 20px);
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-    }
-    .modal button {
-        background: var(--primary-color);
-        color: white;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        margin: 5px;
-    }
-    .modal button:hover, .userIcon:hover {
-        background: var(--primary-color);
-        color: #ffffff;
-    }
-    .modal-close {
-        float: right;
-        cursor: pointer;
-        font-size: 20px;
-        color: var(--primary-color);
-    }
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
 
-    .wideButton {
-        flex: 1;
-        min-width: 30%; /* Zajištění stejné šířky tlačítek */
-        padding: 2%;
-        background: var(--primary-color);
-        color: var(--primary-color);
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        text-align: center;
-        transition: background-color 0.3s;
-        font-weight: bold;
-        font-size: 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 4vh; /* Zajištění stejné výšky tlačítek */
-        width: 100%; /* Plná šířka uvnitř kontejneru */
-    }
+        .modal h2 {
+            color: var(--primary-color);
+        }
 
-    .mapButtons {
-        display: flex;
-        gap: 2%;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-        padding-bottom: 2%;
-    }
+        .modal input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
 
+        .modal button {
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .modal button:hover, .userIcon:hover {
+            background: var(--primary-color);
+            color: #ffffff;
+        }
+
+        .modal-close {
+            float: right;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+
+        .wideButton {
+            flex: 1;
+            min-width: 30%; /* Zajištění stejné šířky tlačítek */
+            padding: 2%;
+            background: var(--primary-color);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 4vh; /* Zajištění stejné výšky tlačítek */
+            width: 100%; /* Plná šířka uvnitř kontejneru */
+        }
+
+        .mapButtons {
+            display: flex;
+            gap: 2%;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            padding-bottom: 2%;
+        }
+
+        @media (max-width: 600px) {
+            .mapButtons > button {
+                height: 6vh;
+            }
+
+            #searchContainer {
+                width: 68%;
+                left: 48%;
+            }
+
+            .buttonContainer {
+                margin-bottom: 2px;
+            }
+
+            #mapDivContainer {
+                width: 100%;
+                /*height: 80vh;*/
+            }
+        }
     </style>
 </head>
 <body>
-    <div id="mainContainer">
-        <div id="mapDivContainer">
-            <div id="searchContainer">
-                <input type="text" id="searchBar" placeholder="Search...">
-                <button type="button" id="searchButton">Hledat</button>
-            </div>
-            <div id="map"></div>
-                <div id="chartContainer" style="display: none;">
-                    <canvas id="chartCanvas"></canvas>
-                </div>
-            <div class="buttonContainer">
-                <div id="subMenu" class="mapButtons">
-                    <!-- <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat 🌍</button>
-                    <button type="button" class="wideButton colorZebraCl" id="occupancy">Obsazení 🚗</button>
-                    <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase 📊</button> -->
+<div id="mainContainer">
+    <div id="mapDivContainer">
+        <div id="searchContainer">
+            <input type="text" id="searchBar" placeholder="Search...">
+            <button type="button" id="searchButton">Hledat</button>
+        </div>
+        <div id="map"></div>
+        <div id="chartContainer" style="display: none;">
+            <canvas id="chartCanvas"></canvas>
+        </div>
+        <div class="buttonContainer">
+            <div id="subMenu" class="mapButtons">
+                <!-- <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat 🌍</button>
+                <button type="button" class="wideButton colorZebraCl" id="occupancy">Obsazení 🚗</button>
+                <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase 📊</button> -->
 
-                    <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat</button>
-                    <button type="button" class="wideButton colorZebraCl" id="occupancy">Zadat stav</button>
-                    <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase</button>
-                </div>
-                <div class="mapButtons">
-                    <!-- <button type="button" class="wideButton colorZebraCl" id="aboutUsBtn">O nás 📜</button> -->
-                    <button type="button" class="wideButton colorZebraCl" id="aboutUsBtn">O nás</button>
-                    <button id="loginButton" class="wideButton colorZebraCl">Přihlásit se</button>
-                    <span id="userIcon" class="userIcon hidden">👤 admin</span>
-                </div>
+                <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat</button>
+                <button type="button" class="wideButton colorZebraCl" id="occupancy">Zadat stav</button>
+                <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase</button>
+            </div>
+            <div class="mapButtons">
+                <!-- <button type="button" class="wideButton colorZebraCl" id="aboutUsBtn">O nás 📜</button> -->
+                <button type="button" class="wideButton colorZebraCl" id="aboutUsBtn">O nás</button>
+                <button id="loginButton" class="wideButton colorZebraCl">Přihlásit se</button>
+                <span id="userIcon" class="userIcon hidden">👤 admin</span>
             </div>
         </div>
+    </div>
     <div id="aboutUsModal">
         <div id="aboutUsContent">
             <span id="closeAboutUs">❌</span>
             <h2>O nás</h2>
-            <p>Jsme tým „náhodných“ lidí, které všechny spojuje absolvování brigády či pracovního poměru ve společnosti ATEsystem.
-                 Přestože většina z nás v této společnosti již nevykonává žádné aktivity, tak jsme stále dobrý kolektiv a rádi se účastníme různých výzev. </p>
+            <p>Jsme tým „náhodných“ lidí, které všechny spojuje absolvování brigády či pracovního poměru ve společnosti
+                ATEsystem.
+                Přestože většina z nás v této společnosti již nevykonává žádné aktivity, tak jsme stále dobrý kolektiv a
+                rádi se účastníme různých výzev. </p>
             <img src="static/team.jpg" alt="Týmová fotka" style="width:100%; border-radius: 10px">
             <h2>Náš tým zleva</h2>
             <p><strong>Patrik Děcký</strong> - SW Architekt</p>
@@ -478,107 +490,113 @@
             <p><strong>Boris Pustějovský</strong> - SW Developer</p>
             <p><strong>Přemysl Bílek</strong> - Database Expert & SW Developer</p>
             <h2>O aplikaci</h2>
-            <p>ParkSense nyní přináší inovativní řešení optimalizace parkování zaměřené speciálně na hlavní město Prahu. 
-                Aplikace využívá kamerové záznamy k monitorování veřejných parkovišť v reálném čase, které jsou vyhodnocovány pomocí umělé inteligence. 
-                Dále je aplikace obohacena i o integraci s offline daty parkovišť, které jsou dostupné v otevřených datových sadách. Díky této kombinaci poskytuje uživatelům ještě přesnější a aktuálnější informace o dostupnosti parkovacích míst.
-                 Mobilní a webová aplikace nadále spolupracuje s Google Maps API, umožňuje vyhledávat nejbližší parkoviště, zobrazit počet volných míst a umožňuje snadnou navigaci přes aplikace jako Google Maps. 
-                 ParkSense tak přispívá k hladšímu parkování a zlepšuje mobilitu v dynamickém prostředí Prahy.</p>
+            <p>ParkSense nyní přináší inovativní řešení optimalizace parkování zaměřené speciálně na hlavní město Prahu.
+                Aplikace využívá kamerové záznamy k monitorování veřejných parkovišť v reálném čase, které jsou
+                vyhodnocovány pomocí umělé inteligence.
+                Dále je aplikace obohacena i o integraci s offline daty parkovišť, které jsou dostupné v otevřených
+                datových sadách. Díky této kombinaci poskytuje uživatelům ještě přesnější a aktuálnější informace o
+                dostupnosti parkovacích míst.
+                Mobilní a webová aplikace nadále spolupracuje s Google Maps API, umožňuje vyhledávat nejbližší
+                parkoviště, zobrazit počet volných míst a umožňuje snadnou navigaci přes aplikace jako Google Maps.
+                ParkSense tak přispívá k hladšímu parkování a zlepšuje mobilitu v dynamickém prostředí Prahy.</p>
             <h2>Použité datové sady</h2>
             <ul>
                 <li><a href="https://golemio.cz/data/doprava">Golemio - Doprava v datech</a></li>
-                <li><a href="https://data.praha.eu/dashboardy/obsazenost-pr-parkovist">Obsazenost P+R parkovišť v Praze</a></li>
-                <li><a href="https://www.windy.com/cs/-Webkamery-Praha-Horn%C3%AD-M%C4%9Bcholupy-Petrovice/webcams/1268410152?50.050,14.546,5">Windy.com - webkamery</a></li>
+                <li><a href="https://data.praha.eu/dashboardy/obsazenost-pr-parkovist">Obsazenost P+R parkovišť v
+                        Praze</a></li>
+                <li>
+                    <a href="https://www.windy.com/cs/-Webkamery-Praha-Horn%C3%AD-M%C4%9Bcholupy-Petrovice/webcams/1268410152?50.050,14.546,5">Windy.com
+                        - webkamery</a></li>
                 <li><a href="https://bezpecnost.praha.eu/mapy/kamery">Veřejné kamery v Praze</a></li>
             </ul>
         </div>
     </div>
-    </div>
+</div>
 
-    <!-- <div id="loginModal">
-        <h2>Přihlášení</h2>
-        <label>Uživatel:</label>
-        <input type="text" id="username"><br>
-        <label>Heslo:</label>
-        <input type="password" id="password"><br>
-        <button onclick="login()">Přihlásit</button>
-        <button onclick="closeLogin()">Zrušit</button>
-    </div> -->
+<!-- <div id="loginModal">
+    <h2>Přihlášení</h2>
+    <label>Uživatel:</label>
+    <input type="text" id="username"><br>
+    <label>Heslo:</label>
+    <input type="password" id="password"><br>
+    <button onclick="login()">Přihlásit</button>
+    <button onclick="closeLogin()">Zrušit</button>
+</div> -->
 
-    <div id="userMenu", class="modal">
-        <h2>Menu uživatele</h2>
-        <p><strong>Jméno: </strong>admin</p>
-        <button onclick="openVote()">Je tady volno?</button>
-        <button onclick="logout()">Odhlásit se</button>
-    </div>
+<div id="userMenu" , class="modal">
+    <h2>Menu uživatele</h2>
+    <p><strong>Jméno: </strong>admin</p>
+    <button onclick="openVote()">Je tady volno?</button>
+    <button onclick="logout()">Odhlásit se</button>
+</div>
 
-    <div id="loginModal" class="modal">
-        <span class="modal-close" onclick="closeModal('loginModal')">&times;</span>
-        <h2>Přihlášení</h2>
-        <input type="text" id="username" placeholder="Uživatel">
-        <input type="password" id="password" placeholder="Heslo">
-        <button onclick="login()">Přihlásit</button>
-        <button onclick="closeModal('loginModal')">Zrušit</button>
-    </div>
-    
-    <div id="voteModal" class="modal">
-        <span class="modal-close" onclick="closeModal('voteModal')">&times;</span>
-        <h2>Je zde volné místo?</h2>
-        <button onclick="vote('yes')">👍 Ano</button>
-        <button onclick="vote('no')">👎 Ne</button>
-        <p id="voteMessage"></p>
-    </div>
+<div id="loginModal" class="modal">
+    <span class="modal-close" onclick="closeModal('loginModal')">&times;</span>
+    <h2>Přihlášení</h2>
+    <input type="text" id="username" placeholder="Uživatel">
+    <input type="password" id="password" placeholder="Heslo">
+    <button onclick="login()">Přihlásit</button>
+    <button onclick="closeModal('loginModal')">Zrušit</button>
+</div>
 
-    <script>
-        document.getElementById("aboutUsBtn").onclick = function() {
-            document.getElementById("aboutUsModal").style.display = "unset";
-        };
-        document.getElementById("closeAboutUs").onclick = function() {
-            document.getElementById("aboutUsModal").style.display = "none";
-        };
+<div id="voteModal" class="modal">
+    <span class="modal-close" onclick="closeModal('voteModal')">&times;</span>
+    <h2>Je zde volné místo?</h2>
+    <button onclick="vote('yes')">👍 Ano</button>
+    <button onclick="vote('no')">👎 Ne</button>
+    <p id="voteMessage"></p>
+</div>
 
-        
+<script>
+    document.getElementById("aboutUsBtn").onclick = function () {
+        document.getElementById("aboutUsModal").style.display = "unset";
+    };
+    document.getElementById("closeAboutUs").onclick = function () {
+        document.getElementById("aboutUsModal").style.display = "none";
+    };
 
-        document.getElementById("loginButton").onclick = function() {
-            document.getElementById("loginModal").style.display = "unset";
-        };
-        document.getElementById("userIcon").onclick = function() {
-            document.getElementById("userMenu").style.display = "unset";
-        };
 
-        function closeLogin() {
-            document.getElementById("loginModal").style.display = "none";
+    document.getElementById("loginButton").onclick = function () {
+        document.getElementById("loginModal").style.display = "unset";
+    };
+    document.getElementById("userIcon").onclick = function () {
+        document.getElementById("userMenu").style.display = "unset";
+    };
+
+    function closeLogin() {
+        document.getElementById("loginModal").style.display = "none";
+    }
+
+    function login() {
+        var user = document.getElementById("username").value;
+        var pass = document.getElementById("password").value;
+        if (user === "admin" && pass === "admin") {
+            document.getElementById("loginButton").style.display = "none";
+            document.getElementById("userIcon").classList.remove("hidden");
+            closeLogin();
+        } else {
+            alert("Nesprávné přihlašovací údaje");
         }
+    }
 
-        function login() {
-            var user = document.getElementById("username").value;
-            var pass = document.getElementById("password").value;
-            if (user === "admin" && pass === "admin") {
-                document.getElementById("loginButton").style.display = "none";
-                document.getElementById("userIcon").classList.remove("hidden");
-                closeLogin();
-            } else {
-                alert("Nesprávné přihlašovací údaje");
-            }
-        }
+    function logout() {
+        document.getElementById("loginButton").style.display = "inline-block";
+        document.getElementById("userIcon").classList.add("hidden");
+        document.getElementById("userMenu").style.display = "none";
+    }
 
-        function logout() {
-            document.getElementById("loginButton").style.display = "inline-block";
-            document.getElementById("userIcon").classList.add("hidden");
-            document.getElementById("userMenu").style.display = "none";
-        }
+    function openVote() {
+        document.getElementById("voteModal").style.display = "unset";
+    }
 
-        function openVote() {
-            document.getElementById("voteModal").style.display = "unset";
-        }
-
-        function vote(option) {
-            document.getElementById("voteMessage").innerText = "Děkujeme za vaši informaci!";
-            setTimeout(() => {
-                document.getElementById("voteModal").style.display = "none";
-                document.getElementById("userMenu").style.display = "None";
-                document.getElementById("voteMessage").innerText = "";
-            }, 1000);
-        }
-    </script>
-    </body>
+    function vote(option) {
+        document.getElementById("voteMessage").innerText = "Děkujeme za vaši informaci!";
+        setTimeout(() => {
+            document.getElementById("voteModal").style.display = "none";
+            document.getElementById("userMenu").style.display = "None";
+            document.getElementById("voteMessage").innerText = "";
+        }, 1000);
+    }
+</script>
+</body>
 </html>
