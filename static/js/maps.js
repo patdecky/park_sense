@@ -159,8 +159,8 @@ window.addEventListener('load', () => {
         });
 
         let description = buildMarkerDescription(name, vacancy, predicted_vacancy, community_vacancy, capacity)
-        marker_vacancy = vacancy != null ? vacancy : predicted_vacancy
-        ppmarker = betterMarkerUse(latitude, longitude, description, marker_vacancy)
+        let marker_vacancy = vacancy != null ? vacancy : predicted_vacancy
+        let ppmarker = betterMarkerUse(latitude, longitude, description, marker_vacancy)
         ppmarker.parkinglot_id = parkinglot_id
         park_place_markers.push(ppmarker);
         //ppmarker.openPopup();
@@ -188,7 +188,7 @@ window.addEventListener('load', () => {
                 if (community_vacancy > capacity){
                     community_vacancy = capacity
                 }
-                description += "<br> Komunita: " + round(community_vacancy/capacity*100) + " %"
+                description += "<br> Komunita: " + Math.round(community_vacancy/capacity*100) + " %"
             }
         }
         else{
