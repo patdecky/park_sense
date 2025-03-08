@@ -93,10 +93,10 @@ class DBH_parkinglot extends DBH_abstract
     public function searchNearestFreeParking(array $carPosition, int $distanceMeters = 500, int $limit = 5): array
     {
         $limit = min($limit, self::MAX_PER_SELECT);
-        $sql = 'SELECT ' . self::FULL_SELECT . ', ST_Distance_Sphere(geopos, POINT(' . $carPosition[0] . ', ' . $carPosition[1] . ')) AS distancee ' . chr(0xa)
+        $sql = 'SELECT ' . self::FULL_SELECT . ', ST_Distance_Sphere(geopos, POINT(' . $carPosition[1] . ', ' . $carPosition[0] . ')) AS distancee ' . chr(0xa)
             . 'FROM `' . self::TABLE_NAME . '` ' . chr(0xa)
             . 'WHERE `car_capacity` > 0 ' . chr(0xa)
-            . 'AND ST_Distance_Sphere(geopos, POINT(' . $carPosition[0] . ', ' . $carPosition[1] . ')) <= ' . $distanceMeters . ' ' . chr(0xa)
+            . 'AND ST_Distance_Sphere(geopos, POINT(' . $carPosition[1] . ', ' . $carPosition[0] . ')) <= ' . $distanceMeters . ' ' . chr(0xa)
             . 'ORDER BY distancee ASC ' . chr(0xa)
             . "LIMIT $limit;";
 
