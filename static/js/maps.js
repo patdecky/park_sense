@@ -18,6 +18,9 @@ window.addEventListener('load', () => {
     document.getElementById('navigate').addEventListener('click', () => {
         openCoordinatesInGoogleMaps()
     });
+    document.getElementById('occupancy').addEventListener('click', () => {
+        communityOcuppacy()
+    });
 
 
     function onHashChange() {
@@ -87,7 +90,6 @@ window.addEventListener('load', () => {
         };
 
 
-
         // Layer control for switching between base layers
         var baseMaps = {
             "OpenStreetMap": openStreetMap,
@@ -98,7 +100,7 @@ window.addEventListener('load', () => {
         // Add layer control to the map
         L.control.layers(baseMaps).addTo(map);
 
-        setMapCenter(49.5940567,17.251143, 13)
+        setMapCenter(50.106788, 14.450860, 13)
         // setMarkerToMap(51.505, -0.09, null)
         /*betterMarker(L.ExtraMarkers.icon({
             icon: 'fa-number',
@@ -107,6 +109,19 @@ window.addEventListener('load', () => {
             number: '11',
             prefix: 'fa'
         }), [49.5876267,17.2553681], 'skibbidy toilet')*/
+
+        // Add click event listener to the map
+        map.on('click', async function(e) {
+            const { lat, lng } = e.latlng;
+            const nearestParkingLots = await findNearestParkingLots(lat, lng);
+            if (nearestParkingLots && nearestParkingLots.length > 0) {
+                const nearestParking = nearestParkingLots[0];
+                const location = `${nearestParking.geopos_x},${nearestParking.geopos_y}`;
+                geocodePlace(location);
+            } else {
+                alert('No parking lots found nearby.');
+            }
+        });
     }
 
     function setMarkerToMap(latitude, longitude, description) {
@@ -115,10 +130,13 @@ window.addEventListener('load', () => {
         }
         // Add the new marker at the new location
 
-        marker = L.marker([latitude, longitude], {icon: L.ExtraMarkers.icon({
-                        icon: 'fa-number',
-                        markerColor: "red",
-                        prefix: 'fa'})}).addTo(map)
+        marker = L.marker([latitude, longitude], {
+            icon: L.ExtraMarkers.icon({
+                icon: 'fa-number',
+                markerColor: "red",
+                prefix: 'fa'
+            })
+        }).addTo(map)
         if (description != null) {
             marker.bindPopup(description).openPopup();
             if (onPopupOpenCallbackMain && typeof onPopupOpenCallbackMain === 'function') {
@@ -137,7 +155,7 @@ window.addEventListener('load', () => {
     }
 
 
-    function setParkPlaceMarkerToMap(latitude, longitude, description,vacancy, capacity, main = false) {
+    function setParkPlaceMarkerToMap(latitude, longitude, description, vacancy, capacity, main = false) {
         park_place_markers.forEach(element => {
             element.closePopup();
         });
@@ -174,14 +192,15 @@ window.addEventListener('load', () => {
         setMarkerToMap(latitude, longitude, description)
         let nearestParkingLots = await findNearestParkingLots(latitude, longitude)
         let is_first = true
-        if (nearestParkingLots){
-        nearestParkingLots.forEach(async (element) => {
-            vacancy_element = await findVacancy(element.id)
-            setParkPlaceMarkerToMap(element.geopos_x, element.geopos_y, element.name, vacancy_element.vacancy, element.car_capacity, is_first)
-            if (is_first) {
-                is_first = false
-            }
-        })}
+        if (nearestParkingLots) {
+            nearestParkingLots.forEach(async (element) => {
+                vacancy_element = await findVacancy(element.id)
+                setParkPlaceMarkerToMap(element.geopos_x, element.geopos_y, element.name, vacancy_element.vacancy, element.car_capacity, is_first)
+                if (is_first) {
+                    is_first = false
+                }
+            })
+        }
         // setParkPlaceMarkerToMap(latitude - 0.001, longitude, "1", true);
         // setParkPlaceMarkerToMap(latitude, longitude - 0.001, "2", true);
         // setParkPlaceMarkerToMap(latitude + 0.001, longitude, "3", true);
@@ -223,18 +242,27 @@ window.addEventListener('load', () => {
         return result = await (new dataRequester()).loadParkingLotsVacancy(parkinglot_id)
     }
 
+    function communityOcuppacy() {
+        open_marker = getActiveMarker()
+        if (!open_marker) {
+            alert("You may only add occupancy to watched parking lot.")
+            return;
+        }
+        // todo
+    }
     function openCoordinatesInGoogleMaps() {
         open_marker = getActiveMarker()
-        if (open_marker) {
-            lat_lon = getMarkerCoordinance(open_marker)
-            if (lat_lon[0] && lat_lon[1]) {
-                const url = `https://www.google.com/maps?q=${lat_lon[0]},${lat_lon[1]}`;
-                window.open(url, '_blank');
-            } else {
-                alert("Missing latitude or longitude!")
-            }
-        } else {
+        if (!open_marker) {
             alert("Please search and select a place to navigate.")
+            return;
+        }
+
+        lat_lon = getMarkerCoordinance(open_marker)
+        if (lat_lon[0] && lat_lon[1]) {
+            const url = `https://www.google.com/maps?q=${lat_lon[0]},${lat_lon[1]}`;
+            window.open(url, '_blank');
+        } else {
+            alert("Missing latitude or longitude!")
         }
 
     }
@@ -262,27 +290,27 @@ window.addEventListener('load', () => {
 //////////////////////
     // Setup map
 
-function betterMarker(options, pos, name) {
-    const marker = L.marker(pos, {icon: options}).addTo(map);
-    marker.bindPopup(name);
-    return marker
-}
-    
-
-function betterMarkerUse(latitude, longitude,description, vacancy, capacity, main = false){
-    my_marker = betterMarker(L.ExtraMarkers.icon({
-        icon: 'fa-number',
-        markerColor: "blue",
-        shape: 'square',
-        number: vacancy,
-        prefix: 'fa'
-    }), [latitude, longitude], "Volno: "+ vacancy + "/" + capacity + "<br>" + description)
-
-    if (main){
-        my_marker.openPopup()
+    function betterMarker(options, pos, name) {
+        const marker = L.marker(pos, {icon: options}).addTo(map);
+        marker.bindPopup(name);
+        return marker
     }
-    return my_marker
-}
+
+
+    function betterMarkerUse(latitude, longitude, description, vacancy, capacity, main = false) {
+        my_marker = betterMarker(L.ExtraMarkers.icon({
+            icon: 'fa-number',
+            markerColor: "blue",
+            shape: 'square',
+            number: vacancy,
+            prefix: 'fa'
+        }), [latitude, longitude], "Volno: " + vacancy + "/" + capacity + "<br>" + description)
+
+        if (main) {
+            my_marker.openPopup()
+        }
+        return my_marker
+    }
 
 });
 
