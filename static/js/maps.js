@@ -2,7 +2,6 @@
 let map;
 let marker;
 let park_place_markers = [];
-let latest_parklot_id = 0;
 
 const shapes = ['circle', 'square', 'star', 'penta'];
 const colors = ['red', 'orange-dark', 'orange', 'yellow', 'blue-dark', 'cyan', 'purple', 'violet', 'pink', 'green-dark', 'green', 'white', 'black'];
@@ -20,7 +19,7 @@ window.addEventListener('load', () => {
         openCoordinatesInGoogleMaps()
     });
     document.getElementById('occupancy').addEventListener('click', () => {
-        communityOcuppacy()
+        setCommunityOcuppacy()
     });
 
 
@@ -153,11 +152,12 @@ window.addEventListener('load', () => {
     }
 
 
-    function setParkPlaceMarkerToMap(latitude, longitude, description, vacancy, capacity, main = false) {
+    function setParkPlaceMarkerToMap(latitude, longitude, description, vacancy, capacity, parkinglot_id) {
         park_place_markers.forEach(element => {
             element.closePopup();
         });
-        ppmarker = betterMarkerUse(latitude, longitude, description, vacancy, capacity, main)
+        ppmarker = betterMarkerUse(latitude, longitude, description, vacancy, capacity)
+        ppmarker.parkinglot_id = parkinglot_id
         park_place_markers.push(ppmarker);
         //ppmarker.openPopup();
         // Check if a callback is provided for when the popup is opened
@@ -190,7 +190,6 @@ window.addEventListener('load', () => {
         latest_parklot_id = 0;
         setMarkerToMap(latitude, longitude, description)
         let nearestParkingLots = await findNearestParkingLots(latitude, longitude)
-        let is_first = true
         if (nearestParkingLots) {
             for (const element of nearestParkingLots) {
                 let vacancy_element = await findVacancy(element.id)
@@ -204,16 +203,15 @@ window.addEventListener('load', () => {
                         element.name += " (Community)";
                     }
                 }
-                await setParkPlaceMarkerToMap(element.geopos_y, element.geopos_x, element.name, vacancy, element.car_capacity, is_first)
-                if (is_first) {
-                    latest_parklot_id = element.id;
-                    is_first = false
-                }
+                await setParkPlaceMarkerToMap(element.geopos_y, element.geopos_x, element.name, vacancy, element.car_capacity, element.id)
             }
             openLastMarker()
             zoomMapToMarkers()
-            return !is_first;
-        } else return 0;
+            return true
+        } else {
+            marker.openPopup()
+            return false
+        }
         // setParkPlaceMarkerToMap(latitude - 0.001, longitude, "1", true);
         // setParkPlaceMarkerToMap(latitude, longitude - 0.001, "2", true);
         // setParkPlaceMarkerToMap(latitude + 0.001, longitude, "3", true);
@@ -270,7 +268,7 @@ window.addEventListener('load', () => {
         return await (new dataRequester()).loadParkingLotsVacancy(parkinglot_id)
     }
 
-    function communityOcuppacy() {
+    function setCommunityOcuppacy() {
         let open_marker = getActiveMarker()
         if (!open_marker) {
             alert("Můžete vyplnit obsazenost pouze u vybraných sledovaných parkovišť.")
@@ -278,9 +276,11 @@ window.addEventListener('load', () => {
         }
         // check if the current open marker is in park_place_markers
         let found = false
+        let parkinglot_id = null
         for (let i = 0; i < park_place_markers.length; i++) {
             if (park_place_markers[i] === open_marker) {
                 found = true
+                parkinglot_id = park_place_markers[i].parkinglot_id
                 break
             }
         }
@@ -292,7 +292,7 @@ window.addEventListener('load', () => {
         // console.log(vacancy);
         //todo set vacancy to api
 
-        (new dataRequester()).setOccupancyCommunity(latest_parklot_id, vacancy).then();
+        (new dataRequester()).setOccupancyCommunity(parkinglot_id, vacancy).then();
     }
 
     function openCoordinatesInGoogleMaps() {
@@ -342,7 +342,7 @@ window.addEventListener('load', () => {
     }
 
 
-    function betterMarkerUse(latitude, longitude, description, vacancy, capacity, main = false) {
+    function betterMarkerUse(latitude, longitude, description, vacancy, capacity) {
         my_marker = betterMarker(L.ExtraMarkers.icon({
             icon: 'fa-number',
             markerColor: "blue",
@@ -351,9 +351,7 @@ window.addEventListener('load', () => {
             prefix: 'fa'
         }), [latitude, longitude], "Volno: " + vacancy + "/" + capacity + "<br>" + description)
 
-        //if (main) {
-        //    my_marker.openPopup()
-        //}
+
         return my_marker
     }
 
