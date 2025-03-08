@@ -113,14 +113,19 @@ window.addEventListener('load', () => {
         // Add click event listener to the map
         map.on('click', async function(e) {
             const { lat, lng } = e.latlng;
-            const nearestParkingLots = await findNearestParkingLots(lat, lng);
-            if (nearestParkingLots && nearestParkingLots.length > 0) {
-                const nearestParking = nearestParkingLots[0];
-                const location = `${nearestParking.geopos_x},${nearestParking.geopos_y}`;
-                geocodePlace(location);
-            } else {
-                alert('No parking lots found nearby.');
+            let ret = await searchAndPlaceMarkers(lat, lng, "Označené místo");
+            if (!ret) {
+                alert('Žádná volná parkoviště v okolí.');   
             }
+            // const nearestParkingLots = await findNearestParkingLots(lat, lng);
+            // if (nearestParkingLots && nearestParkingLots.length > 0) {
+            //     const nearestParking = nearestParkingLots[0];
+            //     // const location = `${nearestParking.geopos_x},${nearestParking.geopos_y}`;
+            //     // geocodePlace(location);
+            //     await searchAndPlaceMarkers(nearestParking.geopos_y, nearestParking.geopos_x, nearestParking.name);
+            // } else {
+            //     alert('No parking lots found nearby.');
+            // }
         });
     }
 
@@ -193,14 +198,20 @@ window.addEventListener('load', () => {
         let nearestParkingLots = await findNearestParkingLots(latitude, longitude)
         let is_first = true
         if (nearestParkingLots) {
-            nearestParkingLots.forEach(async (element) => {
-                vacancy_element = await findVacancy(element.id)
-                setParkPlaceMarkerToMap(element.geopos_x, element.geopos_y, element.name, vacancy_element.vacancy, element.car_capacity, is_first)
+            for (const element of nearestParkingLots) {
+                let vacancy_element = await findVacancy(element.id)
+                let vacancy = 0;
+                if (vacancy_element != null) {
+                    vacancy = vacancy_element.vacancy
+                }
+                setParkPlaceMarkerToMap(element.geopos_y, element.geopos_x, element.name, vacancy, element.car_capacity, is_first)
                 if (is_first) {
                     is_first = false
                 }
-            })
+            }
+            return !is_first;
         }
+        else return 0;
         // setParkPlaceMarkerToMap(latitude - 0.001, longitude, "1", true);
         // setParkPlaceMarkerToMap(latitude, longitude - 0.001, "2", true);
         // setParkPlaceMarkerToMap(latitude + 0.001, longitude, "3", true);
@@ -233,13 +244,11 @@ window.addEventListener('load', () => {
     }
 
     async function findNearestParkingLots(lat, lon) {
-
-        return result = await (new dataRequester()).loadParkingLots(lat, lon, 1500, 5)
+        return  await (new dataRequester()).loadParkingLots(lat, lon, 1500, 5)
     }
 
     async function findVacancy(parkinglot_id) {
-
-        return result = await (new dataRequester()).loadParkingLotsVacancy(parkinglot_id)
+        return await (new dataRequester()).loadParkingLotsVacancy(parkinglot_id)
     }
 
     function communityOcuppacy() {
