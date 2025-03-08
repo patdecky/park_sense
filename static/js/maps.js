@@ -193,10 +193,9 @@ window.addEventListener('load', () => {
             } else if (predicted_vacancy != null) {
                 description = name + "<br> Volno: " + predicted_vacancy + "/" + capacity
             }
-            } else {
+            else {
                 description = name + "<br> Kapacita: " + capacity
             }
-            if (community_vacancy != null){
             if (community_vacancy != null) {
                 if (community_vacancy > capacity) {
                     community_vacancy = capacity

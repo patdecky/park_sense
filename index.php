@@ -121,6 +121,9 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            background-image: radial-gradient(circle, #eee 2px, transparent 2px);
+            background-size: 40px 40px;
+            background-position: 0 0;
         }
 
         #mainContainer {
