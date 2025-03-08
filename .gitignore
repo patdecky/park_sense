@@ -1,8 +1,12 @@
-./.idea
-./.code
+.idea/*
+.idea/
+.code
+.code/*
 
 php/globals.php
 
+
+.vscode/*
 
 /AI_backend/config.json
 

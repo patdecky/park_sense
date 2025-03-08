@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 192.168.12.210
--- Generation Time: Mar 07, 2025 at 08:54 PM
+-- Generation Time: Mar 08, 2025 at 01:51 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -50,6 +50,22 @@ CREATE TABLE IF NOT EXISTS `data_source` (
   `parkinglot_id` bigint(20) UNSIGNED NOT NULL,
   `type` tinyint(3) UNSIGNED NOT NULL,
   `source` text DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `parkinglot_id` (`parkinglot_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_czech_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `occupancy_community`
+--
+
+DROP TABLE IF EXISTS `occupancy_community`;
+CREATE TABLE IF NOT EXISTS `occupancy_community` (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `parkinglot_id` bigint(20) UNSIGNED NOT NULL,
+  `occupancy` int(10) UNSIGNED NOT NULL,
+  `current_timestamp` datetime NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
   KEY `parkinglot_id` (`parkinglot_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_czech_ci;
@@ -137,18 +153,23 @@ ALTER TABLE `data_source`
   ADD CONSTRAINT `data_source_ibfk_1` FOREIGN KEY (`parkinglot_id`) REFERENCES `parkinglot` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `pl_history`
+--
+ALTER TABLE `pl_history`
+  ADD CONSTRAINT `pl_history_ibfk_1` FOREIGN KEY (`parkinglot_id`) REFERENCES `parkinglot` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `pl_prediction`
 --
 ALTER TABLE `pl_prediction`
   ADD CONSTRAINT `pl_prediction_ibfk_1` FOREIGN KEY (`parkinglot_id`) REFERENCES `parkinglot` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
-
 --
--- Constraints for table `pl_history`
+-- Constraints for table `occupancy_community`
 --
-ALTER TABLE `pl_history`
-    ADD CONSTRAINT `pl_history_ibfk_1` FOREIGN KEY (`parkinglot_id`) REFERENCES `parkinglot` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `occupancy_community`
+  ADD CONSTRAINT `occupancy_community_ibfk_1` FOREIGN KEY (`parkinglot_id`) REFERENCES `parkinglot` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

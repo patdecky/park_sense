@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
         openCoordinatesInGoogleMaps()
     });
     document.getElementById('occupancy').addEventListener('click', () => {
-        communityOcuppacy()
+        setCommunityOcuppacy()
     });
 
 
@@ -89,14 +89,6 @@ window.addEventListener('load', () => {
             "Terrain": terrainLayer
         };
 
-
-        // Layer control for switching between base layers
-        var baseMaps = {
-            "OpenStreetMap": openStreetMap,
-            "Satellite": satelliteLayer,
-            "Terrain": terrainLayer
-        };
-
         // Add layer control to the map
         L.control.layers(baseMaps).addTo(map);
 
@@ -111,11 +103,11 @@ window.addEventListener('load', () => {
         }), [49.5876267,17.2553681], 'skibbidy toilet')*/
 
         // Add click event listener to the map
-        map.on('click', async function(e) {
-            const { lat, lng } = e.latlng;
+        map.on('click', async function (e) {
+            const {lat, lng} = e.latlng;
             let ret = await searchAndPlaceMarkers(lat, lng, "Označené místo");
             if (!ret) {
-                alert('Žádná volná parkoviště v okolí.');   
+                alert('Žádná volná parkoviště v okolí.');
             }
             // const nearestParkingLots = await findNearestParkingLots(lat, lng);
             // if (nearestParkingLots && nearestParkingLots.length > 0) {
@@ -160,13 +152,14 @@ window.addEventListener('load', () => {
     }
 
 
-    function setParkPlaceMarkerToMap(latitude, longitude, description, vacancy, capacity, main = false) {
+    function setParkPlaceMarkerToMap(latitude, longitude, description, vacancy, capacity, parkinglot_id) {
         park_place_markers.forEach(element => {
             element.closePopup();
         });
-        ppmarker = betterMarkerUse(latitude, longitude, description, vacancy, capacity, main)
+        ppmarker = betterMarkerUse(latitude, longitude, description, vacancy, capacity)
+        ppmarker.parkinglot_id = parkinglot_id
         park_place_markers.push(ppmarker);
-        ppmarker.openPopup();
+        //ppmarker.openPopup();
         // Check if a callback is provided for when the popup is opened
         if (onPopupOpenCallback && typeof onPopupOpenCallback === 'function') {
             ppmarker.on('popupopen', function (event) {
@@ -194,29 +187,53 @@ window.addEventListener('load', () => {
 
     async function searchAndPlaceMarkers(latitude, longitude, description) {
         removeParkPlaceMarkersFromMap()
+        latest_parklot_id = 0;
         setMarkerToMap(latitude, longitude, description)
         let nearestParkingLots = await findNearestParkingLots(latitude, longitude)
-        let is_first = true
         if (nearestParkingLots) {
             for (const element of nearestParkingLots) {
                 let vacancy_element = await findVacancy(element.id)
                 let vacancy = 0;
                 if (vacancy_element != null) {
                     vacancy = vacancy_element.vacancy
+                } else {
+                    let ret = await (new dataRequester()).loadOccupancyCommunity(element.id);
+                    if (ret && ret.length > 0) {
+                        vacancy = ret[0].occupancy;
+                        element.name += " (Community)";
+                    }
                 }
-                setParkPlaceMarkerToMap(element.geopos_y, element.geopos_x, element.name, vacancy, element.car_capacity, is_first)
-                if (is_first) {
-                    is_first = false
-                }
+                await setParkPlaceMarkerToMap(element.geopos_y, element.geopos_x, element.name, vacancy, element.car_capacity, element.id)
             }
-            return !is_first;
+            openLastMarker()
+            zoomMapToMarkers()
+            return true
+        } else {
+            marker.openPopup()
+            return false
         }
-        else return 0;
         // setParkPlaceMarkerToMap(latitude - 0.001, longitude, "1", true);
         // setParkPlaceMarkerToMap(latitude, longitude - 0.001, "2", true);
         // setParkPlaceMarkerToMap(latitude + 0.001, longitude, "3", true);
         // setParkPlaceMarkerToMap(latitude, longitude + 0.001, "4", true);
     }
+
+    function openLastMarker() {
+        if (park_place_markers.length > 0) {
+            park_place_markers[park_place_markers.length - 1].openPopup()
+        }
+    }
+
+    function zoomMapToMarkers() {
+        let points = []
+        park_place_markers.forEach(element => {
+            points.push(element.getLatLng())
+        });
+        points.push(marker.getLatLng())
+        let bounds = L.latLngBounds(points)
+        map.fitBounds(bounds);}
+
+
 
     function geocodePlace(place) {
         const nominatimUrl = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(place)}&format=json&limit=1`;
@@ -244,23 +261,42 @@ window.addEventListener('load', () => {
     }
 
     async function findNearestParkingLots(lat, lon) {
-        return  await (new dataRequester()).loadParkingLots(lat, lon, 1500, 5)
+        return await (new dataRequester()).loadParkingLots(lat, lon, 1500, 5)
     }
 
     async function findVacancy(parkinglot_id) {
         return await (new dataRequester()).loadParkingLotsVacancy(parkinglot_id)
     }
 
-    function communityOcuppacy() {
-        open_marker = getActiveMarker()
+    function setCommunityOcuppacy() {
+        let open_marker = getActiveMarker()
         if (!open_marker) {
-            alert("You may only add occupancy to watched parking lot.")
+            alert("Můžete vyplnit obsazenost pouze u vybraných sledovaných parkovišť.")
             return;
         }
-        // todo
+        // check if the current open marker is in park_place_markers
+        let found = false
+        let parkinglot_id = null
+        for (let i = 0; i < park_place_markers.length; i++) {
+            if (park_place_markers[i] === open_marker) {
+                found = true
+                parkinglot_id = park_place_markers[i].parkinglot_id
+                break
+            }
+        }
+        if (!found) {
+            alert("Můžete vyplnit obsazenost pouze u vybraných sledovaných parkovišť.")
+            return;
+        }
+        let vacancy = prompt("Please enter the number of free parking spots:", "0");
+        // console.log(vacancy);
+        //todo set vacancy to api
+
+        (new dataRequester()).setOccupancyCommunity(parkinglot_id, vacancy).then();
     }
+
     function openCoordinatesInGoogleMaps() {
-        open_marker = getActiveMarker()
+        let open_marker = getActiveMarker()
         if (!open_marker) {
             alert("Please search and select a place to navigate.")
             return;
@@ -306,7 +342,7 @@ window.addEventListener('load', () => {
     }
 
 
-    function betterMarkerUse(latitude, longitude, description, vacancy, capacity, main = false) {
+    function betterMarkerUse(latitude, longitude, description, vacancy, capacity) {
         my_marker = betterMarker(L.ExtraMarkers.icon({
             icon: 'fa-number',
             markerColor: "blue",
@@ -315,9 +351,7 @@ window.addEventListener('load', () => {
             prefix: 'fa'
         }), [latitude, longitude], "Volno: " + vacancy + "/" + capacity + "<br>" + description)
 
-        if (main) {
-            my_marker.openPopup()
-        }
+
         return my_marker
     }
 

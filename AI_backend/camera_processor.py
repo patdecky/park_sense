@@ -9,27 +9,28 @@ import datasource_bezp_praha
 
 
 def process_all_cameras(database_mapper:DatabaseMapper, pl_viewer:ParkingLotViewer):
-    parking_lots = database_mapper.get_all_parking_lots()
+    parking_lots = database_mapper.get_all_parking_lots_with_datasource()
     availability = []
     for parking_lot in parking_lots:
         datasources_for_parking_lot = database_mapper.get_data_sources_by_parkinglot(parking_lot.id)
+        
         datasource = datasources_for_parking_lot[0]
         match datasource.type:
             case 1:
-                print(datasource.source)
                 datasource_data = json.loads(datasource.source)
                 datasouce_object = datasource_windy.WindyDataSource(**datasource_data)
                 image = datasource_windy.read_live_image(datasouce_object.url)
             case 2:
+                print(datasource.source)
                 datasource_data = json.loads(datasource.source)
                 datasouce_object = datasource_bezp_praha.BEZPPrahaDataSource(**datasource_data)
                 image = datasource_bezp_praha.read_live_image(datasouce_object.url)
             case _:
                 print("Unknown datasource type")
 
-        vacancy = process_parking_lot(image, parking_lot.car_capacity)
+        vacancy = process_parking_lot(image, parking_lot.id, parking_lot.car_capacity, pl_viewer)
         availability.append(vacancy)
-        #database_mapper.write_vacancy(parking_lot.id, vacancy)
+        database_mapper.write_vacancy(parking_lot.id, vacancy)
     return availability
 
 

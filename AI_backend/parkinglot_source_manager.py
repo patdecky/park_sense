@@ -63,6 +63,7 @@ class Loader:
                 parkinglot.name,
                 parkinglot.description
             ))
+        return parkinglot_ids
 
     def alter_parkinglot_into_database(self, existing_parkinglot_ids:list):
         for parkinglot, existing_id in zip(self.parkinglot_sources, existing_parkinglot_ids):
@@ -99,10 +100,14 @@ class Loader:
 
 
 if __name__ == "__main__":
-    loader = ParkingLotSourceLoader("datasource/parkinglots_windy_1.json")
+
+    import sys
+    sys.stdout.reconfigure(encoding='utf-8')
+
+    parking_lot = ParkingLotSourceLoader("datasource/parkinglots_praha_api.json")
 
 
-    data_loader = DataSourceSourceLoader("datasource/datasource_windy_1.json")
+    data_loader = DataSourceSourceLoader("datasource/datasource_praha_bezp_1.json")
 
     from config_loader import ConfigNew
 
@@ -111,9 +116,16 @@ if __name__ == "__main__":
     database_manager = DatabaseMapper(config.host, config.user,config.password, config.database, config.port)
     database_manager.connect()
 
-    loader = Loader(loader, data_loader, database_manager)
+    loader = Loader(parking_lot, data_loader, database_manager)
 
     loader.create_sources()
-    ##print(loader.alter_datasource_into_database([1,2,3,4], [1,2,3,4]))
+    lot_ids = loader.insert_parkinglot_into_database()
+    print(lot_ids)
+    #datasource_ids = loader.insert_datasource_into_database([17, 18, 19])
+    #print(datasource_ids)
+
+    #print(loader.alter_parkinglot_into_database([1,2,3,4]))
+    #print(loader.alter_datasource_into_database([1,2,3,4], [1,2,3,4]))
+    #print(loader.insert_datasource_into_database([4]))
 
     database_manager.disconnect()

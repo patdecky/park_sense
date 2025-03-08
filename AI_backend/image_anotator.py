@@ -29,10 +29,10 @@ def click_event(event, x, y, flags, params):
 
         cv2.imshow("Image", image)
 
-parkinglot_id = 4
+parkinglot_id = 18
 
 # Load the image
-image_path = f'windy_images/{parkinglot_id}.png'  # Update this to the correct path if needed
+image_path = f'bezp_images/{parkinglot_id}.png'  # Update this to the correct path if needed
 image = cv2.imread(image_path)
 
 # Create a window and set the mouse callback function to capture clicks

@@ -34,12 +34,15 @@ def read_live_image(url):
     return image
 
 if __name__ == "__main__":
-    url = f"https://bezpecnost.praha.eu/Intens.CrisisPortalInfrastructureApp/cameras/101048/image?format=json"
+    url = f"https://bezpecnost.praha.eu/Intens.CrisisPortalInfrastructureApp/cameras/500005/image?format=json"
 
 
     image = read_live_image(url)
 
         
     cv.imshow("image",image)
+
+    cv.imwrite("bezp_images/19.png", image)
+
 
     key= cv.waitKey(0)
