@@ -7,12 +7,15 @@ import numpy as np
 def list_parking_places(file_path:str) -> list[list[int]]:
     pkm_coordinates = []
     with open(file_path, 'r') as file:
-        pkm_lines = file.readlines()    
+        pkm_lines = file.readlines()
+        iou = pkm_lines[0]
+        pkm_lines = pkm_lines[1:]
         for line in pkm_lines:
             st_line = line.strip()
-            sp_line = list(st_line.split(" "))
-            pkm_coordinates.append(sp_line)
-    return pkm_coordinates
+            if st_line != "":
+                sp_line = list(st_line.split(" "))
+                pkm_coordinates.append(sp_line)
+    return float(iou), pkm_coordinates
 
 
 
@@ -95,7 +98,6 @@ class ParkingLotViewer:
 
     
     def scan_cars(self, image):
-        # Run the YOLOv8 model on the image
         result = self.model(image)[0]
 
         car_detections = [box for box in result.boxes if int(box.cls[0]) == 2]
@@ -138,8 +140,10 @@ if __name__ == "__main__":
     # Load a pre-trained YOLOv8 model (YOLOv8n is a smaller model, faster to run)
     model = YOLO('yolo11l.pt')  # You can also use 'yolov8m.pt' or 'yolov8l.pt' for larger models
 
+    parkinglot_id = 3
+
     # Load an image where you want to detect cars
-    image_path = 'mohelnice_full.jpg'
+    image_path = f'windy_images/{parkinglot_id}.png'
     img = cv2.imread(image_path)
 
 
@@ -150,22 +154,20 @@ if __name__ == "__main__":
 
     pl_viewer.draw_boxes(img, car_bboxes)
 
+    iou, polygons = list_parking_places(f"annotations/{parkinglot_id}.txt")
     
-    parking_lots_polygons = convert_parking_lot_list(list_parking_places("7.txt"))
+    parking_lots_polygons = convert_parking_lot_list(polygons)
 
 
 
     # Check for each polygonal parking lot if there is a car in it using IoU threshold of 0.5
-    parking_lot_status = cars_in_parking_lots_iou_polygon(car_bboxes, parking_lots_polygons, 0.15)
+    parking_lot_status = cars_in_parking_lots_iou_polygon(car_bboxes, parking_lots_polygons, iou)
     
     
     pl_viewer.draw_parking_spots(img, parking_lots_polygons, parking_lot_status)
 
 
-
-    cv2.imshow("name", img)
-
-    cv2.imwrite("mohelnice_marked.jpg", img)
+    cv2.imshow("labeled", img)
     cv2.waitKey(0)
 
     print(parking_lot_status)  # Output: [True, True, False]

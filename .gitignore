@@ -6,6 +6,7 @@ php/globals.php
 
 /AI_backend/config.json
 
+/AI_backend/yolo*.pt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

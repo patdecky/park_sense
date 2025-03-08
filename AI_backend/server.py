@@ -1,25 +1,13 @@
 from database_management import DatabaseMapper
 from config_loader import Config
 from mysql.connector import Error
-import image_scraper
+import windy_image_scraper
 from ultralytics import YOLO
 import cv2
 import matplotlib.pyplot as plt
 from park_place_management import ParkingLotViewer, convert_parking_lot_list, list_parking_places, calculate_availability, cars_in_parking_lots_iou_polygon
 
 import time
-
-
-"""
-zjistím jaká jsou k dipozici parkoviště
-pro každé parkoviště
-    zjistím jaké kamery jsou k dispozici pro dané parkoviště
-    pro každou z kamer:
-        z kamery zjistím obsazenost v procentech
-    sečtu obsazenost pro celé parkoviště
-    zapíšu do databáze stav
-
-"""
 
 
 def process_all_cameras(database_mapper:DatabaseMapper, pl_viewer:ParkingLotViewer):
@@ -29,7 +17,7 @@ def process_all_cameras(database_mapper:DatabaseMapper, pl_viewer:ParkingLotView
         cameras_for_parking_lot = database_mapper.get_cameras_by_parkinglot(parking_lot.id)
         camera = cameras_for_parking_lot[0]
         camera_url = camera.address
-        image = image_scraper.read_live_image(camera_url)
+        image = windy_image_scraper.read_live_image(camera_url)
         cars_in_image = pl_viewer.scan_cars(image)
         parking_lots_polygons = convert_parking_lot_list(list_parking_places(f"{camera.id}.txt"))
         parking_lot_status = cars_in_parking_lots_iou_polygon(cars_in_image, parking_lots_polygons, 0.15)

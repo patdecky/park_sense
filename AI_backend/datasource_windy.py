@@ -1,6 +1,11 @@
 import requests
 import numpy as np
 import cv2 as cv
+from dataclasses import dataclass
+
+@dataclass
+class WindyDataSource:
+    url:str
 
 
 def read_live_image(url):
@@ -43,3 +48,7 @@ def read_live_image(url):
         return image
             
 
+if __name__ == "__main__":
+    url = "https://webcams.windy.com/webcams/public/embed/player/1669637039/day"
+
+    cv.imwrite("windy_images/Praha Jih.png", read_live_image(url))

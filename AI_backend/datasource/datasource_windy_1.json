@@ -1,0 +1,22 @@
+[
+    {
+        "parkinglot_name": "Praha Barrandov",
+        "type": 1,
+        "data": "{url:'https://webcams.windy.com/webcams/public/embed/player/1630321308/day'}"
+    },
+    {
+        "parkinglot_name": "Praha Západ budovy",
+        "type": 1,
+        "data": "{url:'https://webcams.windy.com/webcams/public/embed/player/1515313400/day'}"
+    },
+    {
+        "parkinglot_name": "Praha Horní Měcholupy",
+        "type": 1,
+        "data": "{url:'https://webcams.windy.com/webcams/public/embed/player/1268410152/day'}"
+    },
+    {
+        "parkinglot_name": "Praha Jih",
+        "type": 1,
+        "data": "{url:'https://webcams.windy.com/webcams/public/embed/player/1669637039/day'}"
+    }
+]

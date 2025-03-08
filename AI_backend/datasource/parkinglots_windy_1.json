@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Praha Barrandov",
+        "longitude": 14.372435,
+        "latitude": 50.035352, 
+        "car_capacity": 150,
+        "description": ""
+    },
+    {
+        "name": "Praha Západ budovy",
+        "longitude": 14.316376401624725,
+        "latitude": 50.03966159143824,
+        "car_capacity": 17,
+        "description": ""
+    },
+    {
+        "name": "Praha Horní Měcholupy ",
+        "longitude": 14.566247199368847,
+        "latitude": 50.04114638391763, 
+        "car_capacity": 284,
+        "description": ""
+    },    
+    {
+        "name": "Praha Jih",
+        "longitude":  14.559814084211121,
+        "latitude": 50.10536819512684,
+        "car_capacity": 39,
+        "description": ""
+    }
+]
