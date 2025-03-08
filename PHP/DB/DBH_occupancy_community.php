@@ -33,7 +33,7 @@ class DBH_occupancy_community extends DBH_abstract
         if (!($ObjToBeInserted instanceof CL_occupancy_community)) {
             throw new InvalidArgumentException;
         }
-        parent::insert($ObjToBeInserted);
+//        parent::insert($ObjToBeInserted);
         $sql = 'INSERT INTO `' . self::TABLE_NAME . '` ' . self::FULL_INSERT . ' VALUES '
             . '(' . $ObjToBeInserted->occupancy . ', '
             . $ObjToBeInserted->parkinglot_id . ');';
@@ -50,7 +50,7 @@ class DBH_occupancy_community extends DBH_abstract
      */
     public function inserts(array $ObjsToBeInserted): int
     {
-        parent::inserts($ObjsToBeInserted);
+//        parent::inserts($ObjsToBeInserted);
         $sql = 'INSERT INTO `' . self::TABLE_NAME . '` ' . self::FULL_INSERT . chr(0xa);
         $i = false;
         foreach ($ObjsToBeInserted as $event) {
