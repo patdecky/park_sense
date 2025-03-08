@@ -285,6 +285,29 @@ class dataRequester extends dataHolderBase {
         return mvs[0]
     }
 
+    async loadParkingLotsPredictedVacancy(parkinglot_id) {
+        let currentDay = new Date().getDay();
+        let day = currentDay === 0 ? 6 : currentDay - 1; // Convert Sunday (0) to 6 and adjust other days
+        let currentTime = Math.floor((new Date().getTime() - new Date().setHours(0, 0, 0, 0)) / 1000);
+        let ret = await fetchAPI.AllInOneReq("parkingSpaces.php", "getPredictedVacancyForParkingLot", {
+            'parkingLotID': parkinglot_id,
+            "day": day,
+            "day_timestamp":currentTime 
+        }, 0);
+        if (ret.length <= 0) {
+            //observer triggered in vendorList setter
+            return
+        }
+        let mvs = [];
+        ret.forEach(el => {
+            mvs.push(new CL_pl_prediction(el.ID, el.parkinglot_id, el.vacancy, el.day, el.day_timestamp));
+        });
+        //observer triggered in vendorList setter
+
+        return mvs[0]
+    }
+
+
     async loadOccupancyCommunity(parkinglot_id) {
         let ret = await fetchAPI.AllInOneReq("parkingSpaces.php", "getCommunityOccupancy", {'parkingLotID': parkinglot_id}, 0);
         if (ret.length <= 0) {

@@ -96,8 +96,8 @@ class DBH_pl_prediction extends DBH_abstract
         }
     }
 
-    public function selectByDayAndSecondsInterval(int $day, int $secStart, int $secEnd){
-        $sql= 'SELECT ' . self::FULL_SELECT . ' FROM `' . self::TABLE_NAME . '` WHERE `day` = ' . $day . ' AND `day_timestamp` >= ' . $secStart . ' AND `day_timestamp` <= ' . $secEnd . ';';
+    public function selectByDayAndSecondsInterval(int $parkinglot_id, int $day, int $dayTimestamp){
+        $sql = 'SELECT ' . self::FULL_SELECT . ', CAST(`day_timestamp` AS SIGNED) as signed_day_timestamp FROM `' . self::TABLE_NAME . '` WHERE `day` = ' . $day . ' AND `parkinglot_id` = ' . $parkinglot_id . '  ORDER BY ABS(signed_day_timestamp - ' . $dayTimestamp . ') LIMIT 1;';
         $result = mysqli_query($this->linkDB, $sql) or $this->dbError();
 
         $return = [];

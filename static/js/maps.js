@@ -194,6 +194,9 @@ window.addEventListener('load', () => {
             for (const element of nearestParkingLots) {
                 let vacancy_element = await findVacancy(element.id)
                 let vacancy = 0;
+                let predicted_vacancy = await findPredictedVacancy(element.id)
+                console.log(predicted_vacancy)
+                // zde pridat vyhledani v historii
                 if (vacancy_element != null) {
                     vacancy = vacancy_element.vacancy
                 } else {
@@ -267,6 +270,15 @@ window.addEventListener('load', () => {
     async function findVacancy(parkinglot_id) {
         return await (new dataRequester()).loadParkingLotsVacancy(parkinglot_id)
     }
+
+    async function findPLHistory(parkinglot_id) {
+        return await (new dataRequester()).loadParkingLotsHistory(parkinglot_id)
+    }
+
+    async function findPredictedVacancy(parkinglot_id) {
+        return await (new dataRequester()).loadParkingLotsPredictedVacancy(parkinglot_id)
+    }
+
 
     function setCommunityOcuppacy() {
         let open_marker = getActiveMarker()

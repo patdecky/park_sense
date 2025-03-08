@@ -6,10 +6,12 @@ require_once __DIR__ . '/apiPrep.php';
 require_once __DIR__ . '/../DB/DBH_parkinglot.php';
 require_once __DIR__ . '/../DB/DBH_camera.php';
 require_once __DIR__ . '/../DB/DBH_pl_history.php';
+require_once __DIR__ . '/../DB/DBH_pl_prediction.php';
 require_once __DIR__ . '/../DB/DBH_occupancy_community.php';
 
 $DPL = DBH_parkinglot::getInstance();
 $DPLH = DBH_pl_history::getInstance($DPL);
+$DPLPV = DBH_pl_prediction::getInstance($DPL); 
 $DC = DBH_camera::getInstance($DPL);
 $DOC = DBH_occupancy_community::getInstance($DPL);
 
@@ -32,6 +34,9 @@ switch ($_GET['req']) {
         if ($parkingLotID === false) {
             quitExe(400, QE_INPUT_INVALID);
         }
+        if ($hoursBack === false) {
+            quitExe(400, QE_INPUT_INVALID);
+        }
         try {
             $history = $DPLH->getRecentHistory($parkingLotID);
             responseOK($history);
@@ -39,6 +44,26 @@ switch ($_GET['req']) {
             quitExe(500, QE_DB_ERROR);
         }
 
+    case "getPredictedVacancyForParkingLot":
+            $parkingLotID = intFilter('parkingLotID');
+            $day = intFilter('day');
+            $day_timestamp = intFilter('day_timestamp');
+            
+            if ($parkingLotID === false) {
+                quitExe(400, QE_INPUT_INVALID);
+            }
+            if ($day === false) {
+                quitExe(400, QE_INPUT_INVALID);
+            }
+            if ($day_timestamp === false) {
+                quitExe(400, QE_INPUT_INVALID);
+            }
+            try {
+                $history = $DPLPV->selectByDayAndSecondsInterval($parkingLotID, $day, $day_timestamp);
+                responseOK($history);
+            } catch (Exception $e) {
+                quitExe(500, QE_DB_ERROR);
+            }
 
     case "getParkingIntervalHistory":
         $parkingLotID = intFilter('parkingLotID');
