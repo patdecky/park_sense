@@ -1,8 +1,7 @@
 'use strict'
 
 class dataHolderStatistics extends dataHolderBase {
-    day_w = -1;
-    statistics = {};
+    statistics = [];
 
     constructor() {
         super();
@@ -12,7 +11,7 @@ class dataHolderStatistics extends dataHolderBase {
         dataHolderStatistics._instance = this;
 
         this.newListenerType('statisticsLoaded');
-        this.setStatisticsDay(this.getCurrentWeekday());
+        return this._instance
     }
 
     _statisticsRequestTimer;
@@ -26,23 +25,23 @@ class dataHolderStatistics extends dataHolderBase {
     }
 
 
-    getCurrentWeekday() {
-        const date = new Date();
-        const day = date.getDay();
-        return day === 0 ? 7 : day; // Adjust Sunday (0) to be 7
-    };
-
-
-    setStatisticsDay(day_w) {
-        this.day_w = day_w;
+    setStatisticsId(parkinglot_id) {
         clearTimeout(this._statisticsRequestTimer);
         this._statisticsRequestTimer = setTimeout(async () => {
-            await (new dataRequester()).loadStatistics();
-            this.newStatisticsLoadedCallback();
+            // await (new dataRequester()).loadStatistics();
+            let ret = await (new dataRequester()).loadParkingLotsPredictedVacancyWholeDay(parkinglot_id);
+            this.setStatistics(ret);
+            // this.newStatisticsLoadedCallback();
+
         }, 1000);
     }
 
     setStatistics(statistics) {
+        if (!statistics || statistics.length <= 0) {
+            this.statistics = [];
+            this.notifyListeners('statisticsLoaded');
+            return;
+        }
         this.statistics = statistics;
         this.notifyListeners('statisticsLoaded');
     }

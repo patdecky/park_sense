@@ -31,8 +31,9 @@ class CL_pl_prediction extends CL_DBDataParser implements \JsonSerializable
      * @param int $parkinglot_id
      * @param int $vacancy
      */
-    public function __construct(int $parkinglot_id, int $vacancy, int $day, int $day_timestamp)
+    public function __construct(int $id, int $parkinglot_id, int $vacancy, int $day, int $day_timestamp)
     {
+        $this->ID = $id;
         $this->parkinglot_id = $parkinglot_id;
         $this->vacancy = $vacancy;
         $this->day = $day;

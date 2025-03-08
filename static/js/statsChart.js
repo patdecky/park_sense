@@ -3,10 +3,10 @@
 'use strict';
 
 class statsChart {
-    timeDiv = 1 * 60; // 5mins
+    // timeDiv = 1 * 60; // 5mins
     _dcChart = null;
     config = null;
-    perHour = true;
+    // perHour = true;
     container = null;
 
     colorChart = 'blue'
@@ -25,7 +25,7 @@ class statsChart {
 
         // Add event listener to the container
         this.container.addEventListener('click', () => {
-            this.perHour = !this.perHour; // Toggle perHour
+            // this.perHour = !this.perHour; // Toggle perHour
             this.chartMaker(); // Call chartMaker
         });
     }
@@ -42,30 +42,17 @@ class statsChart {
         let title = ["Statistiky"];
 
         if (dhs.statistics.length > 1) {
-            if (!this.perHour) {
-                dhs.statistics.forEach((stati) => {
-                    /** @var stati {Cl_statistics} */
-                    labels.push(stati.hours.toString().padStart(2, '0') + ':' + stati.minutes.toString().padStart(2, '0'));
-                    counted.push(stati.total_arrival_count);
-                });
-            } else {
-                const hourMap = new Map();
 
-                dhs.statistics.forEach((stati) => {
-                    const hour = stati.hours.toString().padStart(2, '0');
-                    if (!hourMap.has(hour)) {
-                        hourMap.set(hour, {total: 0, count: 0});
-                    }
-                    const entry = hourMap.get(hour);
-                    entry.total += stati.total_arrival_count;
-                    entry.count += 1;
-                });
+            // const hourMap = new Map();
 
-                hourMap.forEach((value, key) => {
-                    labels.push(key);
-                    counted.push(value.total / value.count);
-                });
-            }
+            dhs.statistics.forEach((stati) => {
+                // convert seconds to the HH:MM format
+                let hour = Math.floor(stati.day_timestamp / 3600);
+                let minutes = Math.floor((stati.day_timestamp % 3600) / 60);
+
+                labels.push(`${hour}:${minutes}`);
+                counted.push(stati.vacancy);
+            });
 
             if (labels.length < 1) {
                 title.push("No data found for the time period");
@@ -78,7 +65,7 @@ class statsChart {
         const data = {
             labels: labels,
             datasets: [{
-                label: 'Detected client devices',
+                label: 'Predpovedeny pocet aut',
                 backgroundColor: this.colorChart,
                 borderColor: this.colorChart,
                 data: counted

@@ -440,6 +440,10 @@
                 left: 48%;
             }
 
+            #searchBar{
+                padding: 0;
+            }
+
             .buttonContainer {
                 margin-bottom: 2px;
             }
@@ -539,16 +543,16 @@
 </div>
 
 <div id="loginModal" class="modal">
-    <span class="modal-close" onclick="closeModal('loginModal')">&times;</span>
+    <span class="modal-close" onclick="closeLogin()">&times;</span>
     <h2>Přihlášení</h2>
     <input type="text" id="username" placeholder="Uživatel">
     <input type="password" id="password" placeholder="Heslo">
     <button onclick="login()">Přihlásit</button>
-    <button onclick="closeModal('loginModal')">Zrušit</button>
+    <button onclick="closeLogin()">Zrušit</button>
 </div>
 
 <div id="voteModal" class="modal">
-    <span class="modal-close" onclick="closeModal('voteModal')">&times;</span>
+    <span class="modal-close" onclick="closeVote()">&times;</span>
     <h2>Je zde volné místo?</h2>
     <button onclick="vote('yes')">👍 Ano</button>
     <button onclick="vote('no')">👎 Ne</button>
@@ -573,6 +577,8 @@
 
     function closeLogin() {
         document.getElementById("loginModal").style.display = "none";
+    }    function closeVote() {
+        document.getElementById("voteModal").style.display = "none";
     }
 
     function login() {

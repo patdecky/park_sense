@@ -96,8 +96,18 @@ class DBH_pl_prediction extends DBH_abstract
         }
     }
 
-    public function selectByDayAndSecondsInterval(int $parkinglot_id, int $day, int $dayTimestamp){
-        $sql = 'SELECT ' . self::FULL_SELECT . ', CAST(`day_timestamp` AS SIGNED) as signed_day_timestamp FROM `' . self::TABLE_NAME . '` WHERE `day` = ' . $day . ' AND `parkinglot_id` = ' . $parkinglot_id . '  ORDER BY ABS(signed_day_timestamp - ' . $dayTimestamp . ') LIMIT 1;';
+    public function selectByDayAndSecondsInterval(int $parkinglot_id, int $day, int $dayTimestamp, int $limit = 1): array{
+        $sql = 'SELECT ' . self::FULL_SELECT . ', CAST(`day_timestamp` AS SIGNED) as signed_day_timestamp FROM `' . self::TABLE_NAME . '` WHERE `day` = ' . $day . ' AND `parkinglot_id` = ' . $parkinglot_id . '  ORDER BY ABS(signed_day_timestamp - ' . $dayTimestamp . ') LIMIT  '. $limit .' ;';
+        $result = mysqli_query($this->linkDB, $sql) or $this->dbError();
+
+        $return = [];
+        while ($row = mysqli_fetch_object($result)) {
+            $return[] = $this->rowToObj($row);
+        }
+        return $return;
+    }
+    public function selectByDayAndSecondsIntervalWholeDay(int $parkinglot_id, int $day): array{
+        $sql = 'SELECT ' . self::FULL_SELECT . ', CAST(`day_timestamp` AS SIGNED) as signed_day_timestamp FROM `' . self::TABLE_NAME . '` WHERE `day` = ' . $day . ' AND `parkinglot_id` = ' . $parkinglot_id . ' LIMIT  6000 ;';
         $result = mysqli_query($this->linkDB, $sql) or $this->dbError();
 
         $return = [];
@@ -116,6 +126,7 @@ class DBH_pl_prediction extends DBH_abstract
     public function rowToObj(\stdClass $row): CL_pl_prediction
     {
         return new CL_pl_prediction(
+            $row->id,
             $row->parkinglot_id,
             $row->vacancy,
             $row->day,
