@@ -1,9 +1,12 @@
 <?php
 
+use DB\DBH_occupancy_community;
+
 require_once __DIR__ . '/apiPrep.php';
 require_once __DIR__ . '/../DB/DBH_parkinglot.php';
 require_once __DIR__ . '/../DB/DBH_camera.php';
 require_once __DIR__ . '/../DB/DBH_pl_history.php';
+require_once __DIR__ . '/../DB/DBH_occupancy_community.php';
 
 $DPL = DBH_parkinglot::getInstance();
 $DPLH = DBH_pl_history::getInstance($DPL);

@@ -1,5 +1,8 @@
 <?php
 
+namespace DB;
+
+use DBH_abstract;
 use PHPClass\CL_occupancy_community;
 
 require_once __DIR__ . '/../Class/CL_occupancy_community.php';
