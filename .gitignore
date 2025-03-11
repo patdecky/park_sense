@@ -14,6 +14,8 @@ php/globals.php
 
 /AI_backend/log/*
 
+/AI_backend/venv/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
