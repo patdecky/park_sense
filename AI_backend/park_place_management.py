@@ -98,7 +98,7 @@ class ParkingLotViewer:
 
     
     def scan_cars(self, image):
-        result = self.model(image)[0]
+        result = self.model(image, verbose=False)[0]
 
         car_detections = [box for box in result.boxes if int(box.cls[0]) == 2]
     
