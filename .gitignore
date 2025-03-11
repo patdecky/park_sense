@@ -12,6 +12,8 @@ php/globals.php
 
 /AI_backend/yolo*.pt
 
+/AI_backend/log/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
