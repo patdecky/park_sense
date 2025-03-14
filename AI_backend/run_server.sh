@@ -7,10 +7,10 @@ cd /home/deckyp/park_sense/AI_backend
 source /home/deckyp/park_sense/AI_backend/venv/bin/activate
 
 # Get the Process ID (PID) and save it
-echo $! > /home/deckyp/park_sense/AI_backend/server.pid
+echo $! > /home/deckyp/park_sense/AI_backend/log/server.pid
 
-echo "Server started with PID $(cat /home/deckyp/park_sense/AI_backend/server.pid). Logs: /home/deckyp/park_sense/AI_backend/server.log"
+echo "Server started with PID $(cat /home/deckyp/park_sense/AI_backend/log/server.pid). Logs: /home/deckyp/park_sense/AI_backend/log/server.log"
 
 # Run the Python server
-python3 server.py > /home/deckyp/park_sense/AI_backend/server.log 2>&1 &
+python3 server.py > /home/deckyp/park_sense/AI_backend/log/server.log 2>&1 &
 
