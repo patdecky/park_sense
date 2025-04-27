@@ -473,16 +473,16 @@
             <div id="subMenu" class="mapButtons">
                 <!-- <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat 🌍</button>
                 <button type="button" class="wideButton colorZebraCl" id="occupancy">Obsazení 🚗</button>
-                <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase 📊</button> -->
+                <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v&nbsp;čase 📊</button> -->
 
                 
                 <button type="button" class="wideButton colorZebraCl" id="occupancy">Zadat stav</button>
-                <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení v čase</button>
+                <button type="button" class="wideButton colorZebraCl" id="in_time">Vytížení</button>
                 <button type="button" class="wideButton colorZebraCl" id="navigate">Navigovat</button>
             </div>
             <div class="mapButtons">
                 <!-- <button type="button" class="wideButton colorZebraCl" id="aboutUsBtn">O nás 📜</button> -->
-                <button type="button" class="wideButton colorZebraCl" id="aboutUsBtn">O nás</button>
+                <button type="button" class="wideButton colorZebraCl" id="aboutUsBtn">O&nbsp;nás</button>
                 <button id="loginButton" class="wideButton colorZebraCl">Přihlásit se</button>
                 <span id="userIcon" class="userIcon hidden">👤 admin</span>
             </div>
