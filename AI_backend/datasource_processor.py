@@ -22,6 +22,13 @@ Datasource types:
 
 """
 
+def decode_json_or_string(input_data):
+    try:
+        return json.loads(input_data)
+    except json.JSONDecodeError:
+        return input_data
+
+
 def process_all_datasources(database_mapper:DatabaseMapper, pl_viewer:ParkingLotViewer, context:dict[str, Any]):
     parking_lots = database_mapper.get_all_parking_lots_with_datasource()
     for parking_lot in parking_lots:
@@ -30,23 +37,31 @@ def process_all_datasources(database_mapper:DatabaseMapper, pl_viewer:ParkingLot
         datasource = datasources_for_parking_lot[0] # here we should optimize for multiple data sources, for now its
         
         vacancy = None
-        datasource_data = json.loads(datasource.source)
+        datasource_data = decode_json_or_string(datasource.source)
         
         match datasource.type:
             case 1:
                 log.debug("Processing Windy datasource")
+                if not isinstance(datasource_data, dict):
+                    log.error("Datasource is not a json")
+                    continue
                 datasouce_object = datasource_windy.WindyDataSource(**datasource_data)
                 image = datasource_windy.read_live_image(datasouce_object.url)
                 vacancy = process_camera_parking_lot(image, parking_lot.id, parking_lot.car_capacity, pl_viewer)
             case 2:
                 log.debug("Processing BEZP Praha datasource")
+                if not isinstance(datasource_data, dict):
+                    log.error("Datasource is not a json")
+                    continue
                 datasouce_object = datasource_bezp_praha.BEZPPrahaDataSource(**datasource_data)
                 image = datasource_bezp_praha.read_live_image(datasouce_object.url)
                 vacancy = process_camera_parking_lot(image, parking_lot.id, parking_lot.car_capacity, pl_viewer)
             case 3:
                 log.debug("Processing Olomouc API datasource")
-                datasouce_object = datasource_enclod_api_olomouc.EnclodAPIOlomoucDataSource(**datasource_data)
-                api_data = datasource_enclod_api_olomouc.read_live_data(context["enclod_olomouc_context"], datasouce_object)
+                if not isinstance(datasource_data, str):
+                    log.error("Datasource is not a str")
+                    continue
+                api_data = datasource_enclod_api_olomouc.read_live_data(context["enclod_olomouc_context"], datasource_data)
                 vacancy = process_api_parking_lot(api_data, parking_lot.id, parking_lot.car_capacity)
                 
             case _:

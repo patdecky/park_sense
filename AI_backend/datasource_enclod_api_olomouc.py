@@ -6,10 +6,6 @@ from urllib.parse import quote
 from dataclasses import dataclass
 
 
-@dataclass
-class EnclodAPIOlomoucDataSource:
-    city_zone: str
-
 
 @dataclass
 class EnclodAPIOlomoucDataContext:
@@ -17,7 +13,7 @@ class EnclodAPIOlomoucDataContext:
     Mapping from zone name to zone vacancy.
     """
 
-    context: dict[str, float]
+    context: dict[str, tuple[float, int, int, int]]  # fraction_vacant, capacity, measured_occupied, calibration
 
 
 zone_data = {
@@ -129,14 +125,14 @@ def get_context() -> EnclodAPIOlomoucDataContext:
 
 
 def read_live_data(
-    data_context: EnclodAPIOlomoucDataContext, data_source: EnclodAPIOlomoucDataSource
+    data_context: EnclodAPIOlomoucDataContext, city_zone: str
 ):
     """
     Returns fraction of occupied parking spots in the given city zone.
     """
-    if data_source.city_zone in data_context.context:
-        if isinstance(data_context.context[data_source.city_zone], tuple):
-            fraction_zone_vacant, _, _, _ = data_context.context[data_source.city_zone]
+    if city_zone in data_context.context:
+        if isinstance(data_context.context[city_zone], tuple):
+            fraction_zone_vacant, _, _, _ = data_context.context[city_zone]
             return fraction_zone_vacant
     return None
 
