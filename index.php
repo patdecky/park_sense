@@ -511,9 +511,9 @@
                 Dále je aplikace obohacena i o integraci s offline daty parkovišť, které jsou dostupné v otevřených
                 datových sadách. Navíc krom offline dat získáváme i dynamické data ze systému EnCLODE. Díky této kombinaci poskytuje uživatelům ještě přesnější a aktuálnější informace o
                 dostupnosti parkovacích míst.
-                Mobilní a webová aplikace nadále spolupracuje s Google Maps API, umožňuje vyhledávat nejbližší
+                Mobilní a webová aplikace nadále spolupracuje s OpenStreetMaps API, umožňuje vyhledávat nejbližší
                 parkoviště, zobrazit počet volných míst a umožňuje snadnou navigaci přes aplikace jako Google Maps.
-                ParkSense tak přispívá k hladšímu parkování a zlepšuje mobilitu v dynamickém prostředí chytrých měst. <p> <b>Do budoucna může být aplikace integrována například s kontrolními vozy TSK Praha a.s.</b></p>
+                ParkSense tak přispívá k hladšímu parkování a zlepšuje mobilitu v dynamickém prostředí chytrých měst. <p> <b>Do budoucna může být aplikace rozšířena o integraci placených parkovišť, s možností zprostředkování služby rezervace místa.</b></p>
             <h2>Použité datové sady</h2>
             <ul>
                 <li><a href="https://chytra.olomouc.eu/parking">Chytrá Olomouc</a></li>
