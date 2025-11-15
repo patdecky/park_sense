@@ -5,8 +5,9 @@ import datasource_windy
 from ultralytics import YOLO
 import cv2
 import matplotlib.pyplot as plt
-from camera_processor import process_all_cameras
-from park_place_management import ParkingLotViewer, convert_parking_lot_list, list_parking_places, calculate_availability, cars_in_parking_lots_iou_polygon
+from datasource_processor import process_all_datasources
+from park_place_camera_management import ParkingLotViewer, convert_parking_lot_list, list_parking_places, calculate_availability, cars_in_parking_lots_iou_polygon
+from datasource_enclod_api_olomouc import get_context as get_enclod_olomouc_context
 import logging
 import logging.handlers
 import argparse
@@ -54,8 +55,13 @@ root.addHandler(console_handler)
 
 
 def process_all_data(database_mapper:DatabaseMapper, pl_viewer:ParkingLotViewer):
-    process_all_cameras(database_mapper, pl_viewer)                
+    enclod_olomouc_context = get_enclod_olomouc_context()
 
+    datasource_context = {
+        "enclod_olomouc_context": enclod_olomouc_context
+    }
+
+    process_all_datasources(database_mapper, pl_viewer, datasource_context)                
 
 
 if __name__ == "__main__":
