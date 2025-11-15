@@ -39,6 +39,16 @@ def read_live_image(url):
 
         img_name = f"img_{ending}.jpg"
 
+    def extract_webcam_id(url):
+        # Extract the webcam ID from the URL
+        parts = url.split('/')
+        webcam_id = parts[-2]  # The ID is the second to last part
+        return webcam_id
+
+    webcam_id = extract_webcam_id(url)
+
+    img_url = f"https://imgproxy.windy.com/_/full/plain/current/{webcam_id}/original.jpg"
+
     response = requests.get(img_url)
 
     if response.status_code == 200:

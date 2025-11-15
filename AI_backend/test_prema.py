@@ -8,6 +8,8 @@ config = ConfigNew(config_path="config.json")
 
 print(list_all_capacity(config.host, config.user,config.password, config.database, config.port))
 
+database_mapper = DatabaseMapper(config.host, config.user,config.password, config.database, config.port)
+datasources_for_parking_lot = database_mapper.get_data_sources_by_parkinglot(parking_lot.id)
 
 """
 database_manager = DatabaseMapper(config.host, config.user,config.password, config.database, config.port)
