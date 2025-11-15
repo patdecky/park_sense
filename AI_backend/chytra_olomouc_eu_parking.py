@@ -9,7 +9,7 @@ HEADERS = {
     "X-Requested-With": "XMLHttpRequest"
 }
 
-def chytra_olomouc_eu_parking() -> None:
+def chytra_olomouc_eu_parking_get():
     """
     Fetches the JSON data from the parking endpoint and saves it to a file.
     """
@@ -31,6 +31,8 @@ def chytra_olomouc_eu_parking() -> None:
         # print(trimmed)
         data = json.loads(trimmed)
 
+        return data
+
     except requests.RequestException as e:
         print(f"❌ Network error: {e}")
     except json.JSONDecodeError:
@@ -38,6 +40,17 @@ def chytra_olomouc_eu_parking() -> None:
     except OSError as e:
         print(f"❌ File write error: {e}")
 
+def chytra_olomouc_eu_parking_parse(data):
+    return [
+    {
+        "id": item["id"],
+        "free": item["occupancy"]["overall"]["free"]
+    }
+    for item in data
+    ]
+
 if __name__ == "__main__":
     # Example: save to a file named `parking.json` in the current directory
-    chytra_olomouc_eu_parking()
+    data = chytra_olomouc_eu_parking_get()
+    data = chytra_olomouc_eu_parking_parse(data)
+    print (data)
