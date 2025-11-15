@@ -91,7 +91,7 @@ if __name__ == "__main__":
         finally:
             database_mapper.disconnect()
             logging.info(f"Process end")
-        time.sleep(60)
+        time.sleep(120)
 
 
 

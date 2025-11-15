@@ -31,6 +31,7 @@ def decode_json_or_string(input_data):
 
 def process_all_datasources(database_mapper:DatabaseMapper, pl_viewer:ParkingLotViewer, context:dict[str, Any]):
     parking_lots = database_mapper.get_all_parking_lots_with_datasource()
+    updated_count = 0
     for parking_lot in parking_lots:
         log.debug(f"Processing parking lot {parking_lot.id}")
         datasources_for_parking_lot = database_mapper.get_data_sources_by_parkinglot(parking_lot.id)
@@ -63,12 +64,14 @@ def process_all_datasources(database_mapper:DatabaseMapper, pl_viewer:ParkingLot
                     continue
                 api_data = datasource_enclod_api_olomouc.read_live_data(context["enclod_olomouc_context"], datasource_data)
                 vacancy = process_api_parking_lot(api_data, parking_lot.id, parking_lot.car_capacity)
-                
             case _:
                 log.error("Unknown datasource type")
-
-        log.debug(f"Vacancy: {vacancy}")
-        database_mapper.write_vacancy(parking_lot.id, vacancy)
+        if vacancy is not None:
+            updated_count += 1
+            log.debug(f"Vacancy: {vacancy}")
+            database_mapper.write_vacancy(parking_lot.id, vacancy)
+    log.info(f"Updated {updated_count} parking lots from datasources.")
+        
 
 
 
