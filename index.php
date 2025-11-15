@@ -516,23 +516,24 @@
             <p><strong>Boris Pustějovský</strong> - SW Developer</p>
             <p><strong>Přemysl Bílek</strong> - Database Expert & SW Developer</p>
             <h2>O aplikaci</h2>
-            <p>ParkSense nyní přináší inovativní řešení optimalizace parkování zaměřené speciálně na hlavní město Prahu.
+            <p>ParkSense nyní přináší inovativní řešení optimalizace parkování zaměřené speciálně na chytrá města v ČR.
                 Aplikace využívá kamerové záznamy k monitorování veřejných parkovišť v reálném čase, které jsou
                 vyhodnocovány pomocí umělé inteligence.
                 Dále je aplikace obohacena i o integraci s offline daty parkovišť, které jsou dostupné v otevřených
-                datových sadách. Díky této kombinaci poskytuje uživatelům ještě přesnější a aktuálnější informace o
+                datových sadách. Navíc krom offline dat získáváme i dynamické data ze systému EnCLODE. Díky této kombinaci poskytuje uživatelům ještě přesnější a aktuálnější informace o
                 dostupnosti parkovacích míst.
                 Mobilní a webová aplikace nadále spolupracuje s Google Maps API, umožňuje vyhledávat nejbližší
                 parkoviště, zobrazit počet volných míst a umožňuje snadnou navigaci přes aplikace jako Google Maps.
-                ParkSense tak přispívá k hladšímu parkování a zlepšuje mobilitu v dynamickém prostředí Prahy. <p> <b>Do budoucna může být aplikace integrována například s kontrolními vozy TSK Praha a.s.</b></p>
+                ParkSense tak přispívá k hladšímu parkování a zlepšuje mobilitu v dynamickém prostředí chytrých měst. <p> <b>Do budoucna může být aplikace integrována například s kontrolními vozy TSK Praha a.s.</b></p>
             <h2>Použité datové sady</h2>
             <ul>
+                <li><a href="https://chytra.olomouc.eu/parking">Chytrá Olomouc</a></li>
+                <li><a href="https://iot.citiq.cloud/portal/docs/olomouc-traffic-history/">Živé data citiq</a></li>
+                <li><a href="https://www.dataok.cz/">DATA OK, projekt EnCLODE</a></li>
+                <li><a href="https://www.geoinformatics.upol.cz/dprace/magisterske/jarcovjak16/">Pozice parkovacích míst Olomouc</a></li>
                 <li><a href="https://golemio.cz/data/doprava">Golemio - Doprava v datech</a></li>
-                <li><a href="https://data.praha.eu/dashboardy/obsazenost-pr-parkovist">Obsazenost P+R parkovišť v
-                        Praze</a></li>
-                <li>
-                    <a href="https://www.windy.com/cs/-Webkamery-Praha-Horn%C3%AD-M%C4%9Bcholupy-Petrovice/webcams/1268410152?50.050,14.546,5">Windy.com
-                        - webkamery</a></li>
+                <li><a href="https://data.praha.eu/dashboardy/obsazenost-pr-parkovist">Obsazenost P+R parkovišť v Praze</a></li>
+                <li><a href="https://www.windy.com/cs/-Webkamery-Praha-Horn%C3%AD-M%C4%9Bcholupy-Petrovice/webcams/1268410152?50.050,14.546,5">Windy.com - webkamery</a></li>
                 <li><a href="https://bezpecnost.praha.eu/mapy/kamery">Veřejné kamery v Praze</a></li>
             </ul>
         </div>
