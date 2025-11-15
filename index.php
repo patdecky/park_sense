@@ -505,11 +505,11 @@
             <p><strong>Boris Pustějovský</strong> - SW Developer</p>
             <p><strong>Přemysl Bílek</strong> - Database Expert & SW Developer</p>
             <h2>O aplikaci</h2>
-            <p>ParkSense nyní přináší inovativní řešení optimalizace parkování zaměřené speciálně na hlavní město Prahu.
+            <p>ParkSense nyní přináší inovativní řešení optimalizace parkování zaměřené speciálně na chytrá města v ČR.
                 Aplikace využívá kamerové záznamy k monitorování veřejných parkovišť v reálném čase, které jsou
                 vyhodnocovány pomocí umělé inteligence.
                 Dále je aplikace obohacena i o integraci s offline daty parkovišť, které jsou dostupné v otevřených
-                datových sadách. Díky této kombinaci poskytuje uživatelům ještě přesnější a aktuálnější informace o
+                datových sadách. Navíc krom offline dat získáváme i dynamické data ze systému EnCLODE. Díky této kombinaci poskytuje uživatelům ještě přesnější a aktuálnější informace o
                 dostupnosti parkovacích míst.
                 Mobilní a webová aplikace nadále spolupracuje s Google Maps API, umožňuje vyhledávat nejbližší
                 parkoviště, zobrazit počet volných míst a umožňuje snadnou navigaci přes aplikace jako Google Maps.
