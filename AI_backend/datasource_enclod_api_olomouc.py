@@ -4,7 +4,8 @@ from datetime import datetime, timezone
 from urllib.parse import quote
 
 from dataclasses import dataclass
-
+import logging
+log = logging.getLogger(__name__)
 
 
 @dataclass
@@ -115,7 +116,7 @@ def get_context() -> EnclodAPIOlomoucDataContext:
         else:
             calibrated_sum = sum(entries) + zone_info["KALIBRACE"]
             fraction_zone_vacant = 1 - calibrated_sum / zone_info["KAPACITA"]
-            fraction_zone_vacant = max(0.04, min(0.96, fraction_zone_vacant))
+            fraction_zone_vacant = max(0.04, min(0.99, fraction_zone_vacant))
             zone_states[zone] = (fraction_zone_vacant, zone_info["KAPACITA"], sum(entries), zone_info["KALIBRACE"])
 
     print(zone_states)
@@ -125,11 +126,16 @@ def get_context() -> EnclodAPIOlomoucDataContext:
 
 
 def read_live_data(
-    data_context: EnclodAPIOlomoucDataContext, city_zone: str
+    data_context: EnclodAPIOlomoucDataContext, city_zone: str, debug: int
 ):
     """
     Returns fraction of occupied parking spots in the given city zone.
     """
+    if debug == 0:
+        log.info(f"Reading live data for zone: {city_zone=}")
+        log.info(f"context: {data_context=}")
+        log.info(f"the context: {data_context.context=}")
+        log.info(f"the keys: {list(data_context.context.keys())=}")
     if city_zone in data_context.context:
         if isinstance(data_context.context[city_zone], tuple):
             fraction_zone_vacant, _, _, _ = data_context.context[city_zone]
