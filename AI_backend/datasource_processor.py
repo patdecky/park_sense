@@ -58,12 +58,13 @@ def process_all_datasources(database_mapper:DatabaseMapper, pl_viewer:ParkingLot
                 image = datasource_bezp_praha.read_live_image(datasouce_object.url)
                 vacancy = process_camera_parking_lot(image, parking_lot.id, parking_lot.car_capacity, pl_viewer)
             case 3:
-                log.debug("Processing Olomouc API datasource")
+                log.info("Processing Olomouc API datasource")
                 if not isinstance(datasource_data, str):
                     log.error("Datasource is not a str")
                     continue
                 api_data = datasource_enclod_api_olomouc.read_live_data(context["enclod_olomouc_context"], datasource_data)
                 vacancy = process_api_parking_lot(api_data, parking_lot.id, parking_lot.car_capacity)
+                log.info(f"Olomouc API vacancy: {vacancy}")
             case _:
                 log.error("Unknown datasource type")
         if vacancy is not None:
