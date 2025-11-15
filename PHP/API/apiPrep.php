@@ -2,7 +2,7 @@
 
 //includes for later
 require_once __DIR__ . '/../globals.php';
-require_once __DIR__ . '/../authorization.php';
+require_once __DIR__ . '/../Authorization.php';
 require_once __DIR__ . '/../DB/DBH_connection.php';
 require_once __DIR__ . '/responses.php';
 
