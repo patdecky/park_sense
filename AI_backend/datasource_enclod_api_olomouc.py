@@ -122,7 +122,7 @@ def get_context() -> EnclodAPIOlomoucDataContext:
     print(zone_states)
 
 
-    return EnclodAPIOlomoucDataContext(context=profiles)
+    return EnclodAPIOlomoucDataContext(context=zone_states)
 
 
 def read_live_data(
