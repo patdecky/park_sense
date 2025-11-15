@@ -1,0 +1,57 @@
+[
+    {
+        "parkinglot_name": "Jeremenkova",
+        "type": 4,
+        "data": "5e2eabf4f1e83e0001d89729"
+    },
+    {
+        "parkinglot_name": "Namiro",
+        "type": 4,
+        "data": "5e2eac11f1e83e0001d8972b"
+    },
+    {
+        "parkinglot_name": "Palachovo náměstí",
+        "type": 4,
+        "data": "5e2eac42f1e83e0001d8972f"
+    },
+    {
+        "parkinglot_name": "RCO",
+        "type": 4,
+        "data": "5e2eac77f1e83e0001d89733"
+    },
+    {
+        "parkinglot_name": "BEA",
+        "type": 4,
+        "data": "5e2eaca5f1e83e0001d89737"
+    },
+    {
+        "parkinglot_name": "Hotel Flora",
+        "type": 4,
+        "data": "5e2ead4bf1e83e0001d89740"
+    },
+    {
+        "parkinglot_name": "Sv. Kopeček - P1 ZOO",
+        "type": 4,
+        "data": "64afe8af8cafbe0001e4a498"
+    },
+    {
+        "parkinglot_name": "Sv. Kopeček - P2 Radíkovská",
+        "type": 4,
+        "data": "64b513648cafbe0001e86d29"
+    },
+    {
+        "parkinglot_name": "Sv. Kopeček - P3 U Ovčačky",
+        "type": 4,
+        "data": "64b513ba8cafbe0001e86d6a"
+    },
+    {
+        "parkinglot_name": "Sv. Kopeček - P4 U Hřiště / Fojtství",
+        "type": 4,
+        "data": "64b5142a8cafbe0001e86dc7"
+    },
+    {
+        "parkinglot_name": "Sv. Kopeček - P5 U Macků",
+        "type": 4,
+        "data": "64b514668cafbe0001e86e04"
+    }
+]

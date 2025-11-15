@@ -32,7 +32,6 @@ def decode_json_or_string(input_data):
 def process_all_datasources(database_mapper:DatabaseMapper, pl_viewer:ParkingLotViewer, context:dict[str, Any]):
     parking_lots = database_mapper.get_all_parking_lots_with_datasource()
     updated_count = 0
-    debug_instance = 0
     for parking_lot in parking_lots:
         log.debug(f"Processing parking lot {parking_lot.id}")
         datasources_for_parking_lot = database_mapper.get_data_sources_by_parkinglot(parking_lot.id)
@@ -40,7 +39,6 @@ def process_all_datasources(database_mapper:DatabaseMapper, pl_viewer:ParkingLot
         
         vacancy = None
         datasource_data = decode_json_or_string(datasource.source)
-        
         match datasource.type:
             case 1:
                 log.debug("Processing Windy datasource")
@@ -60,19 +58,18 @@ def process_all_datasources(database_mapper:DatabaseMapper, pl_viewer:ParkingLot
                 vacancy = process_camera_parking_lot(image, parking_lot.id, parking_lot.car_capacity, pl_viewer)
             case 3:
                 log.debug("Processing Olomouc API datasource")
-                if debug_instance == 0:
-                    log.info("Processing Olomouc API datasource")
                 if not isinstance(datasource_data, str):
                     log.error("Datasource is not a str")
                     continue
-                api_data = datasource_enclod_api_olomouc.read_live_data(context["enclod_olomouc_context"], datasource_data, debug_instance)
-                if debug_instance == 0:
-                    log.info(f"Olomouc API fraction vacant: {api_data}")
+                api_data = datasource_enclod_api_olomouc.read_live_data(context["enclod_olomouc_context"], datasource_data)
                 vacancy = process_api_parking_lot(api_data, parking_lot.id, parking_lot.car_capacity)
-                if debug_instance == 0:
-                    log.info(f"Olomouc API vacancy: {vacancy}")
-
-                debug_instance += 1
+            case 4:
+                log.debug("Processing Chytra Olomouc")
+                if not isinstance(datasource_data, str):
+                    log.error("Datasource is not a str")
+                    continue
+                vacancy = context["chytra_olomouc_context"].context.get(datasource_data, None)
+                
             case _:
                 log.error("Unknown datasource type")
         if vacancy is not None:
