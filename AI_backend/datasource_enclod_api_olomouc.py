@@ -69,12 +69,12 @@ def get_api_url() -> str:
 
 def get_data_to_file(file_path: str):
     with open(file_path, "w", encoding="utf-8") as f:
-        response = requests.get(get_api_url())
+        response = requests.get(get_api_url(), timeout=30)
         f.write(response.text)
 
 
 def get_data_to_variable():
-    response = requests.get(get_api_url())
+    response = requests.get(get_api_url(), timeout=30)
     return response.json()
 
 
@@ -119,23 +119,17 @@ def get_context() -> EnclodAPIOlomoucDataContext:
             fraction_zone_vacant = max(0.04, min(0.99, fraction_zone_vacant))
             zone_states[zone] = (fraction_zone_vacant, zone_info["KAPACITA"], sum(entries), zone_info["KALIBRACE"])
 
-    print(zone_states)
 
 
     return EnclodAPIOlomoucDataContext(context=zone_states)
 
 
 def read_live_data(
-    data_context: EnclodAPIOlomoucDataContext, city_zone: str, debug: int
+    data_context: EnclodAPIOlomoucDataContext, city_zone: str
 ):
     """
     Returns fraction of occupied parking spots in the given city zone.
     """
-    if debug == 0:
-        log.info(f"Reading live data for zone: {city_zone=}")
-        log.info(f"context: {data_context=}")
-        log.info(f"the context: {data_context.context=}")
-        log.info(f"the keys: {list(data_context.context.keys())=}")
     if city_zone in data_context.context:
         if isinstance(data_context.context[city_zone], tuple):
             fraction_zone_vacant, _, _, _ = data_context.context[city_zone]

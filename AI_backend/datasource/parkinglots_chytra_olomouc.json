@@ -1,0 +1,79 @@
+[
+    {
+        "name": "Jeremenkova",
+        "longitude": 17.27783,
+        "latitude": 49.59128,
+        "car_capacity": 387,
+        "description": ""
+    },
+    {
+        "name": "Namiro",
+        "longitude": 17.243882,
+        "latitude": 49.596154,
+        "car_capacity": 90,
+        "description": ""
+    },
+    {
+        "name": "Palachovo náměstí",
+        "longitude": 17.250676,
+        "latitude": 49.590528,
+        "car_capacity": 64,
+        "description": ""
+    },
+    {
+        "name": "RCO",
+        "longitude": 17.277465,
+        "latitude": 49.590774,
+        "car_capacity": 101,
+        "description": ""
+    },
+    {
+        "name": "BEA",
+        "longitude": 17.267321,
+        "latitude": 49.590562,
+        "car_capacity": 86,
+        "description": ""
+    },
+    {
+        "name": "Hotel Flora",
+        "longitude": 17.243401,
+        "latitude": 49.591087,
+        "car_capacity": 100,
+        "description": ""
+    },
+    {
+        "name": "Sv. Kopeček - P1 ZOO",
+        "longitude": 17.34425,
+        "latitude": 49.6327817,
+        "car_capacity": 130,
+        "description": ""
+    },
+    {
+        "name": "Sv. Kopeček - P2 Radíkovská",
+        "longitude": 17.351645175522975,
+        "latitude": 49.633262979921824,
+        "car_capacity": 98,
+        "description": ""
+    },
+    {
+        "name": "Sv. Kopeček - P3 U Ovčačky",
+        "longitude": 17.348003302538388,
+        "latitude": 49.6300998043898,
+        "car_capacity": 20,
+        "description": ""
+    },
+    {
+        "name": "Sv. Kopeček - P4 U Hřiště / Fojtství",
+        "longitude": 17.344229432104896,
+        "latitude": 49.6287472735666,
+        "car_capacity": 83,
+        "description": ""
+    },
+    {
+        "name": "Sv. Kopeček - P5 U Macků",
+        "longitude": 17.339549868613688,
+        "latitude": 49.6276112054457,
+        "car_capacity": 26,
+        "description": ""
+    }
+]
