@@ -202,6 +202,9 @@ class DatabaseMapper:
         for row in results:
             parking_lots.append(ParkingLot(id=row[0], geopos=row[1], car_capacity=row[2], name=row[3], description=row[4]))
         return parking_lots
+    
+    # @check_connection
+    # def get_all_distinct_datasources(self) -> 
 
     @check_connection
     def get_data_sources_by_parkinglot(self, parkinglot_id:int) -> list[DataSource]:
@@ -216,11 +219,11 @@ class DatabaseMapper:
         # Fetch all the results
         results = self.cursor.fetchall()
 
-        cameras = []
+        datasource = []
         # Print each camera's details
         for row in results:
-            cameras.append(DataSource(id=row[0], parkinglot_id=row[1], type=row[2], source=row[3]))
-        return cameras
+            datasource.append(DataSource(id=row[0], parkinglot_id=row[1], type=row[2], source=row[3]))
+        return datasource
 
     @check_connection
     def get_pl_history(self, parkinglot_id:int) -> list[PLHistory]:
