@@ -3,7 +3,7 @@
 .code
 .code/*
 
-php/globals.php
+PHP/globals.php
 
 
 .vscode/*
@@ -25,3 +25,6 @@ __pycache__/
 *.so
 
 *.bak
+
+/nbproject/private/
+nbproject/*
