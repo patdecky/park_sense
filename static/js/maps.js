@@ -9,19 +9,19 @@ const colors = ['red', 'orange-dark', 'orange', 'yellow', 'blue-dark', 'cyan', '
 
 window.addEventListener('load', () => {
     // Initialize the map
-    initializeMap()
+    initializeMap();
 
     if (window.matchMedia("(min-width: 800px)").matches) {
         document.getElementById('searchBar').focus();
     }
 
     document.getElementById('navigate').addEventListener('click', () => {
-        openCoordinatesInGoogleMaps()
+        openCoordinatesInGoogleMaps();
     });
     document.getElementById('occupancy').addEventListener('click', () => {
-        setCommunityOcuppacy()
+        setCommunityOcuppacy();
     });
-    hideSubMenu()
+    hideSubMenu();
 
 
     function onHashChange() {
@@ -48,13 +48,13 @@ window.addEventListener('load', () => {
     document.getElementById('searchBar').addEventListener('keydown', function (event) {
         if (event.key === "Enter") {
             const inputValue = event.target.value; // Get the value of the inputf
-            geocodePlace(inputValue)
+            geocodePlace(inputValue);
         }
     });
 
     document.getElementById('searchButton').addEventListener('click', () => {
-        const inputValue = document.getElementById('searchBar').value
-        geocodePlace(inputValue)
+        const inputValue = document.getElementById('searchBar').value;
+        geocodePlace(inputValue);
     });
 
     onHashChange();
@@ -63,7 +63,7 @@ window.addEventListener('load', () => {
     }
 
     function initializeMap() {
-        map = L.map('map')
+        map = L.map('map');
 
         // Base layer: OpenStreetMap
         var openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -93,8 +93,9 @@ window.addEventListener('load', () => {
         // Add layer control to the map
         L.control.layers(baseMaps).addTo(map);
 
-        setMapCenter(50.106788, 14.450860, 13)
-        // setMarkerToMap(51.505, -0.09, null)
+        // setMapCenter(50.106788, 14.450860, 13); // prague
+        setMapCenter(49.59384053850102, 17.25134611129761, 13); // Olomouc
+        // setMarkerToMap(51.505, -0.09, null);
         /*betterMarker(L.ExtraMarkers.icon({
             icon: 'fa-number',
             markerColor: colors[0],
