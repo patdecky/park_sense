@@ -94,7 +94,8 @@ window.addEventListener('load', () => {
         L.control.layers(baseMaps).addTo(map);
 
         // setMapCenter(50.106788, 14.450860, 13); // prague
-        setMapCenter(49.59384053850102, 17.25134611129761, 13); // Olomouc
+        setMapCenter(49.59384053850102, 17.264, 16); // Olomouc Envelopa
+        //setMapCenter(49.59384053850102, 17.25134611129761, 13); // Olomouc
         // setMarkerToMap(51.505, -0.09, null);
         /*betterMarker(L.ExtraMarkers.icon({
             icon: 'fa-number',
