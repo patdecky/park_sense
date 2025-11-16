@@ -519,12 +519,61 @@
                 width: 100%;
                 /*height: 80vh;*/
             }
+        }
+        
+        #voteoverlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            display: none;               /* hidden by default */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        /* Popup container */
+        #popup {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            max-width: 320px;
+            width: 90%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            text-align: center;
+        }
 
-            .buttonContainer {
-                position: static;
-                bottom: 0;
-                border-radius: 0;
-            }
+        #popup h2 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .emoji-btn {
+            font-size: 2rem;
+            margin: 0.5rem;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+        }
+
+        .emoji-btn:hover {
+            transform: scale(1.2);
+        }
+
+        #closeBtn {
+            margin-top: 1rem;
+            padding: 0.4rem 0.8rem;
+            background: #0078d7;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .fade-out{opacity:0.5; pointer-events:none;}
+        #closeBtn{
+            margin-top:1rem; padding:0.4rem 0.8rem;
+            background:#0078d7; color:#fff; border:none;
+            border-radius:4px; cursor:pointer;
         }
     </style>
 </head>
@@ -599,11 +648,9 @@
                 datových sadách. Navíc krom offline dat získáváme i dynamické data ze systému EnCLODE. Díky této
                 kombinaci poskytuje uživatelům ještě přesnější a aktuálnější informace o
                 dostupnosti parkovacích míst.
-                Mobilní a webová aplikace nadále spolupracuje s Google Maps API, umožňuje vyhledávat nejbližší
+                Mobilní a webová aplikace nadále spolupracuje s OpenStreetMaps API, umožňuje vyhledávat nejbližší
                 parkoviště, zobrazit počet volných míst a umožňuje snadnou navigaci přes aplikace jako Google Maps.
-                ParkSense tak přispívá k hladšímu parkování a zlepšuje mobilitu v dynamickém prostředí chytrých
-                měst.
-            <p> <b>Do budoucna může být aplikace integrována například s kontrolními vozy TSK Praha a.s.</b></p>
+                ParkSense tak přispívá k hladšímu parkování a zlepšuje mobilitu v dynamickém prostředí chytrých měst. <p> <b>Do budoucna může být aplikace rozšířena o integraci placených parkovišť, s možností zprostředkování služby rezervace místa.</b></p>
             <h2>Použité datové sady</h2>
             <ul>
                 <li><a href="https://chytra.olomouc.eu/parking">Chytrá Olomouc</a></li>
@@ -649,13 +696,36 @@
         <button onclick="closeLogin()">Zrušit</button>
     </div>
 
-    <div id="voteModal" class="modal">
-        <span class="modal-close" onclick="closeVote()">&times;</span>
-        <h2>Je zde volné místo?</h2>
-        <button onclick="vote('yes')">👍 Ano</button>
-        <button onclick="vote('no')">👎 Ne</button>
-        <p id="voteMessage"></p>
-    </div>
+<div id="voteModal" class="modal">
+    <span class="modal-close" onclick="closeVote()">&times;</span>
+    <h2>Je zde volné místo?</h2>
+    <button onclick="vote('yes')">👍 Ano</button>
+    <button onclick="vote('no')">👎 Ne</button>
+    <p id="voteMessage"></p>
+</div>
+
+<div id="voteoverlay" class="">
+  <div id="popup">
+    <h2>How many free parking spaces are available?</h2>
+    <p>Select an option:</p>
+    <button class="emoji-btn" data-value="smile">😊</button>
+    <button class="emoji-btn" data-value="neutral">😐</button>
+    <button class="emoji-btn" data-value="frown">☹️</button>
+
+    <br>
+    <button id="closeBtn">Close</button>
+    <script>
+        const closeBtn = document.getElementById('closeBtn');
+        const overlay = document.getElementById('voteoverlay');
+
+                // Close the popup
+        closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
+    </script>
+    
+  </div>
+</div>
 
     <script>
         document.getElementById("aboutUsBtn").onclick = function () {

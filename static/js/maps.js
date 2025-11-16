@@ -98,12 +98,12 @@ window.addEventListener('load', () => {
         //setMapCenter(49.59384053850102, 17.25134611129761, 13); // Olomouc
         // setMarkerToMap(51.505, -0.09, null);
         /*betterMarker(L.ExtraMarkers.icon({
-            icon: 'fa-number',
-            markerColor: colors[0],
-            shape: 'square',
-            number: '11',
-            prefix: 'fa'
-        }), [49.5876267,17.2553681], 'skibbidy toilet')*/
+         icon: 'fa-number',
+         markerColor: colors[0],
+         shape: 'square',
+         number: '11',
+         prefix: 'fa'
+         }), [49.5876267,17.2553681], 'skibbidy toilet')*/
 
         // Add click event listener to the map
         map.on('click', async function (e) {
@@ -163,9 +163,9 @@ window.addEventListener('load', () => {
         let description = buildMarkerDescription(name, vacancy, predicted_vacancy, community_vacancy, capacity)
         let marker_vacancy = vacancy != null ? vacancy : predicted_vacancy
         let color = "blue"
-        if (vacancy != null){
+        if (vacancy != null) {
             color = "green"
-        } else if (predicted_vacancy != null){
+        } else if (predicted_vacancy != null) {
             color = "yellow"
         }
 
@@ -177,12 +177,12 @@ window.addEventListener('load', () => {
         // Check if a callback is provided for when the popup is opened
         if (onPopupOpenCallback && typeof onPopupOpenCallback === 'function') {
             ppmarker.on('popupopen', function (event) {
-            onPopupOpenCallback(event.target); // Pass the marker (event.target is the marker)
+                onPopupOpenCallback(event.target); // Pass the marker (event.target is the marker)
             });
         }
         if (onPopupCloseCallback && typeof onPopupCloseCallback === 'function') {
             ppmarker.on('popupclose', function (event) {
-            onPopupCloseCallback(event.target); // Pass the marker (event.target is the marker)
+                onPopupCloseCallback(event.target); // Pass the marker (event.target is the marker)
             });
         }
 
@@ -199,8 +199,7 @@ window.addEventListener('load', () => {
                 description = name + "<br> Volno: " + vacancy + "/" + capacity
             } else if (predicted_vacancy != null) {
                 description = name + "<br> Volno: " + predicted_vacancy + "/" + capacity
-            }
-            else {
+            } else {
                 description = name + "<br> Kapacita: " + capacity
             }
             if (community_vacancy != null) {
@@ -238,9 +237,9 @@ window.addEventListener('load', () => {
         hideSubMenu()
     }
 
-    
 
-    function hideSubMenu(){
+
+    function hideSubMenu() {
         document.getElementById('subMenu').style.display = 'none';
         document.getElementById('buttonContainer').style.display = 'none';
     }
@@ -315,25 +314,25 @@ window.addEventListener('load', () => {
         const nominatimUrl = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(place)}&format=json&limit=1`;
 
         fetch(nominatimUrl)
-            .then(response => response.json())
-            .then(async (data) => {
-                if (data.length > 0) {
-                    const location = data[0];
-                    const lat = parseFloat(location.lat);
-                    const lon = parseFloat(location.lon);
-                    const displayName = location.display_name;
-                    const shortName = displayName.split(',')[0];
+                .then(response => response.json())
+                .then(async (data) => {
+                    if (data.length > 0) {
+                        const location = data[0];
+                        const lat = parseFloat(location.lat);
+                        const lon = parseFloat(location.lon);
+                        const displayName = location.display_name;
+                        const shortName = displayName.split(',')[0];
 
-                    const inputValue = document.getElementById('searchBar').value = shortName
+                        const inputValue = document.getElementById('searchBar').value = shortName
 
-                    setMapCenter(lat, lon, 17)
-                    await searchAndPlaceMarkers(lat, lon, displayName)
-                } else {
-                    alert('Place not found!');
-                    place_selected = false
-                }
-            })
-            .catch(error => console.error('Error fetching geocode:', error));
+                        setMapCenter(lat, lon, 17)
+                        await searchAndPlaceMarkers(lat, lon, displayName)
+                    } else {
+                        alert('Place not found!');
+                        place_selected = false
+                    }
+                })
+                .catch(error => console.error('Error fetching geocode:', error));
     }
 
     async function findNearestParkingLots(lat, lon) {
@@ -377,11 +376,56 @@ window.addEventListener('load', () => {
             alert("Můžete vyplnit obsazenost pouze u vybraných sledovaných parkovišť.")
             return;
         }
-        let vacancy = prompt("Please enter the number of free parking spots:", "0");
-        // console.log(vacancy);
-        //todo set vacancy to api
 
-        (new dataRequester()).setOccupancyCommunity(parkinglot_id, vacancy).then();
+
+        const overlay = document.getElementById('voteoverlay');
+        const emojis = document.querySelectorAll('.emoji-btn');
+
+        overlay.style.display = 'flex';
+
+        // Handle emoji selection
+        emojis.forEach(btn => {
+            btn.addEventListener('click', () => {
+
+                emojis.forEach(e => {
+                    e.disabled = true;
+                    if (e !== btn)
+                        e.classList.add('fade-out');
+                });
+
+                const myTimeout = setTimeout(() => {
+                    overlay.style.display = 'none';
+
+                    emojis.forEach(e => {
+                        e.classList.remove('fade-out');
+                        e.disabled = false;
+
+                    });
+                }, 1000);
+
+
+                const choice = btn.dataset.value;   // "smile", "neutral", or "frown"
+                switch (choice) {
+                    case "smile":
+                        (new dataRequester()).setOccupancyCommunity(parkinglot_id, 3).then();
+                        break;
+                    case "neutral":
+                        (new dataRequester()).setOccupancyCommunity(parkinglot_id, 2).then();
+                        break;
+                    case "frown":
+                        (new dataRequester()).setOccupancyCommunity(parkinglot_id, 1).then();
+                        break;
+                    default:
+                        console.warn("new smiley face detected");
+                }
+            });
+        });
+
+        // Optional: close when clicking outside the popup
+        overlay.addEventListener('click', e => {
+            if (e.target === overlay)
+                overlay.style.display = 'none';
+        });
     }
 
     function openCoordinatesInGoogleMaps() {
