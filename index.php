@@ -520,6 +520,14 @@
                 width: 100%;
                 /*height: 80vh;*/
             }
+
+            .buttonContainer{
+                position: relative;
+                bottom: unset;
+                border-radius: 0;
+            }
+
+            
         }
         
         #voteoverlay {
