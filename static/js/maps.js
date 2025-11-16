@@ -168,7 +168,7 @@ window.addEventListener('load', () => {
         } else if (predicted_vacancy != null) {
             color = "yellow"
         } else if (community_vacancy != null) {
-            color = "cyan"
+            color = "purple"
         }
 
 
