@@ -583,7 +583,7 @@
     <div id="mainContainer">
         <div id="mapDivContainer">
             <div id="searchContainer">
-                <input type="text" id="searchBar" placeholder="Search...">
+                <input type="text" id="searchBar" placeholder="Vyhledat...">
                 <button type="button" id="searchButton">Hledat</button>
             </div>
             <div id="map"></div>
