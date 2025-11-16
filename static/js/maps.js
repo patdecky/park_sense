@@ -242,10 +242,12 @@ window.addEventListener('load', () => {
 
     function hideSubMenu(){
         document.getElementById('subMenu').style.display = 'none';
+        document.getElementById('buttonContainer').style.display = 'none';
     }
 
     function showSubMenu() {
         document.getElementById('subMenu').style.display = "";
+        document.getElementById('buttonContainer').style.display = "";
     }
 
     async function searchAndPlaceMarkers(latitude, longitude, description) {
