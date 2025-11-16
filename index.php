@@ -456,6 +456,61 @@
                 /*height: 80vh;*/
             }
         }
+        
+        #voteoverlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            display: none;               /* hidden by default */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        /* Popup container */
+        #popup {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            max-width: 320px;
+            width: 90%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        #popup h2 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .emoji-btn {
+            font-size: 2rem;
+            margin: 0.5rem;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+        }
+
+        .emoji-btn:hover {
+            transform: scale(1.2);
+        }
+
+        #closeBtn {
+            margin-top: 1rem;
+            padding: 0.4rem 0.8rem;
+            background: #0078d7;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .fade-out{opacity:0.5; pointer-events:none;}
+        #closeBtn{
+            margin-top:1rem; padding:0.4rem 0.8rem;
+            background:#0078d7; color:#fff; border:none;
+            border-radius:4px; cursor:pointer;
+        }
     </style>
 </head>
 <body>
@@ -561,6 +616,29 @@
     <button onclick="vote('yes')">👍 Ano</button>
     <button onclick="vote('no')">👎 Ne</button>
     <p id="voteMessage"></p>
+</div>
+
+<div id="voteoverlay" class="">
+  <div id="popup">
+    <h2>How many free parking spaces are available?</h2>
+    <p>Select an option:</p>
+    <button class="emoji-btn" data-value="smile">😊</button>
+    <button class="emoji-btn" data-value="neutral">😐</button>
+    <button class="emoji-btn" data-value="frown">☹️</button>
+
+    <br>
+    <button id="closeBtn">Close</button>
+    <script>
+        const closeBtn = document.getElementById('closeBtn');
+        const overlay = document.getElementById('voteoverlay');
+
+                // Close the popup
+        closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
+    </script>
+    
+  </div>
 </div>
 
 <script>
