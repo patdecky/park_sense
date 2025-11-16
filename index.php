@@ -736,36 +736,36 @@
         };
 
 
-        document.getElementById("loginButton").onclick = function () {
-            document.getElementById("loginModal").style.display = "unset";
-        };
-        document.getElementById("userIcon").onclick = function () {
-            document.getElementById("userMenu").style.display = "unset";
-        };
+        // document.getElementById("loginButton").onclick = function () {
+        //     document.getElementById("loginModal").style.display = "unset";
+        // };
+        // document.getElementById("userIcon").onclick = function () {
+        //     document.getElementById("userMenu").style.display = "unset";
+        // };
 
-        function closeLogin() {
-            document.getElementById("loginModal").style.display = "none";
-        } function closeVote() {
-            document.getElementById("voteModal").style.display = "none";
-        }
+        // function closeLogin() {
+        //     document.getElementById("loginModal").style.display = "none";
+        // } function closeVote() {
+        //     document.getElementById("voteModal").style.display = "none";
+        // }
 
-        function login() {
-            var user = document.getElementById("username").value;
-            var pass = document.getElementById("password").value;
-            if (user === "admin" && pass === "admin") {
-                document.getElementById("loginButton").style.display = "none";
-                document.getElementById("userIcon").classList.remove("hidden");
-                closeLogin();
-            } else {
-                alert("Nesprávné přihlašovací údaje");
-            }
-        }
+        // function login() {
+        //     var user = document.getElementById("username").value;
+        //     var pass = document.getElementById("password").value;
+        //     if (user === "admin" && pass === "admin") {
+        //         document.getElementById("loginButton").style.display = "none";
+        //         document.getElementById("userIcon").classList.remove("hidden");
+        //         closeLogin();
+        //     } else {
+        //         alert("Nesprávné přihlašovací údaje");
+        //     }
+        // }
 
-        function logout() {
-            document.getElementById("loginButton").style.display = "inline-block";
-            document.getElementById("userIcon").classList.add("hidden");
-            document.getElementById("userMenu").style.display = "none";
-        }
+        // function logout() {
+        //     document.getElementById("loginButton").style.display = "inline-block";
+        //     document.getElementById("userIcon").classList.add("hidden");
+        //     document.getElementById("userMenu").style.display = "none";
+        // }
 
         function openVote() {
             document.getElementById("voteModal").style.display = "unset";

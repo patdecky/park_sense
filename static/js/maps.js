@@ -34,15 +34,15 @@ window.addEventListener('load', () => {
         cc.style.display = 'none';
     }
 
-    document.getElementById('in_time').addEventListener('click', () => {
-        // change URL to #in_time
-        if (location.hash === '#in_time') {
-            location.hash = '';
-        } else {
-            location.hash = 'in_time';
-        }
-        onHashChange();
-    });
+    // document.getElementById('in_time').addEventListener('click', () => {
+    //     // change URL to #in_time
+    //     if (location.hash === '#in_time') {
+    //         location.hash = '';
+    //     } else {
+    //         location.hash = 'in_time';
+    //     }
+    //     onHashChange();
+    // });
 
 
     document.getElementById('searchBar').addEventListener('keydown', function (event) {
