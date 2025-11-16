@@ -255,7 +255,8 @@
 
         .wideButton:hover {
             background: var(--button-hover);
-            color: white;
+            transform: scale(0.95);
+            /* color: white; */
         }
 
         #aboutUsModal {

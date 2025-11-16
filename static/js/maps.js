@@ -172,6 +172,7 @@ window.addEventListener('load', () => {
 
         let ppmarker = betterMarkerUse(latitude, longitude, description, marker_vacancy, color)
         ppmarker.parkinglot_id = parkinglot_id
+        ppmarker.capacity = capacity
         park_place_markers.push(ppmarker);
         //ppmarker.openPopup();
         // Check if a callback is provided for when the popup is opened
@@ -365,10 +366,12 @@ window.addEventListener('load', () => {
         // check if the current open marker is in park_place_markers
         let found = false
         let parkinglot_id = null
+        let capacity = null
         for (let i = 0; i < park_place_markers.length; i++) {
             if (park_place_markers[i] === open_marker) {
                 found = true
                 parkinglot_id = park_place_markers[i].parkinglot_id
+                capacity = park_place_markers[i].capacity
                 break
             }
         }
@@ -407,13 +410,13 @@ window.addEventListener('load', () => {
                 const choice = btn.dataset.value;   // "smile", "neutral", or "frown"
                 switch (choice) {
                     case "smile":
-                        (new dataRequester()).setOccupancyCommunity(parkinglot_id, 3).then();
+                        (new dataRequester()).setOccupancyCommunity(parkinglot_id, Math.round(capacity*0.9)).then();
                         break;
                     case "neutral":
-                        (new dataRequester()).setOccupancyCommunity(parkinglot_id, 2).then();
+                        (new dataRequester()).setOccupancyCommunity(parkinglot_id, Math.round(capacity*0.5)).then();
                         break;
                     case "frown":
-                        (new dataRequester()).setOccupancyCommunity(parkinglot_id, 1).then();
+                        (new dataRequester()).setOccupancyCommunity(parkinglot_id, Math.round(capacity*0.1)).then();
                         break;
                     default:
                         console.warn("new smiley face detected");
