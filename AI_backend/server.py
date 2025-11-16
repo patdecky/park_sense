@@ -55,13 +55,13 @@ root.addHandler(file_handler)
 root.addHandler(console_handler)
 
 
-def process_all_data(database_mapper:DatabaseMapper, pl_viewer:ParkingLotViewer):
+def process_all_data(database_mapper:DatabaseMapper, pl_viewer:ParkingLotViewer, config: ConfigNew):
     enclod_olomouc_context = None
     try: 
-        enclod_olomouc_context = get_enclod_olomouc_context()
+        enclod_olomouc_context = get_enclod_olomouc_context(api_key=config.enclod_jwt)
     except Exception as e:
         logging.error(f"Error fetching Enclod Olomouc context: {e}")
-        
+
     chytra_olomouc_context = None
     try:
         chytra_olomouc_context = get_chytra_olomouc_context()
@@ -95,7 +95,7 @@ if __name__ == "__main__":
             logging.debug("Connecting to database")
             database_mapper.connect()
             logging.debug("Processing all data")
-            process_all_data(database_mapper, pl_viewer)
+            process_all_data(database_mapper, pl_viewer, config)
         except Exception:
             logging.exception(f"Server exception.", stack_info=True)
         except KeyboardInterrupt:
@@ -103,7 +103,7 @@ if __name__ == "__main__":
         finally:
             database_mapper.disconnect()
             logging.info(f"Process end")
-        time.sleep(120)
+        time.sleep(300)  # Sleep for 5 minutes before next iteration
 
 
 

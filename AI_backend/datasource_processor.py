@@ -59,7 +59,7 @@ def process_all_datasources(database_mapper:DatabaseMapper, pl_viewer:ParkingLot
             case 3:
                 log.debug("Processing Olomouc API datasource")
                 if context["enclod_olomouc_context"] is None:
-                    log.error("Enclod Olomouc context is None")
+                    log.debug("Enclod Olomouc context is None")
                     continue
                 if not isinstance(datasource_data, str):
                     log.error("Datasource is not a str")
@@ -69,7 +69,7 @@ def process_all_datasources(database_mapper:DatabaseMapper, pl_viewer:ParkingLot
             case 4:
                 log.debug("Processing Chytra Olomouc")
                 if context["chytra_olomouc_context"] is None:
-                    log.error("Chytra Olomouc context is None")
+                    log.debug("Chytra Olomouc context is None")
                     continue
                 if not isinstance(datasource_data, str):
                     log.error("Datasource is not a str")

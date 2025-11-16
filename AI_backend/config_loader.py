@@ -13,6 +13,7 @@ class ConfigNew:
     user: str = ""
     password: str = ""
     database: str = ""
+    enclod_jwt: str = ""
 
     def __init__(self, config_path):
         with open(config_path, "r") as f:
@@ -22,3 +23,4 @@ class ConfigNew:
             self.user = self.data.get("user", "")
             self.password = self.data.get("password", "")
             self.database = self.data.get("database", "")
+            self.enclod_jwt = self.data.get("enclod_jwt", "")

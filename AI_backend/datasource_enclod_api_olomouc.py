@@ -67,14 +67,14 @@ def get_api_url() -> str:
     return url
 
 
-def get_data_to_file(file_path: str):
+def get_data_to_file(file_path: str, api_key: str):
     with open(file_path, "w", encoding="utf-8") as f:
-        response = requests.get(get_api_url(), timeout=30)
+        response = requests.get(get_api_url(), timeout=30, headers={"Authorization": f"JWT {api_key}"})
         f.write(response.text)
 
 
-def get_data_to_variable():
-    response = requests.get(get_api_url(), timeout=30)
+def get_data_to_variable(api_key: str):
+    response = requests.get(get_api_url(), timeout=30, headers={"Authorization": f"JWT {api_key}"})
     return response.json()
 
 
@@ -84,8 +84,8 @@ def load_data(file_path: str):
         return data
 
 
-def get_context() -> EnclodAPIOlomoucDataContext:
-    data = get_data_to_variable()
+def get_context(api_key: str) -> EnclodAPIOlomoucDataContext:
+    data = get_data_to_variable(api_key)
     
     profiles = {}
 
