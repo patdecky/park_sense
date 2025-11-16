@@ -164,7 +164,7 @@
 
             width: 600px;
             width: 100%;
-            height: 100%;
+            height: 100dvh;
             min-width: 400px;
             display: flex;
             flex-direction: column;
@@ -178,6 +178,10 @@
             overflow: hidden;
             /* box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4); */
 
+        }
+
+        input{
+            min-width: 0px;
         }
 
         #searchContainer {
@@ -717,9 +721,9 @@
   <div id="popup">
     <h2>Kolik parkovacích míst je volných?</h2>
     <p>Zvolte možnost:</p>
-    <button class="emoji-btn" data-value="smile">😊</button>
-    <button class="emoji-btn" data-value="neutral">😐</button>
     <button class="emoji-btn" data-value="frown">☹️</button>
+    <button class="emoji-btn" data-value="neutral">😐</button>
+    <button class="emoji-btn" data-value="smile">😊</button>
 
     <br>
     <button id="closeBtn">Close</button>
