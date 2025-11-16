@@ -707,8 +707,8 @@
 
 <div id="voteoverlay" class="">
   <div id="popup">
-    <h2>How many free parking spaces are available?</h2>
-    <p>Select an option:</p>
+    <h2>Kolik parkovacích míst je volných?</h2>
+    <p>Zvolte možnost:</p>
     <button class="emoji-btn" data-value="smile">😊</button>
     <button class="emoji-btn" data-value="neutral">😐</button>
     <button class="emoji-btn" data-value="frown">☹️</button>
