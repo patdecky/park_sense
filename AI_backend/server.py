@@ -56,8 +56,17 @@ root.addHandler(console_handler)
 
 
 def process_all_data(database_mapper:DatabaseMapper, pl_viewer:ParkingLotViewer):
-    enclod_olomouc_context = get_enclod_olomouc_context()
-    chytra_olomouc_context = get_chytra_olomouc_context()
+    enclod_olomouc_context = None
+    try: 
+        enclod_olomouc_context = get_enclod_olomouc_context()
+    except Exception as e:
+        logging.error(f"Error fetching Enclod Olomouc context: {e}")
+        
+    chytra_olomouc_context = None
+    try:
+        chytra_olomouc_context = get_chytra_olomouc_context()
+    except Exception as e:
+        logging.error(f"Error fetching Chytra Olomouc context: {e}")
 
     datasource_context = {
         "enclod_olomouc_context": enclod_olomouc_context,

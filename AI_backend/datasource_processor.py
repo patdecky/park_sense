@@ -58,6 +58,9 @@ def process_all_datasources(database_mapper:DatabaseMapper, pl_viewer:ParkingLot
                 vacancy = process_camera_parking_lot(image, parking_lot.id, parking_lot.car_capacity, pl_viewer)
             case 3:
                 log.debug("Processing Olomouc API datasource")
+                if context["enclod_olomouc_context"] is None:
+                    log.error("Enclod Olomouc context is None")
+                    continue
                 if not isinstance(datasource_data, str):
                     log.error("Datasource is not a str")
                     continue
@@ -65,6 +68,9 @@ def process_all_datasources(database_mapper:DatabaseMapper, pl_viewer:ParkingLot
                 vacancy = process_api_parking_lot(api_data, parking_lot.id, parking_lot.car_capacity)
             case 4:
                 log.debug("Processing Chytra Olomouc")
+                if context["chytra_olomouc_context"] is None:
+                    log.error("Chytra Olomouc context is None")
+                    continue
                 if not isinstance(datasource_data, str):
                     log.error("Datasource is not a str")
                     continue
