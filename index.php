@@ -120,7 +120,7 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            height: 100vh;
+            height: 100dvh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -162,9 +162,9 @@
             background: #fff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
 
-            width: 600px;
+            /* width: 600px; */
             width: 100%;
-            height: 100dvh;
+            height: 100%;
             min-width: 400px;
             display: flex;
             flex-direction: column;
